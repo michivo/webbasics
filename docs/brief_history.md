@@ -1,5 +1,5 @@
 ---
-id: doc3
+id: intro-brief_history
 title: This is Document Number 3
 ---
 

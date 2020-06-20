@@ -17,7 +17,7 @@ module.exports = {
         {
           to: 'docs/',
           activeBasePath: 'docs',
-          label: 'Docs',
+          label: 'Skriptum',
           position: 'left',
         },
         {to: 'blog', label: 'Blog', position: 'left'},
@@ -30,9 +30,9 @@ module.exports = {
     },
     footer: {
       style: 'dark',
-      links: [
+      /*links: [
         {
-          title: 'Docs',
+          title: 'Docsasdsad',
           items: [
             {
               label: 'Style Guide',
@@ -57,8 +57,8 @@ module.exports = {
             },
           ],
         },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Michael Faschinger, Inc. Built with Docusaurus.`,
+      ],*/
+      copyright: `Copyright © ${new Date().getFullYear()} Michael Faschinger, Built with Docusaurus.`,
     },
   },
   presets: [
@@ -67,7 +67,7 @@ module.exports = {
       {
         docs: {
           // It is recommended to set document id as docs home page (`docs/` path).
-          homePageId: 'doc1',
+          homePageId: 'intro-onesecond',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
