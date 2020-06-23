@@ -49,6 +49,9 @@ die erste Version der CSS-Spezifikation veröffentlicht. Trotz der Versuche, HTM
 kommt es zum Browserkrieg zwischen Netscape und Microsoft: Jedes der beiden Unternehmen versucht, die
 Standards eigens zu interpretieren und zu erweitern, um dem jeweiligen Konkurrenten das Leben schwer zu machen.
 
+1996 wird JavaScript 1.0.0 von Netscape veröffentlicht, womit eine dynamische Manipulation von Seiten
+ermöglicht wurde.
+
 ## 2004-heute: Web 2.0, das Web wird allgegenwärtig
 Soziale Netzwerke entstehen (MySpace, Facebook, YouTube, ...). Während Content im Web ursprünglich hauptsächlich von Seitenbetreibern
 generiert wurde, können nun auch Nutzer von Webseiten Inhalte ins Web stellen und über das Web miteinander
@@ -58,7 +61,7 @@ darüber kommunizieren und Informationen teilen.
 Führende Browserhersteller (Apple, Mozilla, Opera) gründen 2004 aus Frust über die langsame Entwicklung der
 Web-Standards durch das W3C die **Web Hypertext Application Technology Working Group (WHATWG)**. Heute
 besteht die Steuerungsgruppe der WHATWG aus Apple, Mozilla, Google und Microsoft. Die WHATWG entwickelte
-einen auf HTML 4.01 aufbauenden neuen Standard namens HTML 5, der von der W3C übernommen wurde. Nach
+einen auf HTML 4.01 aufbauenden neuen Standard namens HTML 5, der 2007 von der W3C übernommen wurde. Nach
 einigen Querelen um die Weiterentwicklung des HTML-Standards ist seit Mai 2019 offiziell die WHATWG für
 die Pflege und Weiterentwicklung des **HTML Living Standard** (früher HTML 5) verantwortlich.
 
