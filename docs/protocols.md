@@ -1,10 +1,8 @@
 ---
 id: intro-protocols
 title: Protokolle und das OSI-Modell
-sidebar_label:
+sidebar_label: Protokolle
 ---
-
-import useBaseUrl from '@docusaurus/useBaseUrl';
 
 In diesem Skriptum wurde HTTP, das *Hypertext Transfer Protocol* bereits mehrfach erwähnt.
 Nachdem schon kurz umrissen wurde, was *Hypertext* ist und die Bedeutung von *Transfer*
