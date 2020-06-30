@@ -1367,6 +1367,20 @@ module.exports = Token;
 
 /***/ }),
 /* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return useBaseUrl; });
+/* harmony import */ var _useDocusaurusContext__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/**
+ * Copyright (c) 2017-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */function useBaseUrl(url){const{siteConfig}=Object(_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])();const{baseUrl='/'}=siteConfig||{};if(!url){return url;}const externalRegex=/^(https?:|\/\/)/;if(externalRegex.test(url)){return url;}if(url.startsWith('/')){return baseUrl+url.slice(1);}return baseUrl+url;}
+
+/***/ }),
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var helpers = __webpack_require__(78);
@@ -1424,7 +1438,7 @@ module.exports = {
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var fs = __webpack_require__(23)
@@ -1784,20 +1798,6 @@ function retry () {
 
 
 /***/ }),
-/* 12 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return useBaseUrl; });
-/* harmony import */ var _useDocusaurusContext__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
-/**
- * Copyright (c) 2017-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function useBaseUrl(url){const{siteConfig}=Object(_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])();const{baseUrl='/'}=siteConfig||{};if(!url){return url;}const externalRegex=/^(https?:|\/\/)/;if(externalRegex.test(url)){return url;}if(url.startsWith('/')){return baseUrl+url.slice(1);}return baseUrl+url;}
-
-/***/ }),
 /* 13 */
 /***/ (function(module, exports) {
 
@@ -1849,7 +1849,7 @@ var isInternalUrl = __webpack_require__(20);
 var useDocusaurusContext = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(12);
+var useBaseUrl = __webpack_require__(10);
 
 // CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/src/theme/hooks/useTheme.js
 /**
@@ -10489,7 +10489,7 @@ module.exports = hasProtocol;
 "use strict";
 
 
-const fs = __webpack_require__(11)
+const fs = __webpack_require__(12)
 const path = __webpack_require__(6)
 
 const NODE_VERSION_MAJOR_WITH_BIGINT = 10
@@ -10796,7 +10796,7 @@ var isInternalUrl = __webpack_require__(20);
 var useDocusaurusContext = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(12);
+var useBaseUrl = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
 var Link = __webpack_require__(7);
@@ -11872,7 +11872,7 @@ HelmetExport.renderStatic = HelmetExport.rewind;
 "use strict";
 /* harmony import */ var _docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var _theme_hooks_useThemeContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(36);
-/* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
+/* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(10);
 /* harmony import */ var _docusaurus_isInternalUrl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(20);
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -13712,8 +13712,8 @@ module.exports = restoreWithComponents;
 // Properties will be tokenized in one step, see #429
 
 var Token = __webpack_require__(9);
-var serializeRules = __webpack_require__(10).rules;
-var serializeValue = __webpack_require__(10).value;
+var serializeRules = __webpack_require__(11).rules;
+var serializeValue = __webpack_require__(11).value;
 
 function extractProperties(token) {
   var properties = [];
@@ -16435,7 +16435,7 @@ exports.ArraySet = ArraySet;
 // This is adapted from https://github.com/normalize/mz
 // Copyright (c) 2014-2016 Jonathan Ong me@jongleberry.com and Contributors
 const u = __webpack_require__(15).fromCallback
-const fs = __webpack_require__(11)
+const fs = __webpack_require__(12)
 
 const api = [
   'access',
@@ -16599,7 +16599,7 @@ module.exports = {
 "use strict";
 
 
-const fs = __webpack_require__(11)
+const fs = __webpack_require__(12)
 const os = __webpack_require__(93)
 const path = __webpack_require__(6)
 
@@ -16725,7 +16725,7 @@ if (true) {
 /* 124 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"docsSidebars\":{\"someSidebar\":[{\"type\":\"category\",\"label\":\"Einführung\",\"items\":[{\"type\":\"link\",\"label\":\"Die 1 Sekunde\",\"href\":\"/webbasics/docs/intro-onesecond\"},{\"type\":\"link\",\"label\":\"Das Web\",\"href\":\"/webbasics/docs/intro-web_vs_internet\"},{\"type\":\"link\",\"label\":\"Eine kurze Geschichte des WWW\",\"href\":\"/webbasics/docs/intro-brief_history\"},{\"type\":\"link\",\"label\":\"Protokolle\",\"href\":\"/webbasics/docs/intro-protocols\"}]},{\"type\":\"category\",\"label\":\"HTTP\",\"items\":[{\"type\":\"link\",\"label\":\"Überblick\",\"href\":\"/webbasics/docs/http-intro\"}]},{\"type\":\"category\",\"label\":\"Features\",\"items\":[{\"type\":\"link\",\"label\":\"Powered by MDX\",\"href\":\"/webbasics/docs/mdx\"}]}]},\"permalinkToSidebar\":{\"/webbasics/docs/http-intro\":\"someSidebar\",\"/webbasics/docs/intro-brief_history\":\"someSidebar\",\"/webbasics/docs/intro-onesecond\":\"someSidebar\",\"/webbasics/docs/intro-protocols\":\"someSidebar\",\"/webbasics/docs/intro-web_vs_internet\":\"someSidebar\",\"/webbasics/docs/mdx\":\"someSidebar\"}}");
+module.exports = JSON.parse("{\"docsSidebars\":{\"someSidebar\":[{\"type\":\"category\",\"label\":\"Einführung\",\"items\":[{\"type\":\"link\",\"label\":\"Die 1 Sekunde\",\"href\":\"/webbasics/docs/intro-onesecond\"},{\"type\":\"link\",\"label\":\"Das Web\",\"href\":\"/webbasics/docs/intro-web_vs_internet\"},{\"type\":\"link\",\"label\":\"Eine kurze Geschichte des WWW\",\"href\":\"/webbasics/docs/intro-brief_history\"},{\"type\":\"link\",\"label\":\"Protokolle\",\"href\":\"/webbasics/docs/intro-protocols\"},{\"type\":\"link\",\"label\":\"Domain Name Service\",\"href\":\"/webbasics/docs/intro-dns\"}]},{\"type\":\"category\",\"label\":\"HTTP\",\"items\":[{\"type\":\"link\",\"label\":\"Überblick\",\"href\":\"/webbasics/docs/http-intro\"}]},{\"type\":\"category\",\"label\":\"Features\",\"items\":[{\"type\":\"link\",\"label\":\"Powered by MDX\",\"href\":\"/webbasics/docs/mdx\"}]}]},\"permalinkToSidebar\":{\"/webbasics/docs/http-intro\":\"someSidebar\",\"/webbasics/docs/intro-brief_history\":\"someSidebar\",\"/webbasics/docs/intro-dns\":\"someSidebar\",\"/webbasics/docs/intro-onesecond\":\"someSidebar\",\"/webbasics/docs/intro-protocols\":\"someSidebar\",\"/webbasics/docs/intro-web_vs_internet\":\"someSidebar\",\"/webbasics/docs/mdx\":\"someSidebar\"}}");
 
 /***/ }),
 /* 125 */
@@ -16796,38 +16796,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
-const frontMatter={id:'intro-dns',title:'DNS - Das Domain Name Service',sidebar_label:'Domain Name Service'};const metadata={"id":"intro-dns","title":"DNS - Das Domain Name Service","description":"Das Internet als IP-basiertes Netzwerk kennt IP-Adressen, keine Domain-Namen wie z.B. campus02.at.","source":"@site/docs/dns.md","permalink":"/webbasics/docs/intro-dns","editUrl":"https://github.com/michivo/webbasics/edit/master/website/docs/dns.md","sidebar_label":"Domain Name Service"};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Das Internet als IP-basiertes Netzwerk kennt IP-Adressen, keine Domain-Namen wie z.B. campus02.at.
-Wir als Benutzer arbeiten aber nur in seltenen Fällen direkt mit IP-Adressen, in der Regel kennen
-wir nur Domain-Namen wie z.B. campus02.at . Die Umwandlung eines Domain-Namens in eine IP-Adresse
-geschieht über das `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"p"},`Domain Name Service (DNS)`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Der Domäne campus02.at ist zum Beispiel die IPv4-Adresse 149.154.100.47 zugeordnet (Stand 26.6.2020),
-der Domäne de.wikipedia.org die IPv4-Adresse 91.198.174.192 und die IPv6-Adresse 2620:0:862:ed1a::1.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Das DNS funktioniert also ähnlich einem Telefonbuch: Im Telefonbuch werden Unternehmen oder Personen
-Telefonnummern zugeordnet, im DNS werden Domain-Namen IP-Adressen zugeordnet. Im Falle des DNS werden
-die Domains in einem global verteilten System gespeichert, das den Namensraum des Internets verwaltet.`));};MDXContent.isMDXComponent=true;
-
-/***/ }),
-/* 128 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "frontMatter", function() { return frontMatter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "metadata", function() { return metadata; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rightToc", function() { return rightToc; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MDXContent; });
-/* harmony import */ var _home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
 const frontMatter={id:'hello-world',title:'Hello',author:'Endilie Yacop Sucipto',author_title:'Maintainer of Docusaurus',author_url:'https://github.com/endiliey',author_image_url:'https://avatars1.githubusercontent.com/u/17883920?s=460&v=4',tags:['hello','docusaurus']};const metadata={"permalink":"/webbasics/blog/hello-world","editUrl":"https://github.com/michivo/webbasics/edit/master/website/blog/blog/2019-05-29-hello-world.md","source":"@site/blog/2019-05-29-hello-world.md","description":"Welcome to this blog. This blog is created with Docusaurus 2 alpha.","date":"2019-05-29T00:00:00.000Z","tags":[{"label":"hello","permalink":"/webbasics/blog/tags/hello"},{"label":"docusaurus","permalink":"/webbasics/blog/tags/docusaurus"}],"title":"Hello","readingTime":0.12,"truncated":true,"prevItem":{"title":"Welcome","permalink":"/webbasics/blog/welcome"},"nextItem":{"title":"Hola","permalink":"/webbasics/blog/hola"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Welcome to this blog. This blog is created with `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://v2.docusaurus.io/"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"a"},`Docusaurus 2 alpha`)),`.`));};MDXContent.isMDXComponent=true;
 
 /***/ }),
-/* 129 */
+/* 128 */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"allTagsPath\":\"/webbasics/blog/tags\",\"slug\":\"hola\",\"name\":\"hola\",\"count\":1,\"permalink\":\"/webbasics/blog/tags/hola\"}");
 
 /***/ }),
-/* 130 */
+/* 129 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16848,13 +16826,13 @@ LeserInnen dieses Skriptums sollen am Ende einerseits verstehen, was in den oben
 passiert, andererseits sollen sie auch Fähigkeiten erwerben, um selbst Webseiten zu bauen.`));};MDXContent.isMDXComponent=true;
 
 /***/ }),
-/* 131 */
+/* 130 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"docsSidebars\":{\"someSidebar\":[{\"type\":\"category\",\"label\":\"Einführung\",\"items\":[{\"type\":\"link\",\"label\":\"Die 1 Sekunde\",\"href\":\"/webbasics/docs/intro-onesecond\"},{\"type\":\"link\",\"label\":\"Das Web\",\"href\":\"/webbasics/docs/intro-web_vs_internet\"},{\"type\":\"link\",\"label\":\"Eine kurze Geschichte des WWW\",\"href\":\"/webbasics/docs/intro-brief_history\"},{\"type\":\"link\",\"label\":\"Protokolle\",\"href\":\"/webbasics/docs/intro-protocols\"}]},{\"type\":\"category\",\"label\":\"HTTP\",\"items\":[{\"type\":\"link\",\"label\":\"Überblick\",\"href\":\"/webbasics/docs/http-intro\"}]},{\"type\":\"category\",\"label\":\"Features\",\"items\":[{\"type\":\"link\",\"label\":\"Powered by MDX\",\"href\":\"/webbasics/docs/mdx\"}]}]},\"permalinkToSidebar\":{\"/webbasics/docs/http-intro\":\"someSidebar\",\"/webbasics/docs/intro-brief_history\":\"someSidebar\",\"/webbasics/docs/intro-onesecond\":\"someSidebar\",\"/webbasics/docs/intro-protocols\":\"someSidebar\",\"/webbasics/docs/intro-web_vs_internet\":\"someSidebar\",\"/webbasics/docs/mdx\":\"someSidebar\"},\"isHomePage\":true,\"homePagePath\":\"/webbasics/docs/intro-onesecond\"}");
+module.exports = JSON.parse("{\"docsSidebars\":{\"someSidebar\":[{\"type\":\"category\",\"label\":\"Einführung\",\"items\":[{\"type\":\"link\",\"label\":\"Die 1 Sekunde\",\"href\":\"/webbasics/docs/intro-onesecond\"},{\"type\":\"link\",\"label\":\"Das Web\",\"href\":\"/webbasics/docs/intro-web_vs_internet\"},{\"type\":\"link\",\"label\":\"Eine kurze Geschichte des WWW\",\"href\":\"/webbasics/docs/intro-brief_history\"},{\"type\":\"link\",\"label\":\"Protokolle\",\"href\":\"/webbasics/docs/intro-protocols\"},{\"type\":\"link\",\"label\":\"Domain Name Service\",\"href\":\"/webbasics/docs/intro-dns\"}]},{\"type\":\"category\",\"label\":\"HTTP\",\"items\":[{\"type\":\"link\",\"label\":\"Überblick\",\"href\":\"/webbasics/docs/http-intro\"}]},{\"type\":\"category\",\"label\":\"Features\",\"items\":[{\"type\":\"link\",\"label\":\"Powered by MDX\",\"href\":\"/webbasics/docs/mdx\"}]}]},\"permalinkToSidebar\":{\"/webbasics/docs/http-intro\":\"someSidebar\",\"/webbasics/docs/intro-brief_history\":\"someSidebar\",\"/webbasics/docs/intro-dns\":\"someSidebar\",\"/webbasics/docs/intro-onesecond\":\"someSidebar\",\"/webbasics/docs/intro-protocols\":\"someSidebar\",\"/webbasics/docs/intro-web_vs_internet\":\"someSidebar\",\"/webbasics/docs/mdx\":\"someSidebar\"},\"isHomePage\":true,\"homePagePath\":\"/webbasics/docs/intro-onesecond\"}");
 
 /***/ }),
-/* 132 */
+/* 131 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16872,7 +16850,7 @@ __webpack_require__.r(__webpack_exports__);
  */function pluralize(count,word){return count>1?`${word}s`:word;}function BlogTagsPostPage(props){const{metadata,items}=props;const{allTagsPath,name:tagName,count}=metadata;return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_theme_Layout__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"],{title:`Posts tagged "${tagName}"`,description:`Blog | Tagged "${tagName}"`},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"container margin-vert--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"row"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"col col--8 col--offset-2"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1",null,count," ",pluralize(count,'post')," tagged with \"",tagName,"\""),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{href:allTagsPath},"View All Tags"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-vert--xl"},items.map(({content:BlogPostContent})=>/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_theme_BlogPostItem__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"],{key:BlogPostContent.metadata.permalink,frontMatter:BlogPostContent.frontMatter,metadata:BlogPostContent.metadata,truncated:true},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BlogPostContent,null))))))));}/* harmony default export */ __webpack_exports__["default"] = (BlogTagsPostPage);
 
 /***/ }),
-/* 133 */
+/* 132 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16885,7 +16863,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
-const frontMatter={id:'intro-protocols',title:'Protokolle und das OSI-Modell',sidebar_label:'Protokolle'};const metadata={"id":"intro-protocols","title":"Protokolle und das OSI-Modell","description":"In diesem Skriptum wurde HTTP, das Hypertext Transfer Protocol bereits mehrfach erwähnt.","source":"@site/docs/protocols.md","permalink":"/webbasics/docs/intro-protocols","editUrl":"https://github.com/michivo/webbasics/edit/master/website/docs/protocols.md","sidebar_label":"Protokolle","sidebar":"someSidebar","previous":{"title":"Eine kurze Geschichte des WWW","permalink":"/webbasics/docs/intro-brief_history"},"next":{"title":"HTTP - das HyperText Transfer Protocol","permalink":"/webbasics/docs/http-intro"}};/* @jsx mdx */const rightToc=[{value:'Das TCP/IP-Referenzmodell',id:'das-tcpip-referenzmodell',children:[{value:'Netzzugangsschicht / Link Layer',id:'netzzugangsschicht--link-layer',children:[]},{value:'Internetschicht / Internet Layer',id:'internetschicht--internet-layer',children:[]},{value:'Transportschicht / Transport Layer',id:'transportschicht--transport-layer',children:[]},{value:'Anwendungsschicht / Application Layer',id:'anwendungsschicht--application-layer',children:[]}]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`In diesem Skriptum wurde HTTP, das `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"p"},`Hypertext Transfer Protocol`),` bereits mehrfach erwähnt.
+const frontMatter={id:'intro-protocols',title:'Protokolle und das OSI-Modell',sidebar_label:'Protokolle'};const metadata={"id":"intro-protocols","title":"Protokolle und das OSI-Modell","description":"In diesem Skriptum wurde HTTP, das Hypertext Transfer Protocol bereits mehrfach erwähnt.","source":"@site/docs/protocols.md","permalink":"/webbasics/docs/intro-protocols","editUrl":"https://github.com/michivo/webbasics/edit/master/website/docs/protocols.md","sidebar_label":"Protokolle","sidebar":"someSidebar","previous":{"title":"Eine kurze Geschichte des WWW","permalink":"/webbasics/docs/intro-brief_history"},"next":{"title":"DNS - Das Domain Name Service","permalink":"/webbasics/docs/intro-dns"}};/* @jsx mdx */const rightToc=[{value:'Das TCP/IP-Referenzmodell',id:'das-tcpip-referenzmodell',children:[{value:'Netzzugangsschicht / Link Layer',id:'netzzugangsschicht--link-layer',children:[]},{value:'Internetschicht / Internet Layer',id:'internetschicht--internet-layer',children:[]},{value:'Transportschicht / Transport Layer',id:'transportschicht--transport-layer',children:[]},{value:'Anwendungsschicht / Application Layer',id:'anwendungsschicht--application-layer',children:[]}]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`In diesem Skriptum wurde HTTP, das `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"p"},`Hypertext Transfer Protocol`),` bereits mehrfach erwähnt.
 Nachdem schon kurz umrissen wurde, was `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"p"},`Hypertext`),` ist und die Bedeutung von `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"p"},`Transfer`),`
 (also Übertragung) wohl keiner weiteren Erläuterung bedarf, bleibt noch der Begriff
 `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"p"},`Protocol`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Ein Protokoll in der Informatik bzw. Telekommunikation ist eine Vereinbarung, nach der
@@ -16914,7 +16892,7 @@ und nicht-standardisierter Protokolle, zum Beispiel DNS, FTP, HTTP, POP3, HTTPS,
 SSH, ...`));};MDXContent.isMDXComponent=true;
 
 /***/ }),
-/* 134 */
+/* 133 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16927,16 +16905,97 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
-const frontMatter={id:'http-intro',title:'HTTP - das HyperText Transfer Protocol',sidebar_label:'Überblick'};const metadata={"id":"http-intro","title":"HTTP - das HyperText Transfer Protocol","description":"TODO","source":"@site/docs/http_intro.md","permalink":"/webbasics/docs/http-intro","editUrl":"https://github.com/michivo/webbasics/edit/master/website/docs/http_intro.md","sidebar_label":"Überblick","sidebar":"someSidebar","previous":{"title":"Protokolle und das OSI-Modell","permalink":"/webbasics/docs/intro-protocols"},"next":{"title":"Powered by MDX","permalink":"/webbasics/docs/mdx"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`TODO`));};MDXContent.isMDXComponent=true;
+const frontMatter={id:'http-intro',title:'HTTP - das HyperText Transfer Protocol',sidebar_label:'Überblick'};const metadata={"id":"http-intro","title":"HTTP - das HyperText Transfer Protocol","description":"Das Hypertext Transfer Protocol (HTTP, englisch für Hypertext-Übertragungsprotokoll) ist ein","source":"@site/docs/http_intro.md","permalink":"/webbasics/docs/http-intro","editUrl":"https://github.com/michivo/webbasics/edit/master/website/docs/http_intro.md","sidebar_label":"Überblick","sidebar":"someSidebar","previous":{"title":"DNS - Das Domain Name Service","permalink":"/webbasics/docs/intro-dns"},"next":{"title":"Powered by MDX","permalink":"/webbasics/docs/mdx"}};/* @jsx mdx */const rightToc=[{value:'Beispiel-Anfrage',id:'beispiel-anfrage',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"p"},`Das Hypertext Transfer Protocol (HTTP, englisch für Hypertext-Übertragungsprotokoll) ist ein`),`
+`,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"p"},`zustandsloses Protokoll zur Übertragung von Daten auf der Anwendungsschicht über ein Rechnernetz.`),`
+`,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"p"},`Es wird hauptsächlich eingesetzt, um Webseiten (Hypertext-Dokumente) aus dem World Wide Web (WWW)`),`
+`,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"p"},`in einen Webbrowser zu laden. Es ist jedoch nicht prinzipiell darauf beschränkt und auch als`),`
+`,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"p"},`allgemeines Dateiübertragungsprotokoll sehr verbreitet.`),`
+(Quelle: `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol"}),`https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol`),`).`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`HTTP ist also`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},`ein zustandsloses Protokoll: Anfragen sind voneinander unabhängig. Anfragen haben keinen Bezug zu früheren Anfragen.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},`ein Protokoll auf der Anwendungsschicht des `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"li"},{"href":"intro-protocols"}),`TCP/IP-Referenzmodells`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},`ein Protokoll zur Übertragung von Daten über ein Rechnernetz, meist über das Internet`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Die Kommunikation bei HTTP findet stets zwischen einem HTTP-Client (meist einem Browser, wie
+Chrome, Firefox, Edge, ...) und einem HTTP-Server (nginx, Apache, MS IIS, ...) statt. Der Client
+schickt `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"p"},`Anfragen/Requests`),` an den Server, der Server reagiert darauf mit `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"p"},`Antworten/Responses`),`.
+Anfragen und Antworten werden als `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"p"},`Nachrichten`),` bezeichnet, jede Nachricht besteht aus einem
+`,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"p"},`Header`),` und einem `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"p"},`Body`),`. Der Header enthält Daten über den Body, damit dieser vom Empfänger
+der jeweiligen Nachricht richtig verarbeitet werden kann.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"beispiel-anfrage"},`Beispiel-Anfrage`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`HTTP-Requests sind auch für Menschen lesbar. Will man zum Beispiel die Internetseite mit
+der URL `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"http://info.cern.ch/hypertext/WWW/TheProject.html"}),`http://info.cern.ch/hypertext/WWW/TheProject.html`),` abrufen, wird zuerst (siehe `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"DNS"}),`intro-dns`),`)
+der Domainname `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`info.cern.ch`),` aufgelöst. Der Domainname ist mit der IP-Adresse 188.184.100.82
+verknüpft, zum Rechner mit dieser IP-Adresse wird dann folgende Anfrage geschickt:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{}),`GET /hypertext/WWW/TheProject.html HTTP/1.1
+Host: info.cern.ch
+`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`GET`),` ist dabei das sogenannte `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"li"},`HTTP-Anfragemethode`),` und bezeichnet die Operation, die ausgeführt werden soll`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`/hypertext/WWW/TheProject.html`),` ist die Ressource, auf die zugegriffen werden soll`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`HTTP/1.1`),` ist der Protokollbezeichner - es wird also HTTP Version 1.1 für die Kommunikation verwendet`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`Host`),` ist ein `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"li"},`HTTP-Header`),`, der festlegt, für welchen DNS-Namen die Anfrage gedacht ist. So ist es möglich, mehrere Webseiten auf einem Rechner mit einer IP-Adresse zu betreiben. Der Wert dieses Headers ist der DNS-Name `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`info.cern.ch`),`.`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{}),`HTTP/1.1 200 OK 
+Date: Tue, 30 Jun 2020 09:24:25 GMT  
+Server: Apache  
+Last-Modified: Thu, 03 Dec 1992 08:37:20 GMT  
+ETag: "40521e06-8a9-291e721905000"   
+Accept-Ranges: bytes  
+Content-Length: 2217  
+Connection: close  
+Content-Type: text/html
+
+[Antwort-Body]
+`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("details",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("summary",null,"Klicken Sie hier, um den gesamten Antwort-Body zu sehen (zur besseren Lesbarkeit formatiert)."),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{}),`<HEADER>
+  <TITLE>The World Wide Web project<TITLE> 
+  <NEXTID N="55"> 
+</HEADER> 
+<BODY> 
+  <H1>World Wide Web</H1>
+  The WorldWideWeb (W3) is a wide-area<A NAME=0 HREF="WhatIs.html"> hypermedia</A> 
+  information retrieval initiative aiming to give universal access to a large universe 
+  of documents.
+  <P> 
+  Everything there is online about W3 is linked directly or indirectly to this document, 
+  including an <A NAME=24 HREF="Summary.html">executive summary</A> of the project, 
+  <A NAME=29 HREF="Administration/Mailing/Overview.html">Mailing lists</A> , 
+  <A NAME=30 HREF="Policy.html">Policy</A> , November's  
+  <A NAME=34 HREF="News/9211.html">W3  news</A> , 
+  <A NAME=41 HREF="FAQ/List.html">Frequently Asked Questions</A> . 
+  <DL> 
+    <DT><A NAME=44 HREF="../DataSources/Top.html">What's out there?</A> 
+    <DD> Pointers to the world's online information,
+    <A NAME=45 HREF="../DataSources/bySubject/Overview.html"> subjects</A> , 
+    <A NAME=z54 HREF="../DataSources/WWW/Servers.html">W3 servers</A>, etc. 
+
+    <DT><A NAME=46 HREF="Help.html">Help</A> 
+    <DD> on the browser you are using 
+
+    <DT><A NAME=13 HREF="Status.html">Software Products</A> 
+    <DD> A list of W3 project components and their current state. (e.g. 
+    <A NAME=27 HREF="LineMode/Browser.html">Line Mode</A> ,X11 
+    <A NAME=35 HREF="Status.html#35">Viola</A> ,  
+    <A NAME=26 HREF="NeXT/WorldWideWeb.html">NeXTStep</A> , 
+    <A NAME=25 HREF="Daemon/Overview.html">Servers</A> , 
+    <A NAME=51 HREF="Tools/Overview.html">Tools</A> ,
+    <A NAME=53 HREF="MailRobot/Overview.html"> Mail robot</A> ,
+    <A NAME=52 HREF="Status.html#57"> Library</A> ) 
+    
+    <DT><A NAME=47 HREF="Technical.html">Technical</A> 
+    <DD> Details of protocols, formats, program internals etc 
+
+    <DT><A NAME=40 HREF="Bibliography.html">Bibliography</A> 
+    <DD> Paper documentation on  W3 and references. 
+
+    <DT><A NAME=14 HREF="People.html">People</A> 
+    <DD> A list of some people involved in the project. 
+
+    <DT><A NAME=15 HREF="History.html">History</A> 
+    <DD> A summary of the history of the project. 
+
+    <DT><A NAME=37 HREF="Helping.html">How can I help</A> ? 
+    <DD> If you would like to support the web.. 
+
+    <DT><A NAME=48 HREF="../README.html">Getting code</A> 
+    <DD> Getting the code by
+    <A NAME=49 HREF="LineMode/Defaults/Distribution.html"> anonymous FTP</A> , etc.</A>
+  </DL>
+</BODY>
+`))),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Die Bedeutung der Response-Header ist wie folgt:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`HTTP/1.1`),` - das Ergebnis enspricht HTTP Version 1.1`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`200 OK`),` - der Ergebnisstatuscode ist 200 OK, die Anfrage konnte erfolgreich bearbeitet werden`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`Date: Tue, 30 Jun 2020 09:24:25 GMT`),` - Datum der Response`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`Server: Apache`),` - die Response kommt von einem Apache-Server`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`Last-Modified: Thu, 03 Dec 1992 08:37:20 GMT`),` - das abgefragte Dokument wurde zuletzt 1992 modifiziert`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`ETag: "40521e06-8a9-291e721905000"`),` - Entity Tag, wird u.a. für Caching verwendet`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`Accept-Ranges: bytes`),` - Hiermit gibt der Server bekannt, dass er auch partielle Requests verarbeiten kann (z.B. wenn ein Download unterbrochen wurde)`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`Content-Length: 2217`),` - Länge des Response-Bodys`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`Connection: close`),` - Darunterliegende TCP-Verbindung soll geschlossen werden`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`Content-Type: text/html`),` - Das Ergebnis enthält HTML`)));};MDXContent.isMDXComponent=true;
 
 /***/ }),
-/* 135 */
+/* 134 */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"allTagsPath\":\"/webbasics/blog/tags\",\"slug\":\"docusaurus\",\"name\":\"docusaurus\",\"count\":3,\"permalink\":\"/webbasics/blog/tags/docusaurus\"}");
 
 /***/ }),
-/* 136 */
+/* 135 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16952,13 +17011,13 @@ __webpack_require__.r(__webpack_exports__);
 const frontMatter={id:'hola',title:'Hola',author:'Gao Wei',author_title:'Docusaurus Core Team',author_url:'https://github.com/wgao19',author_image_url:'https://avatars1.githubusercontent.com/u/2055384?v=4',tags:['hola','docusaurus']};const metadata={"permalink":"/webbasics/blog/hola","editUrl":"https://github.com/michivo/webbasics/edit/master/website/blog/blog/2019-05-28-hola.md","source":"@site/blog/2019-05-28-hola.md","description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet","date":"2019-05-28T00:00:00.000Z","tags":[{"label":"hola","permalink":"/webbasics/blog/tags/hola"},{"label":"docusaurus","permalink":"/webbasics/blog/tags/docusaurus"}],"title":"Hola","readingTime":0.12,"truncated":false,"prevItem":{"title":"Hello","permalink":"/webbasics/blog/hello-world"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet`));};MDXContent.isMDXComponent=true;
 
 /***/ }),
-/* 137 */
+/* 136 */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"allTagsPath\":\"/webbasics/blog/tags\",\"slug\":\"hello\",\"name\":\"hello\",\"count\":2,\"permalink\":\"/webbasics/blog/tags/hello\"}");
 
 /***/ }),
-/* 138 */
+/* 137 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16974,7 +17033,7 @@ __webpack_require__.r(__webpack_exports__);
 const frontMatter={id:'welcome',title:'Welcome',author:'Yangshun Tay',author_title:'Front End Engineer @ Facebook',author_url:'https://github.com/yangshun',author_image_url:'https://avatars0.githubusercontent.com/u/1315101?s=400&v=4',tags:['facebook','hello','docusaurus']};const metadata={"permalink":"/webbasics/blog/welcome","editUrl":"https://github.com/michivo/webbasics/edit/master/website/blog/blog/2019-05-30-welcome.md","source":"@site/blog/2019-05-30-welcome.md","description":"Blog features are powered by the blog plugin. Simply add files to the blog directory. It supports tags as well!","date":"2019-05-30T00:00:00.000Z","tags":[{"label":"facebook","permalink":"/webbasics/blog/tags/facebook"},{"label":"hello","permalink":"/webbasics/blog/tags/hello"},{"label":"docusaurus","permalink":"/webbasics/blog/tags/docusaurus"}],"title":"Welcome","readingTime":0.175,"truncated":false,"nextItem":{"title":"Hello","permalink":"/webbasics/blog/hello-world"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Blog features are powered by the blog plugin. Simply add files to the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`blog`),` directory. It supports tags as well!`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Delete the whole directory if you don't want the blog features. As simple as that!`));};MDXContent.isMDXComponent=true;
 
 /***/ }),
-/* 139 */
+/* 138 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16998,10 +17057,26 @@ Transfer Protocol HTTP `),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* m
 im Browser u.a. auf Webseiten zugreifen können`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},`HyperText Transfer Protocol Secure (HTTPS), mit dem der gesamte Datenverkehr verschlüsselt werden kann`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Diese Standards werden großteils vom `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://www.w3.org"}),`World Wide Web Consortium`),` verwaltet.`));};MDXContent.isMDXComponent=true;
 
 /***/ }),
-/* 140 */
+/* 139 */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"permalink\":\"/webbasics/blog\",\"page\":1,\"postsPerPage\":10,\"totalPages\":1,\"totalCount\":3,\"previousPage\":null,\"nextPage\":null}");
+
+/***/ }),
+/* 140 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "frontMatter", function() { return frontMatter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "metadata", function() { return metadata; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rightToc", function() { return rightToc; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MDXContent; });
+/* harmony import */ var _home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
+const frontMatter={id:'hola',title:'Hola',author:'Gao Wei',author_title:'Docusaurus Core Team',author_url:'https://github.com/wgao19',author_image_url:'https://avatars1.githubusercontent.com/u/2055384?v=4',tags:['hola','docusaurus']};const metadata={"permalink":"/webbasics/blog/hola","editUrl":"https://github.com/michivo/webbasics/edit/master/website/blog/blog/2019-05-28-hola.md","source":"@site/blog/2019-05-28-hola.md","description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet","date":"2019-05-28T00:00:00.000Z","tags":[{"label":"hola","permalink":"/webbasics/blog/tags/hola"},{"label":"docusaurus","permalink":"/webbasics/blog/tags/docusaurus"}],"title":"Hola","readingTime":0.12,"truncated":false,"prevItem":{"title":"Hello","permalink":"/webbasics/blog/hello-world"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet`));};MDXContent.isMDXComponent=true;
 
 /***/ }),
 /* 141 */
@@ -17017,7 +17092,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
-const frontMatter={id:'hola',title:'Hola',author:'Gao Wei',author_title:'Docusaurus Core Team',author_url:'https://github.com/wgao19',author_image_url:'https://avatars1.githubusercontent.com/u/2055384?v=4',tags:['hola','docusaurus']};const metadata={"permalink":"/webbasics/blog/hola","editUrl":"https://github.com/michivo/webbasics/edit/master/website/blog/blog/2019-05-28-hola.md","source":"@site/blog/2019-05-28-hola.md","description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet","date":"2019-05-28T00:00:00.000Z","tags":[{"label":"hola","permalink":"/webbasics/blog/tags/hola"},{"label":"docusaurus","permalink":"/webbasics/blog/tags/docusaurus"}],"title":"Hola","readingTime":0.12,"truncated":false,"prevItem":{"title":"Hello","permalink":"/webbasics/blog/hello-world"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet`));};MDXContent.isMDXComponent=true;
+/* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(10);
+const frontMatter={id:'intro-dns',title:'DNS - Das Domain Name Service',sidebar_label:'Domain Name Service'};const metadata={"id":"intro-dns","title":"DNS - Das Domain Name Service","description":"Das Internet als IP-basiertes Netzwerk kennt IP-Adressen, keine Domain-Namen wie z.B. campus02.at.","source":"@site/docs/dns.mdx","permalink":"/webbasics/docs/intro-dns","editUrl":"https://github.com/michivo/webbasics/edit/master/website/docs/dns.mdx","sidebar_label":"Domain Name Service","sidebar":"someSidebar","previous":{"title":"Protokolle und das OSI-Modell","permalink":"/webbasics/docs/intro-protocols"},"next":{"title":"HTTP - das HyperText Transfer Protocol","permalink":"/webbasics/docs/http-intro"}};/* @jsx mdx */const rightToc=[{value:'Auflösung eines DNS-Requests',id:'auflösung-eines-dns-requests',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Das Internet als IP-basiertes Netzwerk kennt `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"p"},`IP-Adressen`),`, keine `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"p"},`Domain-Namen`),` wie z.B. campus02.at.
+Wir als Benutzer arbeiten aber nur in seltenen Fällen direkt mit IP-Adressen, in der Regel kennen
+wir nur Domain-Namen wie z.B. campus02.at . Die Umwandlung eines Domain-Namens in eine IP-Adresse
+geschieht über das `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"p"},`Domain Name Service (DNS)`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Der Domäne campus02.at ist zum Beispiel die IPv4-Adresse 149.154.100.47 zugeordnet (Stand 26.6.2020),
+der Domäne de.wikipedia.org die IPv4-Adresse 91.198.174.192 und die IPv6-Adresse 2620:0:862:ed1a::1.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Das DNS funktioniert also ähnlich einem Telefonbuch: Im Telefonbuch werden Unternehmen oder Personen
+Telefonnummern zugeordnet, im DNS werden Domain-Namen IP-Adressen zugeordnet. Im Falle des DNS werden
+die Domains in einem global verteilten System gespeichert, das den Namensraum des Internets verwaltet.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"auflösung-eines-dns-requests"},`Auflösung eines DNS-Requests`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Angenommen, Sie wollen von Ihrem Rechner eine Verbindung zu `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`www.campus02.at`),` aufbauen. Dazu brauchen
+Sie, wie bereits erwähnt, die `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"p"},`IP-Adresse`),`, die der Domain `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`www.campus02.at`),` zugeordnet ist.
+Wie wird nun so ein DNS-Request aufgelöst?`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ol",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Ihr Rechner sucht in der Hosts-Datei bzw. in einem lokalen Cache,, ob die IP-Adresse für `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`www.campus02.at`),` hinterlegt ist. Wenn nicht, ...`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Ihr Rechner kontaktiert den DNS-Server, der in der Regel über DHCP automatisch zugewiesen wurde.
+Der DNS-Server wird in der Regel von Ihrem Internet Service Provider (ISP) betrieben. Der DNS-Server überprüft,
+ob er die IP-Adresse für `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"li"},{"href":"http://www.campus02.at"}),`www.campus02.at`),` kennt. Wenn nicht, ...`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Der DNS-Server fragt bei einem der weltweit 13 Root-Nameserver nach `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"li"},{"href":"http://www.campus02.at."}),`www.campus02.at.`),` Der Root-Nameserver
+weiß, in welcher DNS-Zone `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`at.`),` verwaltet wird und sendet Namen und IP-Adressen der `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`.at`),`-Nameserver an
+den DNS-Server Ihres ISPs.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Der `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`.at`),`-Nameserver sendet dem DNS-Server die Namen und IP-Adressen der Nameserver für `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`campus02.at`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Der DNS-Server fragt den Nameserver für `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`campus02.at`),` nach der IP-Adresse für `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`www.campus02.at`),`. `),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Der Nameserver antwortet dem DNS-Server mit der IP-Adresse. Der DNS-Server antwortet Ihrem Rechner ebenso
+mit dieser IP-Adresse. `),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Ihr Rechner kennt die IP-Adresse von `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`www.campus02.at`),`,
+Sie können eine Verbindung zu diesem Rechner aufbauen. `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("img",{alt:"Happy dancing banana",src:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"])('img/banana.gif'),height:"30"}))));};MDXContent.isMDXComponent=true;
 
 /***/ }),
 /* 142 */
@@ -17039,7 +17129,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _theme_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(14);
 /* harmony import */ var _docusaurus_Link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7);
 /* harmony import */ var _docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(3);
-/* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(12);
+/* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(10);
 /* harmony import */ var _styles_module_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(32);
 /* harmony import */ var _styles_module_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_styles_module_css__WEBPACK_IMPORTED_MODULE_7__);
 const features=[{title:/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment,null,"Easy to Use"),imageUrl:'img/undraw_docusaurus_mountain.svg',description:/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment,null,"Docusaurus was designed from the ground up to be easily installed and used to get your website up and running quickly.")},{title:/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment,null,"Focus on What Matters"),imageUrl:'img/undraw_docusaurus_tree.svg',description:/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment,null,"Docusaurus lets you focus on your docs, and we'll do the chores. Go ahead and move your docs into the ",/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("code",null,"docs")," directory.")},{title:/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment,null,"Powered by React"),imageUrl:'img/undraw_docusaurus_react.svg',description:/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment,null,"Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the same header and footer.")}];function Feature({imageUrl,title,description}){const imgUrl=Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"])(imageUrl);return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div",{className:classnames__WEBPACK_IMPORTED_MODULE_2___default()('col col--4',_styles_module_css__WEBPACK_IMPORTED_MODULE_7___default.a.feature)},imgUrl&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div",{className:"text--center"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img",{className:_styles_module_css__WEBPACK_IMPORTED_MODULE_7___default.a.featureImage,src:imgUrl,alt:title})),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3",null,title),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p",null,description));}function Home(){const context=Object(_docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"])();const{siteConfig={}}=context;return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_theme_Layout__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{title:`Hello from ${siteConfig.title}`,description:"Description will go into a meta tag in <head />"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("header",{className:classnames__WEBPACK_IMPORTED_MODULE_2___default()('hero hero--primary',_styles_module_css__WEBPACK_IMPORTED_MODULE_7___default.a.heroBanner)},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div",{className:"container"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1",{className:"hero__title"},siteConfig.title),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p",{className:"hero__subtitle"},siteConfig.tagline),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div",{className:_styles_module_css__WEBPACK_IMPORTED_MODULE_7___default.a.buttons},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:classnames__WEBPACK_IMPORTED_MODULE_2___default()('button button--outline button--secondary button--lg',_styles_module_css__WEBPACK_IMPORTED_MODULE_7___default.a.getStarted),to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"])('docs/')},"Get Started")))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("main",null,features&&features.length>0&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section",{className:_styles_module_css__WEBPACK_IMPORTED_MODULE_7___default.a.features},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div",{className:"container"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div",{className:"row"},features.map((props,idx)=>/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Feature,Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({key:idx},props))))))));}/* harmony default export */ __webpack_exports__["default"] = (Home);
@@ -18917,7 +19007,7 @@ if (Object.getOwnPropertyDescriptor(fs, 'promises')) {
 /* 157 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"/webbasics/\":{\"component\":\"c4f5d8e4\"},\"/webbasics/blog\":{\"component\":\"a6aa9e1f\",\"items\":[{\"content\":\"af172acd\"},{\"content\":\"3570154c\"},{\"content\":\"8e9f0a8a\"}],\"metadata\":\"bd4c9765\"},\"/webbasics/blog/hello-world\":{\"component\":\"ccc49370\",\"content\":\"d610846f\"},\"/webbasics/blog/hola\":{\"component\":\"ccc49370\",\"content\":\"bdd709f1\"},\"/webbasics/blog/tags\":{\"component\":\"01a85c17\",\"tags\":\"c27f81d6\"},\"/webbasics/blog/tags/docusaurus\":{\"component\":\"6875c492\",\"items\":[{\"content\":\"af172acd\"},{\"content\":\"3570154c\"},{\"content\":\"8e9f0a8a\"}],\"metadata\":\"8873f260\"},\"/webbasics/blog/tags/facebook\":{\"component\":\"6875c492\",\"items\":[{\"content\":\"af172acd\"}],\"metadata\":\"edfec533\"},\"/webbasics/blog/tags/hello\":{\"component\":\"6875c492\",\"items\":[{\"content\":\"af172acd\"},{\"content\":\"3570154c\"}],\"metadata\":\"99ed84a9\"},\"/webbasics/blog/tags/hola\":{\"component\":\"6875c492\",\"items\":[{\"content\":\"8e9f0a8a\"}],\"metadata\":\"4157bb80\"},\"/webbasics/blog/welcome\":{\"component\":\"ccc49370\",\"content\":\"2868cdab\"},\"/webbasics/docs\":{\"component\":\"1be78505\",\"docsMetadata\":\"5c33d81d\",\"content\":\"4e1bdf0d\"},\"/webbasics/docs/:route\":{\"component\":\"1be78505\",\"docsMetadata\":\"1940a611\"},\"/webbasics/docs/http-intro\":{\"component\":\"17896441\",\"content\":\"7ff45023\"},\"/webbasics/docs/intro-brief_history\":{\"component\":\"17896441\",\"content\":\"318196e7\"},\"/webbasics/docs/intro-dns\":{\"component\":\"17896441\",\"content\":\"34271ad4\"},\"/webbasics/docs/intro-onesecond\":{\"component\":\"17896441\",\"content\":\"4e1bdf0d\"},\"/webbasics/docs/intro-protocols\":{\"component\":\"17896441\",\"content\":\"7a2c36e3\"},\"/webbasics/docs/intro-web_vs_internet\":{\"component\":\"17896441\",\"content\":\"bae7b14e\"},\"/webbasics/docs/mdx\":{\"component\":\"17896441\",\"content\":\"ce3e42ad\"}}");
+module.exports = JSON.parse("{\"/webbasics/\":{\"component\":\"c4f5d8e4\"},\"/webbasics/blog\":{\"component\":\"a6aa9e1f\",\"items\":[{\"content\":\"af172acd\"},{\"content\":\"3570154c\"},{\"content\":\"8e9f0a8a\"}],\"metadata\":\"bd4c9765\"},\"/webbasics/blog/hello-world\":{\"component\":\"ccc49370\",\"content\":\"d610846f\"},\"/webbasics/blog/hola\":{\"component\":\"ccc49370\",\"content\":\"bdd709f1\"},\"/webbasics/blog/tags\":{\"component\":\"01a85c17\",\"tags\":\"c27f81d6\"},\"/webbasics/blog/tags/docusaurus\":{\"component\":\"6875c492\",\"items\":[{\"content\":\"af172acd\"},{\"content\":\"3570154c\"},{\"content\":\"8e9f0a8a\"}],\"metadata\":\"8873f260\"},\"/webbasics/blog/tags/facebook\":{\"component\":\"6875c492\",\"items\":[{\"content\":\"af172acd\"}],\"metadata\":\"edfec533\"},\"/webbasics/blog/tags/hello\":{\"component\":\"6875c492\",\"items\":[{\"content\":\"af172acd\"},{\"content\":\"3570154c\"}],\"metadata\":\"99ed84a9\"},\"/webbasics/blog/tags/hola\":{\"component\":\"6875c492\",\"items\":[{\"content\":\"8e9f0a8a\"}],\"metadata\":\"4157bb80\"},\"/webbasics/blog/welcome\":{\"component\":\"ccc49370\",\"content\":\"2868cdab\"},\"/webbasics/docs\":{\"component\":\"1be78505\",\"docsMetadata\":\"5c33d81d\",\"content\":\"4e1bdf0d\"},\"/webbasics/docs/:route\":{\"component\":\"1be78505\",\"docsMetadata\":\"1940a611\"},\"/webbasics/docs/http-intro\":{\"component\":\"17896441\",\"content\":\"7ff45023\"},\"/webbasics/docs/intro-brief_history\":{\"component\":\"17896441\",\"content\":\"318196e7\"},\"/webbasics/docs/intro-dns\":{\"component\":\"17896441\",\"content\":\"c172b834\"},\"/webbasics/docs/intro-onesecond\":{\"component\":\"17896441\",\"content\":\"4e1bdf0d\"},\"/webbasics/docs/intro-protocols\":{\"component\":\"17896441\",\"content\":\"7a2c36e3\"},\"/webbasics/docs/intro-web_vs_internet\":{\"component\":\"17896441\",\"content\":\"bae7b14e\"},\"/webbasics/docs/mdx\":{\"component\":\"17896441\",\"content\":\"ce3e42ad\"}}");
 
 /***/ }),
 /* 158 */
@@ -21206,7 +21296,7 @@ var Marker = __webpack_require__(13);
 var formatPosition = __webpack_require__(46);
 var split = __webpack_require__(77);
 
-var serializeRules = __webpack_require__(10).rules;
+var serializeRules = __webpack_require__(11).rules;
 
 var IgnoreProperty = 'ignore-property';
 
@@ -22390,8 +22480,8 @@ var tidyRules = __webpack_require__(75);
 
 var OptimizationLevel = __webpack_require__(24).OptimizationLevel;
 
-var serializeBody = __webpack_require__(10).body;
-var serializeRules = __webpack_require__(10).rules;
+var serializeBody = __webpack_require__(11).body;
+var serializeRules = __webpack_require__(11).rules;
 
 var Token = __webpack_require__(9);
 
@@ -22448,7 +22538,7 @@ var restoreWithComponents = __webpack_require__(80);
 var restoreFromOptimizing = __webpack_require__(38);
 var wrapSingle = __webpack_require__(34).single;
 
-var serializeBody = __webpack_require__(10).body;
+var serializeBody = __webpack_require__(11).body;
 var Token = __webpack_require__(9);
 
 function mergeIntoShorthands(properties, validator) {
@@ -24175,7 +24265,7 @@ var restoreFromOptimizing = __webpack_require__(38);
 var Token = __webpack_require__(9);
 var Marker = __webpack_require__(13);
 
-var serializeProperty = __webpack_require__(10).property;
+var serializeProperty = __webpack_require__(11).property;
 
 function wouldBreakCompatibility(property, validator) {
   for (var i = 0; i < property.components.length; i++) {
@@ -24758,7 +24848,7 @@ var canReorderSingle = __webpack_require__(50).canReorderSingle;
 var extractProperties = __webpack_require__(81);
 var rulesOverlap = __webpack_require__(100);
 
-var serializeRules = __webpack_require__(10).rules;
+var serializeRules = __webpack_require__(11).rules;
 var OptimizationLevel = __webpack_require__(24).OptimizationLevel;
 var Token = __webpack_require__(9);
 
@@ -24992,8 +25082,8 @@ var tidyRules = __webpack_require__(75);
 
 var OptimizationLevel = __webpack_require__(24).OptimizationLevel;
 
-var serializeBody = __webpack_require__(10).body;
-var serializeRules = __webpack_require__(10).rules;
+var serializeBody = __webpack_require__(11).body;
+var serializeRules = __webpack_require__(11).rules;
 
 var Token = __webpack_require__(9);
 
@@ -25076,7 +25166,7 @@ var extractProperties = __webpack_require__(81);
 
 var optimizeProperties = __webpack_require__(48);
 
-var serializeRules = __webpack_require__(10).rules;
+var serializeRules = __webpack_require__(11).rules;
 
 var Token = __webpack_require__(9);
 
@@ -25163,8 +25253,8 @@ var cloneArray = __webpack_require__(101);
 
 var Token = __webpack_require__(9);
 
-var serializeBody = __webpack_require__(10).body;
-var serializeRules = __webpack_require__(10).rules;
+var serializeBody = __webpack_require__(11).body;
+var serializeRules = __webpack_require__(11).rules;
 
 function reduceNonAdjacent(tokens, context) {
   var options = context.options;
@@ -25343,7 +25433,7 @@ module.exports = reduceNonAdjacent;
 
 var Token = __webpack_require__(9);
 
-var serializeAll = __webpack_require__(10).all;
+var serializeAll = __webpack_require__(11).all;
 
 var FONT_FACE_SCOPE = '@font-face';
 
@@ -25379,8 +25469,8 @@ module.exports = removeDuplicateFontAtRules;
 
 var Token = __webpack_require__(9);
 
-var serializeAll = __webpack_require__(10).all;
-var serializeRules = __webpack_require__(10).rules;
+var serializeAll = __webpack_require__(11).all;
+var serializeRules = __webpack_require__(11).rules;
 
 function removeDuplicateMediaQueries(tokens) {
   var candidates = {};
@@ -25415,8 +25505,8 @@ module.exports = removeDuplicateMediaQueries;
 
 var Token = __webpack_require__(9);
 
-var serializeBody = __webpack_require__(10).body;
-var serializeRules = __webpack_require__(10).rules;
+var serializeBody = __webpack_require__(11).body;
+var serializeRules = __webpack_require__(11).rules;
 
 function removeDuplicates(tokens) {
   var matched = {};
@@ -25726,8 +25816,8 @@ var Token = __webpack_require__(9);
 
 var cloneArray = __webpack_require__(101);
 
-var serializeBody = __webpack_require__(10).body;
-var serializeRules = __webpack_require__(10).rules;
+var serializeBody = __webpack_require__(11).body;
+var serializeRules = __webpack_require__(11).rules;
 
 function naturalSorter(a, b) {
   return a > b ? 1 : -1;
@@ -35482,7 +35572,7 @@ module.exports = require("util");
 "use strict";
 
 
-const fs = __webpack_require__(11)
+const fs = __webpack_require__(12)
 const path = __webpack_require__(6)
 const mkdirpSync = __webpack_require__(18).mkdirsSync
 const utimesSync = __webpack_require__(120).utimesMillisSync
@@ -35653,7 +35743,7 @@ module.exports = copySync
 "use strict";
 
 
-const fs = __webpack_require__(11)
+const fs = __webpack_require__(12)
 const path = __webpack_require__(6)
 const invalidWin32Path = __webpack_require__(119).invalidWin32Path
 
@@ -35723,7 +35813,7 @@ module.exports = mkdirs
 "use strict";
 
 
-const fs = __webpack_require__(11)
+const fs = __webpack_require__(12)
 const path = __webpack_require__(6)
 const invalidWin32Path = __webpack_require__(119).invalidWin32Path
 
@@ -35803,7 +35893,7 @@ module.exports = function (size) {
 "use strict";
 
 
-const fs = __webpack_require__(11)
+const fs = __webpack_require__(12)
 const path = __webpack_require__(6)
 const mkdirp = __webpack_require__(18).mkdirs
 const pathExists = __webpack_require__(21).pathExists
@@ -36023,7 +36113,7 @@ module.exports = copy
 
 
 const u = __webpack_require__(15).fromCallback
-const fs = __webpack_require__(11)
+const fs = __webpack_require__(12)
 const path = __webpack_require__(6)
 const mkdir = __webpack_require__(18)
 const remove = __webpack_require__(53)
@@ -36077,7 +36167,7 @@ module.exports = {
 "use strict";
 
 
-const fs = __webpack_require__(11)
+const fs = __webpack_require__(12)
 const path = __webpack_require__(6)
 const assert = __webpack_require__(117)
 
@@ -36430,7 +36520,7 @@ module.exports = {
 
 const u = __webpack_require__(15).fromCallback
 const path = __webpack_require__(6)
-const fs = __webpack_require__(11)
+const fs = __webpack_require__(12)
 const mkdir = __webpack_require__(18)
 const pathExists = __webpack_require__(21).pathExists
 
@@ -36486,7 +36576,7 @@ module.exports = {
 
 const u = __webpack_require__(15).fromCallback
 const path = __webpack_require__(6)
-const fs = __webpack_require__(11)
+const fs = __webpack_require__(12)
 const mkdir = __webpack_require__(18)
 const pathExists = __webpack_require__(21).pathExists
 
@@ -36554,7 +36644,7 @@ module.exports = {
 
 const u = __webpack_require__(15).fromCallback
 const path = __webpack_require__(6)
-const fs = __webpack_require__(11)
+const fs = __webpack_require__(12)
 const _mkdirs = __webpack_require__(18)
 const mkdirs = _mkdirs.mkdirs
 const mkdirsSync = _mkdirs.mkdirsSync
@@ -36623,7 +36713,7 @@ module.exports = {
 
 
 const path = __webpack_require__(6)
-const fs = __webpack_require__(11)
+const fs = __webpack_require__(12)
 const pathExists = __webpack_require__(21).pathExists
 
 /**
@@ -36728,7 +36818,7 @@ module.exports = {
 "use strict";
 
 
-const fs = __webpack_require__(11)
+const fs = __webpack_require__(12)
 
 function symlinkType (srcpath, type, callback) {
   callback = (typeof type === 'function') ? type : callback
@@ -36788,7 +36878,7 @@ module.exports = jsonFile
 
 var _fs
 try {
-  _fs = __webpack_require__(11)
+  _fs = __webpack_require__(12)
 } catch (_) {
   _fs = __webpack_require__(23)
 }
@@ -36963,7 +37053,7 @@ module.exports = outputJson
 "use strict";
 
 
-const fs = __webpack_require__(11)
+const fs = __webpack_require__(12)
 const path = __webpack_require__(6)
 const mkdir = __webpack_require__(18)
 const jsonFile = __webpack_require__(85)
@@ -37000,7 +37090,7 @@ module.exports = {
 "use strict";
 
 
-const fs = __webpack_require__(11)
+const fs = __webpack_require__(12)
 const path = __webpack_require__(6)
 const copySync = __webpack_require__(118).copySync
 const removeSync = __webpack_require__(53).removeSync
@@ -37067,7 +37157,7 @@ module.exports = {
 "use strict";
 
 
-const fs = __webpack_require__(11)
+const fs = __webpack_require__(12)
 const path = __webpack_require__(6)
 const copy = __webpack_require__(121).copy
 const remove = __webpack_require__(53).remove
@@ -37140,7 +37230,7 @@ module.exports = move
 
 
 const u = __webpack_require__(15).fromCallback
-const fs = __webpack_require__(11)
+const fs = __webpack_require__(12)
 const path = __webpack_require__(6)
 const mkdir = __webpack_require__(18)
 const pathExists = __webpack_require__(21).pathExists
@@ -38696,7 +38786,7 @@ function _interopRequireWildcard(obj) {
 var routesChunkNames = __webpack_require__(157);
 
 // CONCATENATED MODULE: ./.docusaurus/registry.js
-/* harmony default export */ var registry = ({'01a85c17':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(122))),"@theme/BlogTagsListPage",/*require.resolve*/(122)],'17896441':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(55))),"@theme/DocItem",/*require.resolve*/(55)],'1940a611':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(124))),"~docs/webbasics-docs-route-1d4.json",/*require.resolve*/(124)],'1be78505':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(148))),"@theme/DocPage",/*require.resolve*/(148)],'2868cdab':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(125))),"@site/blog/2019-05-30-welcome.md",/*require.resolve*/(125)],'318196e7':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(126))),"@site/docs/brief_history.md",/*require.resolve*/(126)],'34271ad4':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(127))),"@site/docs/dns.md",/*require.resolve*/(127)],'3570154c':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(128))),"@site/blog/2019-05-29-hello-world.md?truncated=true",/*require.resolve*/(128)],'4157bb80':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(129))),"~blog/webbasics-blog-tags-hola-d9e.json",/*require.resolve*/(129)],'4e1bdf0d':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(130))),"@site/docs/onesecond.md",/*require.resolve*/(130)],'5c33d81d':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(131))),"~docs/site-docs-onesecond-md-4e1-base.json",/*require.resolve*/(131)],'6875c492':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(132))),"@theme/BlogTagsPostsPage",/*require.resolve*/(132)],'7a2c36e3':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(133))),"@site/docs/protocols.md",/*require.resolve*/(133)],'7ff45023':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(134))),"@site/docs/http_intro.md",/*require.resolve*/(134)],'8873f260':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(135))),"~blog/webbasics-blog-tags-docusaurus-3ee.json",/*require.resolve*/(135)],'8e9f0a8a':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(136))),"@site/blog/2019-05-28-hola.md?truncated=true",/*require.resolve*/(136)],'99ed84a9':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(137))),"~blog/webbasics-blog-tags-hello-f1d.json",/*require.resolve*/(137)],'a6aa9e1f':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(149))),"@theme/BlogListPage",/*require.resolve*/(149)],'af172acd':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(138))),"@site/blog/2019-05-30-welcome.md?truncated=true",/*require.resolve*/(138)],'bae7b14e':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(139))),"@site/docs/web_vs_internet.md",/*require.resolve*/(139)],'bd4c9765':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(140))),"~blog/webbasics-blog-cc4.json",/*require.resolve*/(140)],'bdd709f1':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(141))),"@site/blog/2019-05-28-hola.md",/*require.resolve*/(141)],'c27f81d6':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(142))),"~blog/webbasics-blog-tags-tags-1c7.json",/*require.resolve*/(142)],'c4f5d8e4':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(143))),"@site/src/pages/index.js",/*require.resolve*/(143)],'ccc49370':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(150))),"@theme/BlogPostPage",/*require.resolve*/(150)],'ce3e42ad':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(144))),"@site/docs/mdx.md",/*require.resolve*/(144)],'d610846f':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(145))),"@site/blog/2019-05-29-hello-world.md",/*require.resolve*/(145)],'edfec533':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(146))),"~blog/webbasics-blog-tags-facebook-9df.json",/*require.resolve*/(146)]});
+/* harmony default export */ var registry = ({'01a85c17':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(122))),"@theme/BlogTagsListPage",/*require.resolve*/(122)],'17896441':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(55))),"@theme/DocItem",/*require.resolve*/(55)],'1940a611':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(124))),"~docs/webbasics-docs-route-1d4.json",/*require.resolve*/(124)],'1be78505':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(148))),"@theme/DocPage",/*require.resolve*/(148)],'2868cdab':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(125))),"@site/blog/2019-05-30-welcome.md",/*require.resolve*/(125)],'318196e7':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(126))),"@site/docs/brief_history.md",/*require.resolve*/(126)],'3570154c':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(127))),"@site/blog/2019-05-29-hello-world.md?truncated=true",/*require.resolve*/(127)],'4157bb80':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(128))),"~blog/webbasics-blog-tags-hola-d9e.json",/*require.resolve*/(128)],'4e1bdf0d':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(129))),"@site/docs/onesecond.md",/*require.resolve*/(129)],'5c33d81d':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(130))),"~docs/site-docs-onesecond-md-4e1-base.json",/*require.resolve*/(130)],'6875c492':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(131))),"@theme/BlogTagsPostsPage",/*require.resolve*/(131)],'7a2c36e3':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(132))),"@site/docs/protocols.md",/*require.resolve*/(132)],'7ff45023':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(133))),"@site/docs/http_intro.md",/*require.resolve*/(133)],'8873f260':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(134))),"~blog/webbasics-blog-tags-docusaurus-3ee.json",/*require.resolve*/(134)],'8e9f0a8a':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(135))),"@site/blog/2019-05-28-hola.md?truncated=true",/*require.resolve*/(135)],'99ed84a9':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(136))),"~blog/webbasics-blog-tags-hello-f1d.json",/*require.resolve*/(136)],'a6aa9e1f':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(149))),"@theme/BlogListPage",/*require.resolve*/(149)],'af172acd':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(137))),"@site/blog/2019-05-30-welcome.md?truncated=true",/*require.resolve*/(137)],'bae7b14e':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(138))),"@site/docs/web_vs_internet.md",/*require.resolve*/(138)],'bd4c9765':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(139))),"~blog/webbasics-blog-cc4.json",/*require.resolve*/(139)],'bdd709f1':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(140))),"@site/blog/2019-05-28-hola.md",/*require.resolve*/(140)],'c172b834':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(141))),"@site/docs/dns.mdx",/*require.resolve*/(141)],'c27f81d6':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(142))),"~blog/webbasics-blog-tags-tags-1c7.json",/*require.resolve*/(142)],'c4f5d8e4':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(143))),"@site/src/pages/index.js",/*require.resolve*/(143)],'ccc49370':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(150))),"@theme/BlogPostPage",/*require.resolve*/(150)],'ce3e42ad':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(144))),"@site/docs/mdx.md",/*require.resolve*/(144)],'d610846f':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(145))),"@site/blog/2019-05-29-hello-world.md",/*require.resolve*/(145)],'edfec533':[()=>Promise.resolve().then(()=>_interopRequireWildcard(__webpack_require__(146))),"~blog/webbasics-blog-tags-facebook-9df.json",/*require.resolve*/(146)]});
 // CONCATENATED MODULE: ./node_modules/@docusaurus/core/lib/client/flat.js
 /**
  * Copyright (c) 2017-present, Facebook, Inc.
