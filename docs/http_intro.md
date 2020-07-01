@@ -20,7 +20,7 @@ Die Kommunikation bei HTTP findet stets zwischen einem HTTP-Client (meist einem 
 Chrome, Firefox, Edge, ...) und einem HTTP-Server (nginx, Apache, MS IIS, ...) statt. Der Client
 schickt **Anfragen/Requests** an den Server, der Server reagiert darauf mit **Antworten/Responses**.
 Anfragen und Antworten werden als **Nachrichten** bezeichnet, jede Nachricht besteht aus einem 
-**Header** und einem **Body**. Der Header enthält Daten über den Body, damit dieser vom Empfänger
+**Header** und optional einem **Body**. Der Header enthält Daten über den Body, damit dieser vom Empfänger
 der jeweiligen Nachricht richtig verarbeitet werden kann.
 
 ### Beispiel-Anfrage
@@ -37,6 +37,9 @@ Host: info.cern.ch
 - `/hypertext/WWW/TheProject.html` ist die Ressource, auf die zugegriffen werden soll
 - `HTTP/1.1` ist der Protokollbezeichner - es wird also HTTP Version 1.1 für die Kommunikation verwendet
 - `Host` ist ein **HTTP-Header**, der festlegt, für welchen DNS-Namen die Anfrage gedacht ist. So ist es möglich, mehrere Webseiten auf einem Rechner mit einer IP-Adresse zu betreiben. Der Wert dieses Headers ist der DNS-Name `info.cern.ch`.
+
+Eine Anfrage *kann* im Allgemeinen auch einen Body haben, eine **GET**-Anfrage hat jedoch keinen Body, sie besteht nur aus
+einem Header.
 
 ```
 HTTP/1.1 200 OK 
