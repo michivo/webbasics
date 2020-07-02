@@ -1,6 +1,6 @@
 module.exports = {
   someSidebar: {
-    Einführung: ['intro-about', 'intro-onesecond', 'intro-web_vs_internet', 'intro-brief_history', 'intro-protocols', 'intro-dns'],
+    Einführung: ['intro-about', 'intro-onesecond', 'intro-web_vs_internet', 'intro-brief_history', 'intro-protocols', 'intro-dns', 'intro-glossary', 'intro-learnings'],
     HTTP: ['http-intro', 'http-whatfor', 'http-methods', 'http-responses']
   },
 };
