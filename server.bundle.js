@@ -1367,20 +1367,6 @@ module.exports = Token;
 
 /***/ }),
 /* 10 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return useBaseUrl; });
-/* harmony import */ var _useDocusaurusContext__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
-/**
- * Copyright (c) 2017-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function useBaseUrl(url){const{siteConfig}=Object(_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])();const{baseUrl='/'}=siteConfig||{};if(!url){return url;}const externalRegex=/^(https?:|\/\/)/;if(externalRegex.test(url)){return url;}if(url.startsWith('/')){return baseUrl+url.slice(1);}return baseUrl+url;}
-
-/***/ }),
-/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var helpers = __webpack_require__(78);
@@ -1436,6 +1422,20 @@ module.exports = {
   value: value
 };
 
+
+/***/ }),
+/* 11 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return useBaseUrl; });
+/* harmony import */ var _useDocusaurusContext__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/**
+ * Copyright (c) 2017-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */function useBaseUrl(url){const{siteConfig}=Object(_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])();const{baseUrl='/'}=siteConfig||{};if(!url){return url;}const externalRegex=/^(https?:|\/\/)/;if(externalRegex.test(url)){return url;}if(url.startsWith('/')){return baseUrl+url.slice(1);}return baseUrl+url;}
 
 /***/ }),
 /* 12 */
@@ -1849,7 +1849,7 @@ var isInternalUrl = __webpack_require__(20);
 var useDocusaurusContext = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(10);
+var useBaseUrl = __webpack_require__(11);
 
 // CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/src/theme/hooks/useTheme.js
 /**
@@ -1949,7 +1949,7 @@ var component = __webpack_require__(164);
 var component_default = /*#__PURE__*/__webpack_require__.n(component);
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/src/theme/Toggle/styles.module.css
-var Toggle_styles_module = __webpack_require__(43);
+var Toggle_styles_module = __webpack_require__(42);
 var Toggle_styles_module_default = /*#__PURE__*/__webpack_require__.n(Toggle_styles_module);
 
 // CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/src/theme/Toggle/index.js
@@ -1960,7 +1960,7 @@ var Toggle_styles_module_default = /*#__PURE__*/__webpack_require__.n(Toggle_sty
  * LICENSE file in the root directory of this source tree.
  */const Moon=()=>/*#__PURE__*/react_default.a.createElement("span",{className:classnames_default()(Toggle_styles_module_default.a.toggle,Toggle_styles_module_default.a.moon)});const Sun=()=>/*#__PURE__*/react_default.a.createElement("span",{className:classnames_default()(Toggle_styles_module_default.a.toggle,Toggle_styles_module_default.a.sun)});/* harmony default export */ var Toggle = (function(props){const{isClient}=Object(useDocusaurusContext["a" /* default */])();return/*#__PURE__*/react_default.a.createElement(component_default.a,Object(esm_extends["a" /* default */])({disabled:!isClient,icons:{checked:/*#__PURE__*/react_default.a.createElement(Moon,null),unchecked:/*#__PURE__*/react_default.a.createElement(Sun,null)}},props));});
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/src/theme/hooks/useThemeContext.js
-var useThemeContext = __webpack_require__(36);
+var useThemeContext = __webpack_require__(35);
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/router.js
 var router = __webpack_require__(62);
@@ -1989,7 +1989,7 @@ var useLockBodyScroll = __webpack_require__(64);
 var useLogo = __webpack_require__(65);
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/src/theme/Navbar/styles.module.css
-var Navbar_styles_module = __webpack_require__(44);
+var Navbar_styles_module = __webpack_require__(43);
 var Navbar_styles_module_default = /*#__PURE__*/__webpack_require__.n(Navbar_styles_module);
 
 // CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/src/theme/Navbar/index.js
@@ -3226,7 +3226,7 @@ module.exports = require("fs");
 
 var roundingPrecisionFrom = __webpack_require__(95).roundingPrecisionFrom;
 
-var override = __webpack_require__(33);
+var override = __webpack_require__(32);
 
 var OptimizationLevel = {
   Zero: '0',
@@ -3478,7 +3478,7 @@ var breakUp = __webpack_require__(196);
 var canOverride = __webpack_require__(197);
 var restore = __webpack_require__(199);
 
-var override = __webpack_require__(33);
+var override = __webpack_require__(32);
 
 // Properties to process
 // Extend this object in order to add support for more properties in the optimizer.
@@ -4879,19 +4879,6 @@ module.exports = {
 /* 32 */
 /***/ (function(module, exports) {
 
-// Exports
-module.exports = {
-	"heroBanner": "heroBanner_2Ftp",
-	"buttons": "buttons_1Wc3",
-	"features": "features_P2SU",
-	"featureImage": "featureImage_3Xqx"
-};
-
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports) {
-
 function override(source1, source2) {
   var target = {};
   var key1;
@@ -4929,7 +4916,7 @@ module.exports = override;
 
 
 /***/ }),
-/* 34 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Hack = __webpack_require__(76);
@@ -5126,7 +5113,7 @@ module.exports = {
 
 
 /***/ }),
-/* 35 */
+/* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8306,7 +8293,7 @@ Prism.languages.yml = Prism.languages.yaml;
 
 
 /***/ }),
-/* 36 */
+/* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8321,7 +8308,7 @@ Prism.languages.yml = Prism.languages.yaml;
  */function useThemeContext(){return Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_theme_ThemeContext__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"]);}/* harmony default export */ __webpack_exports__["a"] = (useThemeContext);
 
 /***/ }),
-/* 37 */
+/* 36 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8342,7 +8329,7 @@ Prism.languages.yml = Prism.languages.yaml;
  */const MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];function BlogPostItem(props){const{children,frontMatter,metadata,truncated,isBlogPostPage=false}=props;const{date,permalink,tags,readingTime}=metadata;const{author,title}=frontMatter;const authorURL=frontMatter.author_url||frontMatter.authorURL;const authorTitle=frontMatter.author_title||frontMatter.authorTitle;const authorImageURL=frontMatter.author_image_url||frontMatter.authorImageURL;const renderPostHeader=()=>{const TitleHeading=isBlogPostPage?'h1':'h2';const match=date.substring(0,10).split('-');const year=match[0];const month=MONTHS[parseInt(match[1],10)-1];const day=parseInt(match[2],10);return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TitleHeading,{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()('margin-bottom--sm',_styles_module_css__WEBPACK_IMPORTED_MODULE_5___default.a.blogPostTitle)},isBlogPostPage?title:/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:permalink},title)),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-vert--md"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("time",{dateTime:date,className:_styles_module_css__WEBPACK_IMPORTED_MODULE_5___default.a.blogPostDate},month," ",day,", ",year,' ',readingTime&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment,null," \xB7 ",Math.ceil(readingTime)," min read"))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"avatar margin-vert--md"},authorImageURL&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{className:"avatar__photo-link avatar__photo",href:authorURL,target:"_blank",rel:"noreferrer noopener"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img",{src:authorImageURL,alt:author})),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"avatar__intro"},author&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment,null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4",{className:"avatar__name"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:authorURL,target:"_blank",rel:"noreferrer noopener"},author)),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small",{className:"avatar__subtitle"},authorTitle)))));};return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article",{className:!isBlogPostPage?'margin-bottom--xl':undefined},renderPostHeader(),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section",{className:"markdown"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* MDXProvider */ "a"],{components:_theme_MDXComponents__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"]},children)),(tags.length>0||truncated)&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer",{className:"row margin-vert--lg"},tags.length>0&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"col"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong",null,"Tags:"),tags.map(({label,permalink:tagPermalink})=>/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{key:tagPermalink,className:"margin-horiz--sm",to:tagPermalink},label))),truncated&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"col text--right"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:metadata.permalink,"aria-label":`Read more about ${title}`},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong",null,"Read More")))));}/* harmony default export */ __webpack_exports__["a"] = (BlogPostItem);
 
 /***/ }),
-/* 38 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Hack = __webpack_require__(76);
@@ -8417,7 +8404,7 @@ module.exports = restoreFromOptimizing;
 
 
 /***/ }),
-/* 39 */
+/* 38 */
 /***/ (function(module, exports) {
 
 /* -*- Mode: js; js-indent-level: 2; -*- */
@@ -8911,7 +8898,7 @@ exports.computeSourceURL = computeSourceURL;
 
 
 /***/ }),
-/* 40 */
+/* 39 */
 /***/ (function(module, exports) {
 
 var REMOTE_RESOURCE_PATTERN = /^(\w+:\/\/|\/\/)/;
@@ -8924,7 +8911,7 @@ module.exports = isRemoteResource;
 
 
 /***/ }),
-/* 41 */
+/* 40 */
 /***/ (function(module, exports) {
 
 /* -*- Mode: js; js-indent-level: 2; -*- */
@@ -9418,7 +9405,7 @@ exports.computeSourceURL = computeSourceURL;
 
 
 /***/ }),
-/* 42 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9757,7 +9744,7 @@ Loadable.preloadReady = function () {
 module.exports = Loadable;
 
 /***/ }),
-/* 43 */
+/* 42 */
 /***/ (function(module, exports) {
 
 // Exports
@@ -9769,7 +9756,7 @@ module.exports = {
 
 
 /***/ }),
-/* 44 */
+/* 43 */
 /***/ (function(module, exports) {
 
 // Exports
@@ -9782,12 +9769,25 @@ module.exports = {
 
 
 /***/ }),
+/* 44 */
+/***/ (function(module, exports) {
+
+// Exports
+module.exports = {
+	"heroBanner": "heroBanner_2Ftp",
+	"buttons": "buttons_1Wc3",
+	"features": "features_P2SU",
+	"featureImage": "featureImage_3Xqx"
+};
+
+
+/***/ }),
 /* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var systemLineBreak = __webpack_require__(93).EOL;
 
-var override = __webpack_require__(33);
+var override = __webpack_require__(32);
 
 var Breaks = {
   AfterAtRule: 'afterAtRule',
@@ -10295,9 +10295,9 @@ var populateComponents = __webpack_require__(79);
 
 var restoreWithComponents = __webpack_require__(80);
 
-var wrapForOptimizing = __webpack_require__(34).all;
+var wrapForOptimizing = __webpack_require__(33).all;
 var removeUnused = __webpack_require__(94);
-var restoreFromOptimizing = __webpack_require__(38);
+var restoreFromOptimizing = __webpack_require__(37);
 
 var OptimizationLevel = __webpack_require__(24).OptimizationLevel;
 
@@ -10335,7 +10335,7 @@ module.exports = optimizeProperties;
 /* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var wrapSingle = __webpack_require__(34).single;
+var wrapSingle = __webpack_require__(33).single;
 
 var Token = __webpack_require__(9);
 
@@ -10796,7 +10796,7 @@ var isInternalUrl = __webpack_require__(20);
 var useDocusaurusContext = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(10);
+var useBaseUrl = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
 var Link = __webpack_require__(7);
@@ -11871,8 +11871,8 @@ HelmetExport.renderStatic = HelmetExport.rewind;
 
 "use strict";
 /* harmony import */ var _docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
-/* harmony import */ var _theme_hooks_useThemeContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(36);
-/* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(10);
+/* harmony import */ var _theme_hooks_useThemeContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(35);
+/* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(11);
 /* harmony import */ var _docusaurus_isInternalUrl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(20);
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -11971,7 +11971,7 @@ function renderRoutes(routes, extraProps, switchProps) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony default export */ __webpack_exports__["a"] = ({"plugins":[],"themes":[],"customFields":{},"themeConfig":{"navbar":{"title":"Web Basics","logo":{"alt":"My Site Logo","src":"img/logo.svg"},"links":[{"to":"docs/","activeBasePath":"docs","label":"Skriptum","position":"left"},{"to":"blog","label":"Blog","position":"left"},{"href":"https://github.com/michivo/webbasics","label":"GitHub","position":"right"}]},"footer":{"style":"dark","copyright":"Copyright © 2020 Michael Faschinger, Built with Docusaurus."}},"title":"Web Basics","tagline":"Course materials for web basics course at FH Campus 02","url":"https://michivo.github.io","baseUrl":"/webbasics/","favicon":"img/favicon.ico","organizationName":"michivo","projectName":"webbasics","presets":[["@docusaurus/preset-classic",{"docs":{"homePageId":"intro-onesecond","sidebarPath":"/home/runner/work/webbasics/webbasics/sidebars.js","editUrl":"https://github.com/michivo/webbasics/edit/master/website/"},"blog":{"showReadingTime":true,"editUrl":"https://github.com/michivo/webbasics/edit/master/website/blog/"},"theme":{"customCss":"/home/runner/work/webbasics/webbasics/src/css/custom.css"}}]]});
+/* harmony default export */ __webpack_exports__["a"] = ({"plugins":[],"themes":[],"customFields":{},"themeConfig":{"navbar":{"title":"Web Basics","logo":{"alt":"Logo","src":"img/logo.svg"},"links":[{"to":"docs/","activeBasePath":"docs","label":"Skriptum","position":"left"},{"to":"blog","label":"Blog","position":"left"},{"href":"https://github.com/michivo/webbasics","label":"GitHub","position":"right"}]},"footer":{"style":"dark","copyright":"Copyright © 2020 Michael Faschinger, Built with Docusaurus."}},"title":"Web Basics","tagline":"Unterrichtsmaterial für die Lehrveranstaltung","url":"https://michivo.github.io/webbasics","baseUrl":"/webbasics/","favicon":"img/favicon.ico","organizationName":"michivo","projectName":"webbasics","presets":[["@docusaurus/preset-classic",{"docs":{"homePageId":"intro-onesecond","sidebarPath":"/home/runner/work/webbasics/webbasics/sidebars.js","editUrl":"https://github.com/michivo/webbasics/edit/master/website/"},"blog":{"showReadingTime":true,"editUrl":"https://github.com/michivo/webbasics/edit/master/website/blog/"},"theme":{"customCss":"/home/runner/work/webbasics/webbasics/src/css/custom.css"}}]]});
 
 /***/ }),
 /* 69 */
@@ -11994,7 +11994,7 @@ var classnames = __webpack_require__(4);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // EXTERNAL MODULE: ./node_modules/prism-react-renderer/prism/index.js
-var prism_react_renderer_prism = __webpack_require__(35);
+var prism_react_renderer_prism = __webpack_require__(34);
 
 // CONCATENATED MODULE: ./node_modules/prism-react-renderer/themes/duotoneDark/index.js
 // Duotone Dark
@@ -12492,7 +12492,7 @@ var palenight_theme = {
 /* harmony default export */ var palenight = (palenight_theme);
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/src/theme/hooks/useThemeContext.js
-var useThemeContext = __webpack_require__(36);
+var useThemeContext = __webpack_require__(35);
 
 // CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/src/theme/hooks/usePrismTheme.js
 /**
@@ -13712,8 +13712,8 @@ module.exports = restoreWithComponents;
 // Properties will be tokenized in one step, see #429
 
 var Token = __webpack_require__(9);
-var serializeRules = __webpack_require__(11).rules;
-var serializeValue = __webpack_require__(11).value;
+var serializeRules = __webpack_require__(10).rules;
+var serializeValue = __webpack_require__(10).value;
 
 function extractProperties(token) {
   var properties = [];
@@ -13789,7 +13789,7 @@ module.exports = extractProperties;
 var path = __webpack_require__(6);
 var url = __webpack_require__(26);
 
-var isRemoteResource = __webpack_require__(40);
+var isRemoteResource = __webpack_require__(39);
 var hasProtocol = __webpack_require__(51);
 
 var HTTP_PROTOCOL = 'http:';
@@ -14615,7 +14615,7 @@ module.exports = removeUnused;
 /* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var override = __webpack_require__(33);
+var override = __webpack_require__(32);
 
 var INTEGER_PATTERN = /^\d+$/;
 
@@ -14882,7 +14882,7 @@ exports.SourceNode = __webpack_require__(236).SourceNode;
  */
 
 var base64VLQ = __webpack_require__(104);
-var util = __webpack_require__(39);
+var util = __webpack_require__(38);
 var ArraySet = __webpack_require__(105).ArraySet;
 var MappingList = __webpack_require__(232).MappingList;
 
@@ -15458,7 +15458,7 @@ exports.decode = function base64VLQ_decode(aStr, aIndex, aOutParam) {
  * http://opensource.org/licenses/BSD-3-Clause
  */
 
-var util = __webpack_require__(39);
+var util = __webpack_require__(38);
 var has = Object.prototype.hasOwnProperty;
 var hasNativeMap = typeof Map !== "undefined";
 
@@ -15734,7 +15734,7 @@ module.exports =
  */
 
 var base64VLQ = __webpack_require__(114);
-var util = __webpack_require__(41);
+var util = __webpack_require__(40);
 var ArraySet = __webpack_require__(115).ArraySet;
 var MappingList = __webpack_require__(269).MappingList;
 
@@ -16310,7 +16310,7 @@ exports.decode = function base64VLQ_decode(aStr, aIndex, aOutParam) {
  * http://opensource.org/licenses/BSD-3-Clause
  */
 
-var util = __webpack_require__(41);
+var util = __webpack_require__(40);
 var has = Object.prototype.hasOwnProperty;
 var hasNativeMap = typeof Map !== "undefined";
 
@@ -16857,7 +16857,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _theme_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
-/* harmony import */ var _theme_BlogPostItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(37);
+/* harmony import */ var _theme_BlogPostItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(36);
 /* harmony import */ var _docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7);
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -17075,7 +17075,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
-/* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(10);
+/* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(11);
 const frontMatter={id:'intro-dns',title:'DNS - Das Domain Name Service',sidebar_label:'Domain Name Service'};const metadata={"id":"intro-dns","title":"DNS - Das Domain Name Service","description":"Das Internet als IP-basiertes Netzwerk kennt IP-Adressen, keine Domain-Namen wie z.B. campus02.at.","source":"@site/docs/intro_dns.mdx","permalink":"/webbasics/docs/intro-dns","editUrl":"https://github.com/michivo/webbasics/edit/master/website/docs/intro_dns.mdx","sidebar_label":"Domain Name Service","sidebar":"someSidebar","previous":{"title":"Protokolle und das OSI-Modell","permalink":"/webbasics/docs/intro-protocols"},"next":{"title":"Glossar","permalink":"/webbasics/docs/intro-glossary"}};/* @jsx mdx */const rightToc=[{value:'Auflösung eines DNS-Requests',id:'auflösung-eines-dns-requests',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Das Internet als IP-basiertes Netzwerk kennt `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"p"},`IP-Adressen`),`, keine `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"p"},`Domain-Namen`),` wie z.B. campus02.at.
 Wir als Benutzer arbeiten aber nur in seltenen Fällen direkt mit IP-Adressen, in der Regel kennen
 wir nur Domain-Namen wie z.B. campus02.at . Die Umwandlung eines Domain-Namens in eine IP-Adresse
@@ -17149,7 +17149,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
-const frontMatter={id:'http-responses',title:'HTTP - Response Codes',sidebar_label:'Response Codes'};const metadata={"id":"http-responses","title":"HTTP - Response Codes","description":"Jede Response von einem HTTP-Server beginnt mit einem Response-Code, der dem Client","source":"@site/docs/http_response_codes.md","permalink":"/webbasics/docs/http-responses","editUrl":"https://github.com/michivo/webbasics/edit/master/website/docs/http_response_codes.md","sidebar_label":"Response Codes","sidebar":"someSidebar","previous":{"title":"HTTP - Anfragemethoden","permalink":"/webbasics/docs/http-methods"}};/* @jsx mdx */const rightToc=[{value:'Informationen',id:'informationen',children:[{value:'100 Continue',id:'100-continue',children:[]},{value:'101 Switching protocols',id:'101-switching-protocols',children:[]},{value:'102 Processing',id:'102-processing',children:[]}]},{value:'Erfolg',id:'erfolg',children:[{value:'200 OK',id:'200-ok',children:[]},{value:'201 Created',id:'201-created',children:[]},{value:'202 Accepted',id:'202-accepted',children:[]},{value:'203 Non-Authoritative Information',id:'203-non-authoritative-information',children:[]},{value:'204 No Content',id:'204-no-content',children:[]},{value:'205 Reset Content',id:'205-reset-content',children:[]},{value:'206 Partial Content',id:'206-partial-content',children:[]}]},{value:'Umleitung',id:'umleitung',children:[{value:'300 Multiple Choices',id:'300-multiple-choices',children:[]},{value:'301 Moved Permanently',id:'301-moved-permanently',children:[]}]},{value:'Quellen:',id:'quellen',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Jede Response von einem HTTP-Server beginnt mit einem Response-Code, der dem Client
+const frontMatter={id:'http-responses',title:'HTTP - Response Codes',sidebar_label:'Response Codes'};const metadata={"id":"http-responses","title":"HTTP - Response Codes","description":"Jede Response von einem HTTP-Server beginnt mit einem Response-Code, der dem Client","source":"@site/docs/http_response_codes.md","permalink":"/webbasics/docs/http-responses","editUrl":"https://github.com/michivo/webbasics/edit/master/website/docs/http_response_codes.md","sidebar_label":"Response Codes","sidebar":"someSidebar","previous":{"title":"HTTP - Anfragemethoden","permalink":"/webbasics/docs/http-methods"}};/* @jsx mdx */const rightToc=[{value:'Informationen',id:'informationen',children:[{value:'100 Continue',id:'100-continue',children:[]},{value:'101 Switching protocols',id:'101-switching-protocols',children:[]},{value:'102 Processing',id:'102-processing',children:[]}]},{value:'Erfolg',id:'erfolg',children:[{value:'200 OK',id:'200-ok',children:[]},{value:'201 Created',id:'201-created',children:[]},{value:'202 Accepted',id:'202-accepted',children:[]},{value:'203 Non-Authoritative Information',id:'203-non-authoritative-information',children:[]},{value:'204 No Content',id:'204-no-content',children:[]},{value:'205 Reset Content',id:'205-reset-content',children:[]},{value:'206 Partial Content',id:'206-partial-content',children:[]}]},{value:'Umleitung',id:'umleitung',children:[{value:'300 Multiple Choices',id:'300-multiple-choices',children:[]},{value:'301 Moved Permanently',id:'301-moved-permanently',children:[]},{value:'302 Found',id:'302-found',children:[]},{value:'303 See Other',id:'303-see-other',children:[]},{value:'307 Temporary Redirect',id:'307-temporary-redirect',children:[]}]},{value:'Client-Fehler',id:'client-fehler',children:[{value:'400 Bad Request',id:'400-bad-request',children:[]},{value:'401 Unauthorized',id:'401-unauthorized',children:[]},{value:'403 Forbidden',id:'403-forbidden',children:[]},{value:'404 Not Found',id:'404-not-found',children:[]},{value:'405 Method Not Allowed',id:'405-method-not-allowed',children:[]},{value:'406 Not Acceptable',id:'406-not-acceptable',children:[]},{value:'407 Proxy Authentication Required',id:'407-proxy-authentication-required',children:[]},{value:'408 Request Timeout',id:'408-request-timeout',children:[]},{value:'409 Conflict',id:'409-conflict',children:[]},{value:'410 Gone',id:'410-gone',children:[]}]},{value:'Server-Fehler',id:'server-fehler',children:[{value:'500 Internal Server Error',id:'500-internal-server-error',children:[]},{value:'501 Not Implemented',id:'501-not-implemented',children:[]},{value:'502 Bad Gateway',id:'502-bad-gateway',children:[]},{value:'503 Service Unavailable',id:'503-service-unavailable',children:[]},{value:'504 Gateway Timeout',id:'504-gateway-timeout',children:[]},{value:'505 HTTP Version not supported',id:'505-http-version-not-supported',children:[]}]},{value:'Quellen',id:'quellen',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Jede Response von einem HTTP-Server beginnt mit einem Response-Code, der dem Client
 Informationen darüber gibt, ob die von ihm gestellte Anfrage erfolgreich beantwortet
 werden konnte oder nicht. Wenn eine Anfrage nicht erfolgreich beantwortet werden konnte,
 enthält der Response Code Informationen darüber, was der Grund für den Fehler war.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Der Response Code ist eine dreistellige Dezimalzahl, deren erste Stelle die Statusklasse
@@ -17168,7 +17168,27 @@ es gibt aber keinen Body.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/*
 aktive Dokument zurücksetzen bzw. neu laden soll.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"206-partial-content"},`206 Partial Content`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Der Server liefert nur einen Teil der Antwort im Body, weil der Client das so angefordert hat
 (z.B. um einen zuvor abgebrochenen Download fortzusetzen).`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Die weiteren 2xx-Codes haben kaum praktische Relevanz, werden hier daher nicht weiter behandelt.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"umleitung"},`Umleitung`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"300-multiple-choices"},`300 Multiple Choices`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Es gibt mehrere Optionen für die angefragte Ressource (z.B. mehrere unterschiedliche Videoformate, ...),
 der Client muss erst entscheiden, welches Format er bevorzugt.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"301-moved-permanently"},`301 Moved Permanently`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Die Ressource, die unter dieser URI zu finden war, ist nun unter einer neuen URI zu finden. Der Client
-soll in Zukunft nur noch die neue URI verwenden.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"quellen"},`Quellen:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"li"},{"href":"https://tools.ietf.org/html/rfc7231#section-6"}),`https://tools.ietf.org/html/rfc7231#section-6`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"li"},{"href":"https://developer.mozilla.org/de/docs/Web/HTTP/Status"}),`https://developer.mozilla.org/de/docs/Web/HTTP/Status`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"li"},{"href":"https://de.wikipedia.org/wiki/HTTP-Statuscode"}),`https://de.wikipedia.org/wiki/HTTP-Statuscode`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"li"},{"href":"https://en.wikipedia.org/wiki/List_of_HTTP_status_codes"}),`https://en.wikipedia.org/wiki/List_of_HTTP_status_codes`))));};MDXContent.isMDXComponent=true;
+soll in Zukunft nur noch die neue URI verwenden.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"302-found"},`302 Found`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Die Ressource, die unter dieser URI zu finden war, ist temporär unter einer neuen URI zu finden. Diese
+Umleitung kann sich in Zukunft ändern, der Client sollte daher bei späteren Requests immer die
+ursprüngliche URI verwenden. Der Body der Antwort sollte einen kurzen Hinweis auf die Umleitung und einen
+Link zur neuen URI enthalten.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"303-see-other"},`303 See Other`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Der Server leitet die Anfrage des Clients zu einer anderen Ressource um, die eine indirekte Antwort auf
+die ursprüngliche Anfrage des Clients gibt.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"307-temporary-redirect"},`307 Temporary Redirect`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Temporary Redirect verhält sich bis auf ein Detail gleich wie `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`302 Found`),`. Der einzige Unterschied ist,
+dass `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`302 Found`),` aus historischen Gründen eine Änderung der Methode von `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`POST`),` zu `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`GET`),` zulässt.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"client-fehler"},`Client-Fehler`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"400-bad-request"},`400 Bad Request`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Der Server kann die Anfrage nicht beantworten, weil die Anfrage ungültig ist (Fehlende Daten, ungültige
+Syntax, ...)`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"401-unauthorized"},`401 Unauthorized`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Für die Anfrage muss sich der Client erst gegenüber dem Server authentifizieren.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"403-forbidden"},`403 Forbidden`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Der Server hat die Anfrage verstanden, der Client ist aber nicht dazu berechtigt, auf die angefragte
+Ressource zuzugreifen. Der Client sollte nicht versuchen, die Anfrage noch einmal gleich zu stellen,
+kann sie aber mit neuen Zugriffsinformationen erneut senden.
+Server können statt mit `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`403 Forbidden`),` auch mit `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`404 Not Found`),` antworten, wenn sie aus
+Sicherheitsgründen dem Client nicht mitteilen wollen, dass die angefragte Ressource überhaupt existiert.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"404-not-found"},`404 Not Found`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Der Server kann die angefragte Ressource nicht finden oder will dem Client aus Sicherheitsgründen nicht
+mitteilen, dass die Ressource existiert. Dieser Statuscode sagt nichts darüber aus, ob dieser Zustand
+temporär oder permanent ist.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"405-method-not-allowed"},`405 Method Not Allowed`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Die angefragte Ressource existiert zwar, ein Zugriff mit der vom Client verwendeten Anfragemethode (GET, POST, ...)
+ist aber nicht möglich. In den Response-Headern teilt der Server dem Client die unterstützten Methoden mit.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"406-not-acceptable"},`406 Not Acceptable`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Die angefragte Ressource steht nicht in der angefragten Form zur Verfügung. Der Server kann dem Client
+mitteilen, in welcher Form die Ressource angefragt werden kann. Diese `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"p"},`Form`),` ist üblicherweise ein
+Format (z.B. Datenformat XML, Videoformat, ...).`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"407-proxy-authentication-required"},`407 Proxy Authentication Required`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Vergleichbar mit `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`401 Unauthorized`),`, jedoch muss sich der Client hier nicht gegenüber einem Server,
+sondern gegenüber einem Proxy authentifizieren.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"408-request-timeout"},`408 Request Timeout`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Innerhalb der vom Server erlaubten Zeitspanne wurde keine vollständige Anfrage des Clients empfangen.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"409-conflict"},`409 Conflict`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Die Anfrage kann nicht verarbeitet werden, weil die Zielressource in einem Zustand ist, der diese
+Anfrage nicht zulässt.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"410-gone"},`410 Gone`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Die Zielressource ist am Server nicht mehr vorhanden, daran wird sich auch voraussichtlich nichts ändern.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Das sind die wichtigsten Fehlercodes für Client-Fehler, eine umfassendere Liste findet sich in den in den Quellenangaben
+verlinkten Dokumenten. Wie der Name schon sagt, ist (zumindest aus Sicht des Servers) der `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"p"},`Client`),`
+verantwortlich für die 4xx-er Fehler, während der Server für die 5xx-er-Fehler verantwortlich ist. Die Abgrenzung
+zwischen Client- und Serverfehlern ist jedoch nicht immer ganz klar.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"server-fehler"},`Server-Fehler`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"500-internal-server-error"},`500 Internal Server Error`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Generischer Fehlercode für unerwartete Serverfehler.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"501-not-implemented"},`501 Not Implemented`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Die Funktionalität, um eine Anfrage zu bearbeiten, wurde noch nicht implementiert.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"502-bad-gateway"},`502 Bad Gateway`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Diese Antwort kommt üblicherweise von einem Proxy, wenn er wiederum eine ungültige Antwort bekommen hat.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"503-service-unavailable"},`503 Service Unavailable`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Der Server steht gerade nicht zur Verfügung, z.B. weil er gerade neu gestartet wird oder wegen Wartungsarbeiten.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"504-gateway-timeout"},`504 Gateway Timeout`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Diese Antwort kommt üblicherweise von einem Proxy, wenn er wiederum keine Antwort innerhalb der erwarteten Zeit bekommen hat.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"505-http-version-not-supported"},`505 HTTP Version not supported`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Die im Request angegebene HTTP-Version wird nicht unterstützt.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Auch hier gibt es weitere Fehler-Codes, die oben genannten sind allerdings die häufigsten serverseitigen Fehler.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"quellen"},`Quellen`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"li"},{"href":"https://tools.ietf.org/html/rfc7231#section-6"}),`https://tools.ietf.org/html/rfc7231#section-6`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"li"},{"href":"https://developer.mozilla.org/de/docs/Web/HTTP/Status"}),`https://developer.mozilla.org/de/docs/Web/HTTP/Status`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"li"},{"href":"https://de.wikipedia.org/wiki/HTTP-Statuscode"}),`https://de.wikipedia.org/wiki/HTTP-Statuscode`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"li"},{"href":"https://en.wikipedia.org/wiki/List_of_HTTP_status_codes"}),`https://en.wikipedia.org/wiki/List_of_HTTP_status_codes`))));};MDXContent.isMDXComponent=true;
 
 /***/ }),
 /* 144 */
@@ -17212,10 +17232,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _theme_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(14);
 /* harmony import */ var _docusaurus_Link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7);
 /* harmony import */ var _docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(3);
-/* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(10);
-/* harmony import */ var _styles_module_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(32);
+/* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(11);
+/* harmony import */ var _styles_module_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(44);
 /* harmony import */ var _styles_module_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_styles_module_css__WEBPACK_IMPORTED_MODULE_7__);
-const features=[{title:/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment,null,"Easy to Use"),imageUrl:'img/undraw_docusaurus_mountain.svg',description:/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment,null,"Docusaurus was designed from the ground up to be easily installed and used to get your website up and running quickly.")},{title:/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment,null,"Focus on What Matters"),imageUrl:'img/undraw_docusaurus_tree.svg',description:/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment,null,"Docusaurus lets you focus on your docs, and we'll do the chores. Go ahead and move your docs into the ",/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("code",null,"docs")," directory.")},{title:/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment,null,"Powered by React"),imageUrl:'img/undraw_docusaurus_react.svg',description:/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment,null,"Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the same header and footer.")}];function Feature({imageUrl,title,description}){const imgUrl=Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"])(imageUrl);return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div",{className:classnames__WEBPACK_IMPORTED_MODULE_2___default()('col col--4',_styles_module_css__WEBPACK_IMPORTED_MODULE_7___default.a.feature)},imgUrl&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div",{className:"text--center"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img",{className:_styles_module_css__WEBPACK_IMPORTED_MODULE_7___default.a.featureImage,src:imgUrl,alt:title})),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3",null,title),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p",null,description));}function Home(){const context=Object(_docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"])();const{siteConfig={}}=context;return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_theme_Layout__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{title:`Hello from ${siteConfig.title}`,description:"Description will go into a meta tag in <head />"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("header",{className:classnames__WEBPACK_IMPORTED_MODULE_2___default()('hero hero--primary',_styles_module_css__WEBPACK_IMPORTED_MODULE_7___default.a.heroBanner)},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div",{className:"container"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1",{className:"hero__title"},siteConfig.title),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p",{className:"hero__subtitle"},siteConfig.tagline),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div",{className:_styles_module_css__WEBPACK_IMPORTED_MODULE_7___default.a.buttons},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:classnames__WEBPACK_IMPORTED_MODULE_2___default()('button button--outline button--secondary button--lg',_styles_module_css__WEBPACK_IMPORTED_MODULE_7___default.a.getStarted),to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"])('docs/')},"Get Started")))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("main",null,features&&features.length>0&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section",{className:_styles_module_css__WEBPACK_IMPORTED_MODULE_7___default.a.features},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div",{className:"container"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div",{className:"row"},features.map((props,idx)=>/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Feature,Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({key:idx},props))))))));}/* harmony default export */ __webpack_exports__["default"] = (Home);
+const features=[{title:/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment,null,"Grundlagen des Web"),imageUrl:'img/registration-web.svg',description:/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment,null,"Dieses Skriptum bietet eine \xDCbersicht \xFCber die Grundlagen des WWW. Es enth\xE4lt einen \xDCberblick \xFCber die wichtigsten Standards des Webs: HTTP, HTML, URIs, CSS, ...")},{title:/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment,null,"Erstellen von Webseiten"),imageUrl:'img/internet-web-browser.svg',description:/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment,null,"Das Skriptum vermittelt ein Grundlagenwissen dar\xFCber, wie man Webseiten baut: Von Grund auf mit HTML, CSS und JavaScript, unter Verwendung eines Content Management Systems, mit Frameworks wie Angular, ...")},{title:/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment,null,"Interaktive Codebeispiele"),imageUrl:'img/brackets-coding.svg',description:/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment,null,"Das Skriptum enth\xE4lt immer wieder interaktive Codebeispiele. Sie k\xF6nnen die Beispiele selbst in ",/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a",{href:"https://www.jsfiddle.net",target:"_blank"},"JSFiddle")," ansehen, bearbeiten und sehen, welche Auswirkungen Ihre \xC4nderungen haben.")}];function Feature({imageUrl,title,description}){const imgUrl=Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"])(imageUrl);return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div",{className:classnames__WEBPACK_IMPORTED_MODULE_2___default()('col col--4',_styles_module_css__WEBPACK_IMPORTED_MODULE_7___default.a.feature)},imgUrl&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div",{className:"text--center"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img",{className:_styles_module_css__WEBPACK_IMPORTED_MODULE_7___default.a.featureImage,src:imgUrl,alt:title})),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3",null,title),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p",null,description));}function Home(){const context=Object(_docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"])();const{siteConfig={}}=context;return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_theme_Layout__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{title:`Hello from ${siteConfig.title}`,description:"Description will go into a meta tag in <head />"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("header",{className:classnames__WEBPACK_IMPORTED_MODULE_2___default()('hero hero--primary',_styles_module_css__WEBPACK_IMPORTED_MODULE_7___default.a.heroBanner)},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div",{className:"container"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1",{className:"hero__title"},siteConfig.title),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p",{className:"hero__subtitle"},siteConfig.tagline," ",/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("em",null,"Web Basics")," am Campus 02"))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("main",null,features&&features.length>0&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section",{className:_styles_module_css__WEBPACK_IMPORTED_MODULE_7___default.a.features},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div",{className:"container"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div",{className:"row"},features.map((props,idx)=>/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Feature,Object(_home_runner_work_webbasics_webbasics_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({key:idx},props))))))));}/* harmony default export */ __webpack_exports__["default"] = (Home);
 
 /***/ }),
 /* 148 */
@@ -17422,7 +17442,7 @@ var useDocusaurusContext = __webpack_require__(3);
 var Layout = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/src/theme/BlogPostItem/index.js
-var BlogPostItem = __webpack_require__(37);
+var BlogPostItem = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
 var Link = __webpack_require__(7);
@@ -17458,7 +17478,7 @@ var react_default = /*#__PURE__*/__webpack_require__.n(react);
 var Layout = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/src/theme/BlogPostItem/index.js
-var BlogPostItem = __webpack_require__(37);
+var BlogPostItem = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
 var Link = __webpack_require__(7);
@@ -21418,8 +21438,8 @@ var tidyAtRule = __webpack_require__(192);
 
 var Hack = __webpack_require__(76);
 var removeUnused = __webpack_require__(94);
-var restoreFromOptimizing = __webpack_require__(38);
-var wrapForOptimizing = __webpack_require__(34).all;
+var restoreFromOptimizing = __webpack_require__(37);
+var wrapForOptimizing = __webpack_require__(33).all;
 
 var OptimizationLevel = __webpack_require__(24).OptimizationLevel;
 
@@ -21429,7 +21449,7 @@ var Marker = __webpack_require__(13);
 var formatPosition = __webpack_require__(46);
 var split = __webpack_require__(77);
 
-var serializeRules = __webpack_require__(11).rules;
+var serializeRules = __webpack_require__(10).rules;
 
 var IgnoreProperty = 'ignore-property';
 
@@ -22613,8 +22633,8 @@ var tidyRules = __webpack_require__(75);
 
 var OptimizationLevel = __webpack_require__(24).OptimizationLevel;
 
-var serializeBody = __webpack_require__(11).body;
-var serializeRules = __webpack_require__(11).rules;
+var serializeBody = __webpack_require__(10).body;
+var serializeRules = __webpack_require__(10).rules;
 
 var Token = __webpack_require__(9);
 
@@ -22668,10 +22688,10 @@ var compactable = __webpack_require__(27);
 var deepClone = __webpack_require__(49).deep;
 var restoreWithComponents = __webpack_require__(80);
 
-var restoreFromOptimizing = __webpack_require__(38);
-var wrapSingle = __webpack_require__(34).single;
+var restoreFromOptimizing = __webpack_require__(37);
+var wrapSingle = __webpack_require__(33).single;
 
-var serializeBody = __webpack_require__(11).body;
+var serializeBody = __webpack_require__(10).body;
 var Token = __webpack_require__(9);
 
 function mergeIntoShorthands(properties, validator) {
@@ -23113,7 +23133,7 @@ module.exports = mergeIntoShorthands;
 
 var InvalidPropertyError = __webpack_require__(98);
 
-var wrapSingle = __webpack_require__(34).single;
+var wrapSingle = __webpack_require__(33).single;
 
 var Token = __webpack_require__(9);
 var Marker = __webpack_require__(13);
@@ -24393,12 +24413,12 @@ var deepClone = __webpack_require__(49).deep;
 var restoreWithComponents = __webpack_require__(80);
 var shallowClone = __webpack_require__(49).shallow;
 
-var restoreFromOptimizing = __webpack_require__(38);
+var restoreFromOptimizing = __webpack_require__(37);
 
 var Token = __webpack_require__(9);
 var Marker = __webpack_require__(13);
 
-var serializeProperty = __webpack_require__(11).property;
+var serializeProperty = __webpack_require__(10).property;
 
 function wouldBreakCompatibility(property, validator) {
   for (var i = 0; i < property.components.length; i++) {
@@ -24981,7 +25001,7 @@ var canReorderSingle = __webpack_require__(50).canReorderSingle;
 var extractProperties = __webpack_require__(81);
 var rulesOverlap = __webpack_require__(100);
 
-var serializeRules = __webpack_require__(11).rules;
+var serializeRules = __webpack_require__(10).rules;
 var OptimizationLevel = __webpack_require__(24).OptimizationLevel;
 var Token = __webpack_require__(9);
 
@@ -25215,8 +25235,8 @@ var tidyRules = __webpack_require__(75);
 
 var OptimizationLevel = __webpack_require__(24).OptimizationLevel;
 
-var serializeBody = __webpack_require__(11).body;
-var serializeRules = __webpack_require__(11).rules;
+var serializeBody = __webpack_require__(10).body;
+var serializeRules = __webpack_require__(10).rules;
 
 var Token = __webpack_require__(9);
 
@@ -25299,7 +25319,7 @@ var extractProperties = __webpack_require__(81);
 
 var optimizeProperties = __webpack_require__(48);
 
-var serializeRules = __webpack_require__(11).rules;
+var serializeRules = __webpack_require__(10).rules;
 
 var Token = __webpack_require__(9);
 
@@ -25386,8 +25406,8 @@ var cloneArray = __webpack_require__(101);
 
 var Token = __webpack_require__(9);
 
-var serializeBody = __webpack_require__(11).body;
-var serializeRules = __webpack_require__(11).rules;
+var serializeBody = __webpack_require__(10).body;
+var serializeRules = __webpack_require__(10).rules;
 
 function reduceNonAdjacent(tokens, context) {
   var options = context.options;
@@ -25566,7 +25586,7 @@ module.exports = reduceNonAdjacent;
 
 var Token = __webpack_require__(9);
 
-var serializeAll = __webpack_require__(11).all;
+var serializeAll = __webpack_require__(10).all;
 
 var FONT_FACE_SCOPE = '@font-face';
 
@@ -25602,8 +25622,8 @@ module.exports = removeDuplicateFontAtRules;
 
 var Token = __webpack_require__(9);
 
-var serializeAll = __webpack_require__(11).all;
-var serializeRules = __webpack_require__(11).rules;
+var serializeAll = __webpack_require__(10).all;
+var serializeRules = __webpack_require__(10).rules;
 
 function removeDuplicateMediaQueries(tokens) {
   var candidates = {};
@@ -25638,8 +25658,8 @@ module.exports = removeDuplicateMediaQueries;
 
 var Token = __webpack_require__(9);
 
-var serializeBody = __webpack_require__(11).body;
-var serializeRules = __webpack_require__(11).rules;
+var serializeBody = __webpack_require__(10).body;
+var serializeRules = __webpack_require__(10).rules;
 
 function removeDuplicates(tokens) {
   var matched = {};
@@ -25687,8 +25707,8 @@ module.exports = removeDuplicates;
 
 var populateComponents = __webpack_require__(79);
 
-var wrapForOptimizing = __webpack_require__(34).single;
-var restoreFromOptimizing = __webpack_require__(38);
+var wrapForOptimizing = __webpack_require__(33).single;
+var restoreFromOptimizing = __webpack_require__(37);
 
 var Token = __webpack_require__(9);
 
@@ -25949,8 +25969,8 @@ var Token = __webpack_require__(9);
 
 var cloneArray = __webpack_require__(101);
 
-var serializeBody = __webpack_require__(11).body;
-var serializeRules = __webpack_require__(11).rules;
+var serializeBody = __webpack_require__(10).body;
+var serializeRules = __webpack_require__(10).rules;
 
 function naturalSorter(a, b) {
   return a > b ? 1 : -1;
@@ -27105,7 +27125,7 @@ var url = __webpack_require__(26);
 
 var isHttpResource = __webpack_require__(223);
 var isHttpsResource = __webpack_require__(224);
-var override = __webpack_require__(33);
+var override = __webpack_require__(32);
 
 var HTTP_PROTOCOL = 'http:';
 
@@ -27240,7 +27260,7 @@ module.exports = inlineOptionsFrom;
 
 var url = __webpack_require__(26);
 
-var override = __webpack_require__(33);
+var override = __webpack_require__(32);
 
 function inlineRequestFrom(option) {
   return override(
@@ -27447,7 +27467,7 @@ exports.decode = function (charCode) {
  * http://opensource.org/licenses/BSD-3-Clause
  */
 
-var util = __webpack_require__(39);
+var util = __webpack_require__(38);
 
 /**
  * Determine whether mappingB is after mappingA with respect to generated
@@ -27532,7 +27552,7 @@ exports.MappingList = MappingList;
  * http://opensource.org/licenses/BSD-3-Clause
  */
 
-var util = __webpack_require__(39);
+var util = __webpack_require__(38);
 var binarySearch = __webpack_require__(234);
 var ArraySet = __webpack_require__(105).ArraySet;
 var base64VLQ = __webpack_require__(104);
@@ -28921,7 +28941,7 @@ exports.quickSort = function (ary, comparator) {
  */
 
 var SourceMapGenerator = __webpack_require__(103).SourceMapGenerator;
-var util = __webpack_require__(39);
+var util = __webpack_require__(38);
 
 // Matches a Windows-style `\r\n` newline or a `\n` newline used by all other
 // operating systems these days (capturing the result).
@@ -29350,7 +29370,7 @@ var Token = __webpack_require__(9);
 var Marker = __webpack_require__(13);
 var hasProtocol = __webpack_require__(51);
 var isImport = __webpack_require__(110);
-var isRemoteResource = __webpack_require__(40);
+var isRemoteResource = __webpack_require__(39);
 
 var UNKNOWN_URI = 'uri:unknown';
 
@@ -29690,7 +29710,7 @@ var rebaseRemoteMap = __webpack_require__(107);
 var Token = __webpack_require__(9);
 var hasProtocol = __webpack_require__(51);
 var isDataUriResource = __webpack_require__(240);
-var isRemoteResource = __webpack_require__(40);
+var isRemoteResource = __webpack_require__(39);
 
 var MAP_MARKER_PATTERN = /^\/\*# sourceMappingURL=(\S+) \*\/$/;
 
@@ -29962,7 +29982,7 @@ var path = __webpack_require__(6);
 var isAllowedResource = __webpack_require__(82);
 
 var hasProtocol = __webpack_require__(51);
-var isRemoteResource = __webpack_require__(40);
+var isRemoteResource = __webpack_require__(39);
 
 function loadOriginalSources(context, callback) {
   var loadContext = {
@@ -30969,7 +30989,7 @@ module.exports = serializeStyles;
 var SourceMapGenerator = __webpack_require__(102).SourceMapGenerator;
 var all = __webpack_require__(78).all;
 
-var isRemoteResource = __webpack_require__(40);
+var isRemoteResource = __webpack_require__(39);
 
 var isWindows = process.platform == 'win32';
 
@@ -33307,7 +33327,7 @@ exports.decode = function (charCode) {
  * http://opensource.org/licenses/BSD-3-Clause
  */
 
-var util = __webpack_require__(41);
+var util = __webpack_require__(40);
 
 /**
  * Determine whether mappingB is after mappingA with respect to generated
@@ -33392,7 +33412,7 @@ exports.MappingList = MappingList;
  * http://opensource.org/licenses/BSD-3-Clause
  */
 
-var util = __webpack_require__(41);
+var util = __webpack_require__(40);
 var binarySearch = __webpack_require__(271);
 var ArraySet = __webpack_require__(115).ArraySet;
 var base64VLQ = __webpack_require__(114);
@@ -34781,7 +34801,7 @@ exports.quickSort = function (ary, comparator) {
  */
 
 var SourceMapGenerator = __webpack_require__(113).SourceMapGenerator;
-var util = __webpack_require__(41);
+var util = __webpack_require__(40);
 
 // Matches a Windows-style `\r\n` newline or a `\n` newline used by all other
 // operating systems these days (capturing the result).
@@ -37549,7 +37569,7 @@ function pointerCoord(event) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var prism_react_renderer_prism__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(35);
+/* harmony import */ var prism_react_renderer_prism__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(34);
 /* harmony import */ var _docusaurus_ExecutionEnvironment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(29);
 /* harmony import */ var _generated_docusaurus_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(68);
 /**
@@ -38821,7 +38841,7 @@ var Helmet = __webpack_require__(56);
 var lib = __webpack_require__(159);
 
 // EXTERNAL MODULE: ./node_modules/react-loadable/lib/index.js
-var react_loadable_lib = __webpack_require__(42);
+var react_loadable_lib = __webpack_require__(41);
 var react_loadable_lib_default = /*#__PURE__*/__webpack_require__.n(react_loadable_lib);
 
 // EXTERNAL MODULE: ./node_modules/html-minifier-terser/src/htmlminifier.js
