@@ -86,6 +86,9 @@ dass `302 Found` aus historischen Gründen eine Änderung der Methode von `POST`
 Der Server kann die Anfrage nicht beantworten, weil die Anfrage ungültig ist (Fehlende Daten, ungültige
 Syntax, ...)
 
+### 401 Unauthorized
+Für die Anfrage muss sich der Client erst gegenüber dem Server authentifizieren.
+
 ### 403 Forbidden
 Der Server hat die Anfrage verstanden, der Client ist aber nicht dazu berechtigt, auf die angefragte 
 Ressource zuzugreifen. Der Client sollte nicht versuchen, die Anfrage noch einmal gleich zu stellen,
@@ -101,6 +104,51 @@ temporär oder permanent ist.
 ### 405 Method Not Allowed
 Die angefragte Ressource existiert zwar, ein Zugriff mit der vom Client verwendeten Anfragemethode (GET, POST, ...)
 ist aber nicht möglich. In den Response-Headern teilt der Server dem Client die unterstützten Methoden mit.
+
+### 406 Not Acceptable
+Die angefragte Ressource steht nicht in der angefragten Form zur Verfügung. Der Server kann dem Client
+mitteilen, in welcher Form die Ressource angefragt werden kann. Diese *Form* ist üblicherweise ein
+Format (z.B. Datenformat XML, Videoformat, ...).
+
+### 407 Proxy Authentication Required
+Vergleichbar mit `401 Unauthorized`, jedoch muss sich der Client hier nicht gegenüber einem Server,
+sondern gegenüber einem Proxy authentifizieren.
+
+### 408 Request Timeout
+Innerhalb der vom Server erlaubten Zeitspanne wurde keine vollständige Anfrage des Clients empfangen.
+
+### 409 Conflict
+Die Anfrage kann nicht verarbeitet werden, weil die Zielressource in einem Zustand ist, der diese 
+Anfrage nicht zulässt.
+
+### 410 Gone
+Die Zielressource ist am Server nicht mehr vorhanden, daran wird sich auch voraussichtlich nichts ändern.
+
+Das sind die wichtigsten Fehlercodes für Client-Fehler, eine umfassendere Liste findet sich in den in den Quellenangaben
+verlinkten Dokumenten. Wie der Name schon sagt, ist (zumindest aus Sicht des Servers) der **Client** 
+verantwortlich für die 4xx-er Fehler, während der Server für die 5xx-er-Fehler verantwortlich ist. Die Abgrenzung
+zwischen Client- und Serverfehlern ist jedoch nicht immer ganz klar.
+
+## Server-Fehler
+### 500 Internal Server Error
+Generischer Fehlercode für unerwartete Serverfehler.
+
+### 501 Not Implemented
+Die Funktionalität, um eine Anfrage zu bearbeiten, wurde noch nicht implementiert.
+
+### 502 Bad Gateway
+Diese Antwort kommt üblicherweise von einem Proxy, wenn er wiederum eine ungültige Antwort bekommen hat.
+
+### 503 Service Unavailable
+Der Server steht gerade nicht zur Verfügung, z.B. weil er gerade neu gestartet wird oder wegen Wartungsarbeiten.
+
+### 504 Gateway Timeout
+Diese Antwort kommt üblicherweise von einem Proxy, wenn er wiederum keine Antwort innerhalb der erwarteten Zeit bekommen hat.
+
+### 505 HTTP Version not supported
+Die im Request angegebene HTTP-Version wird nicht unterstützt.
+
+Auch hier gibt es weitere Fehler-Codes, die oben genannten sind allerdings die häufigsten serverseitigen Fehler.
 
 ## Quellen
 - https://tools.ietf.org/html/rfc7231#section-6
