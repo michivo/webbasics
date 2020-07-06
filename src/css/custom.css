@@ -8,15 +8,19 @@
 /* You can override the default Infima variables here. */
 
 :root {
-  --ifm-color-primary: #e34f26;
-  --ifm-color-primary-dark: #d3431b;
-  --ifm-color-primary-darker: #c83f1a;
-  --ifm-color-primary-darkest: #a43415;
-  --ifm-color-primary-light: #e6623d;
-  --ifm-color-primary-lighter: #e86c49;
-  --ifm-color-primary-lightest: #ec886c;
+  --ifm-color-primary: #3f366c;
+  --ifm-color-primary-dark: #393161;
+  --ifm-color-primary-darker: #362e5c;
+  --ifm-color-primary-darkest: #2c264c;
+  --ifm-color-primary-light: #453b77;
+  --ifm-color-primary-lighter: #483e7c;
+  --ifm-color-primary-lightest: #52468c;
   --ifm-code-font-family: 95%;
-  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Fira Sans', 'Noto Sans', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer--dark {
+  background-color: var(--ifm-color-primary-darkest);
 }
 
 .docusaurus-highlight-code-line {

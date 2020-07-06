@@ -8,32 +8,34 @@ import styles from './styles.module.css';
 
 const features = [
   {
-    title: <>Easy to Use</>,
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
+    title: <>Grundlagen des Web</>,
+    imageUrl: 'img/registration-web.svg',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Dieses Skriptum bietet eine Übersicht über die Grundlagen des WWW. Es enthält
+        einen Überblick über die wichtigsten Standards des Webs: HTTP, HTML, URIs, CSS, ...
       </>
     ),
   },
   {
-    title: <>Focus on What Matters</>,
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
+    title: <>Erstellen von Webseiten</>,
+    imageUrl: 'img/internet-web-browser.svg',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Das Skriptum vermittelt ein Grundlagenwissen darüber, wie man Webseiten baut: Von
+        Grund auf mit HTML, CSS und JavaScript, unter Verwendung eines Content Management Systems,
+        mit Frameworks wie Angular, ...
       </>
     ),
   },
   {
-    title: <>Powered by React</>,
-    imageUrl: 'img/undraw_docusaurus_react.svg',
+    title: <>Interaktive Codebeispiele</>,
+    imageUrl: 'img/brackets-coding.svg',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Das Skriptum enthält immer wieder interaktive Codebeispiele. Sie können die 
+        Beispiele selbst in <a href="https://www.jsfiddle.net" target="_blank">JSFiddle</a> ansehen,
+        bearbeiten und sehen, welche Auswirkungen Ihre Änderungen haben.
       </>
     ),
   },
@@ -64,17 +66,7 @@ function Home() {
       <header className={classnames('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <div className={styles.buttons}>
-            <Link
-              className={classnames(
-                'button button--outline button--secondary button--lg',
-                styles.getStarted,
-              )}
-              to={useBaseUrl('docs/')}>
-              Get Started
-            </Link>
-          </div>
+          <p className="hero__subtitle">{siteConfig.tagline} <em>Web Basics</em> am Campus 02</p>
         </div>
       </header>
       <main>

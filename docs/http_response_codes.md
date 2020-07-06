@@ -67,9 +67,42 @@ der Client muss erst entscheiden, welches Format er bevorzugt.
 Die Ressource, die unter dieser URI zu finden war, ist nun unter einer neuen URI zu finden. Der Client
 soll in Zukunft nur noch die neue URI verwenden.
 
+### 302 Found
+Die Ressource, die unter dieser URI zu finden war, ist temporär unter einer neuen URI zu finden. Diese
+Umleitung kann sich in Zukunft ändern, der Client sollte daher bei späteren Requests immer die
+ursprüngliche URI verwenden. Der Body der Antwort sollte einen kurzen Hinweis auf die Umleitung und einen
+Link zur neuen URI enthalten.
 
+### 303 See Other
+Der Server leitet die Anfrage des Clients zu einer anderen Ressource um, die eine indirekte Antwort auf
+die ursprüngliche Anfrage des Clients gibt.
 
-## Quellen:
+### 307 Temporary Redirect
+Temporary Redirect verhält sich bis auf ein Detail gleich wie `302 Found`. Der einzige Unterschied ist,
+dass `302 Found` aus historischen Gründen eine Änderung der Methode von `POST` zu `GET` zulässt.
+
+## Client-Fehler
+### 400 Bad Request
+Der Server kann die Anfrage nicht beantworten, weil die Anfrage ungültig ist (Fehlende Daten, ungültige
+Syntax, ...)
+
+### 403 Forbidden
+Der Server hat die Anfrage verstanden, der Client ist aber nicht dazu berechtigt, auf die angefragte 
+Ressource zuzugreifen. Der Client sollte nicht versuchen, die Anfrage noch einmal gleich zu stellen,
+kann sie aber mit neuen Zugriffsinformationen erneut senden.
+Server können statt mit `403 Forbidden` auch mit `404 Not Found` antworten, wenn sie aus
+Sicherheitsgründen dem Client nicht mitteilen wollen, dass die angefragte Ressource überhaupt existiert.
+
+### 404 Not Found
+Der Server kann die angefragte Ressource nicht finden oder will dem Client aus Sicherheitsgründen nicht
+mitteilen, dass die Ressource existiert. Dieser Statuscode sagt nichts darüber aus, ob dieser Zustand
+temporär oder permanent ist.
+
+### 405 Method Not Allowed
+Die angefragte Ressource existiert zwar, ein Zugriff mit der vom Client verwendeten Anfragemethode (GET, POST, ...)
+ist aber nicht möglich. In den Response-Headern teilt der Server dem Client die unterstützten Methoden mit.
+
+## Quellen
 - https://tools.ietf.org/html/rfc7231#section-6
 - https://developer.mozilla.org/de/docs/Web/HTTP/Status
 - https://de.wikipedia.org/wiki/HTTP-Statuscode

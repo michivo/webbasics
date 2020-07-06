@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Web Basics',
-  tagline: 'Course materials for web basics course at FH Campus 02',
-  url: 'https://michivo.github.io',
+  tagline: 'Unterrichtsmaterial für die Lehrveranstaltung',
+  url: 'https://michivo.github.io/webbasics',
   baseUrl: '/webbasics/',
   favicon: 'img/favicon.ico',
   organizationName: 'michivo', // Usually your GitHub org/user name.
@@ -10,7 +10,7 @@ module.exports = {
     navbar: {
       title: 'Web Basics',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Logo',
         src: 'img/logo.svg',
       },
       links: [
