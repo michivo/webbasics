@@ -1,7 +1,7 @@
 ---
 id: http-headers-entity
-title: HTTP Entity Header
-sidebar_label: Entity Header
+title: HTTP Entity Headers
+sidebar_label: Entity Headers
 ---
 
 ...

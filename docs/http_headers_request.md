@@ -1,7 +1,7 @@
 ---
 id: http-headers-request
-title: HTTP Request Header
-sidebar_label: Request Header
+title: HTTP Request Headers
+sidebar_label: Request Headers
 ---
 
 ...
