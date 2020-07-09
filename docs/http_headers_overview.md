@@ -10,7 +10,7 @@ Header können als Teil des Requests und der Response vorkommen, können gemäß
 - **Entity Headers** enthalten Informationen über den Request- bzw. Response-Body (z.B. `Content-Length` - wie lange ist der Body?)
 - **General Headers** enthalten allgemeine Informationen über Request oder Response ohne Bezug auf den Body (z.B. `Date` - wann wurde der Request/die Response erzeugt?)
 
-Im Folgenden werden einige der wichtigsten Header näher erklärt.
+Im Folgenden werden einige der wichtigsten Header näher erklärt. 
 
 Quellen:
 - https://developer.mozilla.org/de/docs/Web/HTTP/Headers
