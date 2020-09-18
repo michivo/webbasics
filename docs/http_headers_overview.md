@@ -1,7 +1,7 @@
 ---
 id: http-headers-overview
-title: HTTP Headers
-sidebar_label: Überblick
+title: HTTP Header
+sidebar_label: HTTP Header
 ---
 
 Header können als Teil des Requests und der Response vorkommen, können gemäß ihres Kontexts wie folgt gruppiert werden:
