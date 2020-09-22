@@ -1,6 +1,6 @@
 ---
 id: intro-protocols
-title: Protokolle und das OSI-Modell
+title: Protokolle
 sidebar_label: Protokolle
 ---
 
