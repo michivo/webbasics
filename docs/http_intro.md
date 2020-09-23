@@ -25,7 +25,7 @@ der jeweiligen Nachricht richtig verarbeitet werden kann.
 
 ### Beispiel-Anfrage
 HTTP-Requests sind auch für Menschen lesbar. Will man zum Beispiel die Internetseite mit
-der URL http://info.cern.ch/hypertext/WWW/TheProject.html abrufen, wird zuerst (siehe [intro-dns](DNS))
+der URL http://info.cern.ch/hypertext/WWW/TheProject.html abrufen, wird zuerst (siehe [DNS](intro-dns))
 der Domainname `info.cern.ch` aufgelöst. Der Domainname ist mit der IP-Adresse 188.184.100.82
 verknüpft, zum Rechner mit dieser IP-Adresse wird dann folgende Anfrage geschickt:
 ```
