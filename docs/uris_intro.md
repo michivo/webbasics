@@ -4,7 +4,6 @@ title: URIs - Wie werden Ressourcen identifiziert?
 sidebar_label: URI-Überblick
 ---
 
-# Uniform Resource Identifier
 Uniform Resource Identifier (URIs) sind menschen- und maschinenlesbare Identifikatoren, die
 zur Identifizierung von Ressourcen dienen. Diese Ressourcen können physisch vorhanden sein (z.B. ein Buch)
 oder abstrakt/virtuell sein (wie z.B. eine Webseite). Eine URI besteht aus 5 Teilen:
