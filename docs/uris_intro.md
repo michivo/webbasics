@@ -1,7 +1,7 @@
 ---
 id: uris-intro
-title: URIs und URLs - Wie werden Ressourcen im Web identifiziert?
-sidebar_label: Überblick
+title: URIs - Wie werden Ressourcen identifiziert?
+sidebar_label: URI-Überblick
 ---
 
 # Uniform Resource Identifier

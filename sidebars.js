@@ -17,7 +17,8 @@ module.exports = {
       'http-headers-overview'
     ],
     URIs: [
-      'uri-intro'
+      'uris-intro',
+      'uris-urls'
     ]
   },
 };
