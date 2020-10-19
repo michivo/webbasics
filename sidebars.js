@@ -15,6 +15,9 @@ module.exports = {
       'http-methods',
       'http-responses',
       'http-headers-overview'
+    ],
+    URIs: [
+      'uri-intro'
     ]
   },
 };
