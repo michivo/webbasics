@@ -21,8 +21,9 @@ Es gelten folgende Zeichen als *reserviert*, weil ihnen im Dokumentenpfad eine B
 
 Um nun andere Zeichen in einer URL verwenden zu können bzw. um auch reservierte Zeichen so zu verwenden, dass sie ihre spezielle Bedeutung verlieren, müssen sie speziell kodiert werden. Das Kodierungsverfahren ordnet jedem Zeichen einen dreistelligen Code zu, der mit einem Prozentzeichen beginnt und dem eine zweiziffrige Heximaldarstellung des ASCII-Zeichencodes folgt. 
 Beispiele:
+
 | Zeichen | Codiert |
-|---|---|
+|:---:|:---:|
 |`#`|`%23`|
 |`$`|`%24`|
 |`%`|`%25`|
