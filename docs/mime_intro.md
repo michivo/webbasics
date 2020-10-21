@@ -11,17 +11,17 @@ Ohne die Angabe eines Media Types wäre es einem Browser zum Beispiel nicht imme
 
 ## Aufbau
 
-Media Types sind wie folgt aufgebaut (Terme in eckigen Klammern sind optional):
+Media Types sind wie folgt aufgebaut (Terme in eckigen Klammern sind optional, ein Media Type kann mehrere Parameter haben):
 
 ```
-Typ "/" [Baum "."] Subtyp ["+" Suffix] * [";" Parameter]
+Typ "/" [Baum "."] Subtyp ["+" Suffix] *[";" Parameter]
 ```
 
 Beispiele für Media Types sind `text/html; charset=UTF-8` für UTF-8-kodierte HTML-Dokumente, `image/jpeg` für JPEG-Bilder, 
 `application/vnd.openxmlformats-officedocument.presentationml.presentation` für Powerpoint-Präsentationen oder
 `application/vnd.apple.installer+xml` für Apples Installer-Pakete. Derzeit gibt es rund 1400 [offizielle, von der IANA anerkannte Media Types](http://www.iana.org/assignments/media-types/media-types.xhtml).
 
-## Typen
+### Typen
 
 Derzeit sind folgende Typen registriert:
 - `text` für menschenlesbare, in Textformat vorliegende Daten, wie z.B. `text/html` für HTML-Dokumente oder `text/plain` für allgemeine Textdateien. Text-Typen werden oft ergänzt durch die Angabe einer Zeichenkodierung ergänzt, z.B.  `text/html; charset=UTF-8`
@@ -33,3 +33,21 @@ Derzeit sind folgende Typen registriert:
 - `font` für Schriftarten, z.B. `font/ttf`
 - `example` als Platzhalter in Beispielcode
 - `model` für 3D-Modelle u.ä., z.B. `model/3mf` oder `model/vml`
+
+### Bäume
+
+Es gibt folgende Bäume:
+- Standards für Media Types, die von allgemeiner Bedeutung sind. Der Standards-Baum wird nicht angegeben: `text/html`, `image/jpeg`, ... . Standards müssen an die IANA übermittelt werden, werden dort einem Experten-Review unterzogen und dann veröffentlicht.
+- Vendor-Baum `vnd` für Typen, die mit öffentlich verfügbaren Software-Produkten verwendet werden, z.B. `application/vnd.openxmlformats-officedocument.presentationml.presentation` oder `application/vnd.amazon.ebook`. Typen aus diesem Baum *können* der IANA für Reviews geschickt werden.
+- Personal/Vanity-Baum `prs` für Typen, die für Testzwecke oder in nicht öffentlich verfügbaren Produkten verwendet werden, z.B. `application/prs.c02.funnydata`. Typen aus diesem Baum *können* der IANA für Reviews geschickt werden.
+- Unregistrierte Typen im `x`-Baum, der nur für interne/private Zwecke genutzt werden soll, z.B. `text/x.michael.bigdb`
+
+Eine Liste der häufigsten MIME-Typen ist u.a. [bei Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) zu finden.
+
+## Verwendung in HTTP-Headern
+In HTTP-Headern werden Media Types u.a. im Request-Header `Accept` und im Response-Header `Content-Type` verwendet. Im `Accept`-Header gibt der Client an, welche Datenformate er erwartet und unterstützt, kann mit dem Q-Wert zusätzlich angeben, welche Media Types bevorzugt werden:
+
+´´´
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+´´´
+

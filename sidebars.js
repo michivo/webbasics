@@ -21,7 +21,8 @@ module.exports = {
       'uris-urls'
     ],
     'Media Types': [
-      'mime-intro'
+      'mime-intro',
+      'mime-list'
     ]
   },
 };
