@@ -19,6 +19,9 @@ module.exports = {
     URIs: [
       'uris-intro',
       'uris-urls'
+    ],
+    'Media Types': [
+      'mime-intro'
     ]
   },
 };
