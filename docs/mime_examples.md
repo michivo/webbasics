@@ -23,3 +23,14 @@ Von der Verwendung von unkomprimierten Bitmaps (`image/bmp`) sollte im Web abges
 Vektorgrafiken eignen sich hervorragend für Logos, Icons und ähnliche Bilder. Der große Vorteil von Vektorgrafiken ist, dass sie beliebig skaliert werden können, ohne dass sie verpixeln, wie das bei Rastergrafiken der Fall wäre. Oft sind Vektorgrafikdateien um ein vielfaches kleiner als vergleichbare Rastergrafikdateien. Das einzige im Web verbreitet unterstützte Vektorgrafikvormat ist das XML-basierte SVG (`image/svg+xml`).
 
 ## Text
+Textdateien sind im Allgemeinen Dateien, die in einem menschenlesbaren Format vorliegen: Source-Code, CSV-Daten, Markup-Sprachen, oder Textinhalte.
+Die für das Web wichtigsten Formate sind:
+- HTML (`text/html`) für HTML-Dokumente
+- CSS (`text/css`) für Stylesheets
+- Javascript (`text/javascript`) für Dateien, die JavaScript-Code beinhalten
+- `text/plain` für "normale" Textdateien, deren Inhalt nicht irgendwie gesondert intepretiert werden soll
+
+Bei Textdateien kann noch optional mit dem `charset`-Parameter angegeben werden, wie der Inhalt codiert ist: `charset=utf-8`. Diese Angabe führt bei JavaScript-Dateien aber oft dazu, dass sie nicht geladen werden.
+
+## MIME-Sniffing
+Bei Webseiten sollte immer sichergestellt werden, dass Server den Browser über den korrekten Media Type informieren. Fehlt der Media Type allerdings oder hat der Browser Grund zur Annahme, dass der Media Type falsch ist, versucht er, den Media Type zu **erraten**. Das wird als *MIME-Sniffing* bezeichnet und ist je nach Browser unterschiedlich implementiert. Der Browser kann z.B. aufgrund der Dateiendung, der ersten paar Bytes einer Datei oder aufgrund des Kontexts erraten, welcher Media Type vorliegt.
