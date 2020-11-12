@@ -20,6 +20,9 @@ module.exports = {
       'uris-intro',
       'uris-urls'
     ],
+    HTML: [
+      'html-intro'
+    ],
     'Media Types': [
       'mime-intro',
       'mime-list'

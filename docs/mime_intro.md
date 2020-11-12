@@ -47,7 +47,7 @@ Eine Liste der häufigsten MIME-Typen ist u.a. [bei Mozilla](https://developer.m
 ## Verwendung in HTTP-Headern
 In HTTP-Headern werden Media Types u.a. im Request-Header `Accept` und im Response-Header `Content-Type` verwendet. Im `Accept`-Header gibt der Client an, welche Datenformate er erwartet und unterstützt, kann mit dem Q-Wert zusätzlich angeben, welche Media Types bevorzugt werden:
 
-´´´
+```
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-´´´
+```
 
