@@ -17,11 +17,62 @@ Neben HTML gibt es zahlreiche weitere Markup-Sprachen, wie zum Beispiel das oben
 
 ## Geschichte von HTML
 
+Wie bereits erwähnt war die ursprüngliche Idee von Tim Berners-Lee bei der Entwicklung von HTML, eine Sprache zur Auszeichnung von Dokumenten wie Artikeln,
+Büchern oder Tutorials zu entwickeln. Die Urversion 1992 enthielt daher auch nur Elemente, mit denen Überschriften, Absätze und Zeilenumbrüche dargestellt 
+werden konnten und Dokumente über Links miteinander verknüpft werden konnten.
+Auch die nächste HTML-Version 1993 hatte noch keine offizielle Versionsnummer, sie enthielt bereits Elemente zur Formatierung von Text (fett, kursiv, ...) und zum
+Einbinden von Bildern in HTML-Seiten.
+
+HTML 2.0 wurde 1995 verabschiedet, es wurde um Elemente für Formulare und Tabellen erweitert, außerdem wurde es damit möglich, Sonderzeichen wie 
+Umlaute darzustellen. In den folgenden Jahren kam es zum bereits erwähnten Browserkrieg zwischen Internet Explorer und Netscape Navigator. Microsoft und Netscape
+versuchten, durch nicht-standardisierte Erweiterungen am HTML-Standard den jeweiligen Konkurrenten auszustechen. Die Versionen 3.0 und 3.1 wurden daher
+übersprungen, im Jahr 1997 erschien der HTML-Standard 3.2, der Unterstützung für Applets brachte. Applets waren in Java geschriebene Programme, die direkt in 
+Webseiten eingebunden werden konnten. 
+
+Später im Jahr 1997 wurde auch HTML 4.0 verabschiedet, diese Version brachte Unterstützung von Stylesheets (CSS), Skripte (JavaScript bzw. JScript) und Frames.
+Dieser Standard war bis zum Jahr 2014 (abgesehen von kleinen Änderungen in HTML 4.01 im Jahr 1999) der gültige Standard. Im W3C arbeitete man an einem neuen, 
+XML-basierten HTML-Standard, verlor aber dabei den Fokus auf notwendige Änderungen an den HTML-Standards: Webseiten wurden nicht mehr nur auf 
+Desktop-Geräten dargestellt, Webanwendungen wurden zunehmend komplexer und das Web wurde zur Plattform für Spiele, soziale Medien, Office-Suiten und vieles mehr.
+Bereits 2004 schlossen sich Apple, Mozilla und Opera, drei der damals vier wichtigsten Browser-Hersteller, zur Web
+ Hypertext Application Technology Working Group **WHATWG** zusammen, deren Ziel es ist, HTML und 
+andere Web-Standards kontinuierlich weiterzuentwickeln. Heute wird die WHATWG von Apple, Mozilla, Google und Microsoft gesteuert. Diese Arbeitsgruppe
+startete unter anderem die Entwicklung des neuen Standards **HTML5**, parallel zur Arbeit des W3C an einem neuen HTML-Standard. Nach jahrelangen Konflikten
+einigten sich die WHATWG und das W3C 2019 darauf, dass die WHATWG für den HTML-Standard zuständig ist. Dieser neue HTML-Standard wird mittlerweile als
+sich ständig weiterentwickelnder **HTML Living Standard** bezeichnet, auch wenn die Bezeichnung **HTML5** im allgemeinen Sprachgebrauch noch immer üblich ist.
+Die jeweils aktuelle Version des HTML-Standards ist auf https://html.spec.whatwg.org zu finden. Alle gängigen Browser unterstützen diesen 
+Standard weitestgehend.
+
+Diese Unterlagen beziehen sich ausschließlich auf den **HTML Living Standard**. Wann immer von HTML oder HTML5 die Rede ist, ist damit der aktuelle
+**HTML Living Standard** gemeint.
+
 ## Bausteine eines HTML-Dokuments
+
+Jedes HTML-Dokument beginnt mit der sogenannten **Doctype-Deklaration**, die deklariert, dass das Dokument ein HTML-Dokument ist. Danach folgt das eigentliche
+Dokument, das aus **Elementen** und ihrem **Inhalt** sowie den **Attributen** dieser Elemente besteht.
+
+HTML-Dokumente müssen laut Standard immer UTF8-kodiert sein (siehe https://de.wikipedia.org/wiki/UTF-8 für Informationen zu UTF-8).
 
 ### Doctype-Deklaration
 
+Mit der Doctype-Deklaration wird dem Browser (oder einem anderen Programm, mit dem ein HTML-Dokument geöffnet wird) mitgeteilt, um welche Art von 
+Dokument es sich handelt. Im Falle von HTML-Dokumenten sieht die Doctype-Deklaration wie folgt aus:
+```
+<!DOCTYPE html>
+```
+Wobei weder `DOCTYPE` noch `html` case-sensitiv sind, `<!doctype HTML>`) ist also ebenso gültig. Die Doctype-Deklaration sollte ganz am Beginn eines
+HTML-Dokuments stehen.
+
 ### Elemente
+
+Elemente bestehen aus einem einzelnen (Start-)Tag oder einem Tag-Paar, bestehend aus Start- und Endtag. Ein Starttag beginnt mit dem Zeichen `<`,
+darauf folgt der Elementname (z.B. `img` für ein Bild, `h1` für eine Überschrift erster Ordnung oder `p` für einen Absatz). Danach folgen
+optionale Attribute, mit dem Zeichen `>` wird der Tag wieder geschlossen. Dann folgt der **Inhalt**, gefolgt vom Endtag. Der Endtag beginnt mit `</`, 
+gefolgt vom Elementnamen und dem abschließenden `>`. Hier sind ein paar Beispiele von Elementen ohne Attribute:
+```
+<h1>Das ist eine Überschrift</h1>
+<p>Das ist ein Absatz, mit dem br-Element <br> macht man einen Zeilenumbruch. <br> hat keinen Endtag, ein Zeilenumbruch hat ja auch (im Gegensatz
+zu einer Überschrift oder einem Absatz) nicht Anfang und Ende.
+```
 
 ### Attribute
 
