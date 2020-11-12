@@ -70,11 +70,32 @@ optionale Attribute, mit dem Zeichen `>` wird der Tag wieder geschlossen. Dann f
 gefolgt vom Elementnamen und dem abschließenden `>`. Hier sind ein paar Beispiele von Elementen ohne Attribute:
 ```
 <h1>Das ist eine Überschrift</h1>
-<p>Das ist ein Absatz, mit dem br-Element <br> macht man einen Zeilenumbruch. <br> hat keinen Endtag, ein Zeilenumbruch hat ja auch (im Gegensatz
-zu einer Überschrift oder einem Absatz) nicht Anfang und Ende.
+<p>Das ist ein Absatz, mit dem br-Element <br> macht man einen Zeilenumbruch. br hat keinen Endtag, ein Zeilenumbruch hat ja auch (im Gegensatz
+zu einer Überschrift oder einem Absatz) weder Anfang noch Ende.</p>
 ```
 
+Hier ist das HTML-Dokument als JSFiddle:
+<iframe width="100%" height="250" src="//jsfiddle.net/michivo/f50y1cp8/3/embedded/html,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+Was in diesem Beispiel auch ersichtlich ist: Zeilenumbrüche in Ihrem HTML-File werden im Browser nicht als solche dargestellt. Sie müssen
+Zeilenumbrüche immer explizit mit `<br>` angeben!
+
 ### Attribute
+
+Attribute enthalten Informationen zu einem Element. In der Regel beginnen sie mit dem Attributnamen, gefolgt von einem `=` und dem Attributwert. Der Attributwert
+ist meistens in Anführungszeichen gehalten, dabei werden doppelte Anführungszeichen bevorzugt. Es gibt auch Attribute, die keinen Wert haben, in solchen Fällen
+wird nur der Attributname angegeben:
+```
+<a href="https://www.campus02.at" target="_blank">Link zum Campus 02, öffnet sich in einem neuen Tab</a><br>
+<script src="jquery.js" async></script> <!-- das Skript jquery.js soll asynchron (async) geladen werden -->
+<img src="https://www.campus02.at/wp-content/themes/campus02/assets/img/logo.png" width=214 height=70 alt='Logo des "Campus 02"'>
+```
+Das letzte Beispiel bindet ein Bild ein. Es zeigt anhand der Attribute `height` und `width`, dass man die Anführungszeichen weglassen kann. Das
+Attribut `alt` zeigt, dass man auch einfache statt doppelter Anführungszeichen verwenden kann, wenn z.B. im Attributwert ein doppeltes Anführungszeichen vorkommt.
+
+In diesem Beispiel ist auch ein Kommentar zu sehen, Kommentare in HTML beginnen mit `<!--` und enden mit `-->`.
+
+<iframe width="100%" height="250" src="//jsfiddle.net/michivo/hn8y3f49/4/embedded/html,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## Quellen
 <a id="hypertext">[1]</a> https://www.w3.org/DesignIssues/Uses.html
