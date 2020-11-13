@@ -70,12 +70,14 @@ optionale Attribute, mit dem Zeichen `>` wird der Tag wieder geschlossen. Dann f
 gefolgt vom Elementnamen und dem abschließenden `>`. Hier sind ein paar Beispiele von Elementen ohne Attribute:
 ```
 <h1>Das ist eine Überschrift</h1>
-<p>Das ist ein Absatz, mit dem br-Element <br> macht man einen Zeilenumbruch. br hat keinen Endtag, ein Zeilenumbruch hat ja auch (im Gegensatz
-zu einer Überschrift oder einem Absatz) weder Anfang noch Ende.</p>
+<p>Das ist ein Absatz. Mit dem br-Element <br> macht man einen 
+Zeilenumbruch. br hat keinen Endtag, ein Zeilenumbruch 
+hat ja auch (im Gegensatz zu einer Überschrift oder einem Absatz) 
+weder Anfang noch Ende.</p>
 ```
 
 Hier ist das HTML-Dokument als JSFiddle:
-<iframe width="100%" height="250" src="//jsfiddle.net/michivo/f50y1cp8/3/embedded/html,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="250" src="//jsfiddle.net/michivo/f50y1cp8/5/embedded/html,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 Was in diesem Beispiel auch ersichtlich ist: Zeilenumbrüche in Ihrem HTML-File werden im Browser nicht als solche dargestellt. Sie müssen
 Zeilenumbrüche immer explizit mit `<br>` angeben!
@@ -86,16 +88,55 @@ Attribute enthalten Informationen zu einem Element. In der Regel beginnen sie mi
 ist meistens in Anführungszeichen gehalten, dabei werden doppelte Anführungszeichen bevorzugt. Es gibt auch Attribute, die keinen Wert haben, in solchen Fällen
 wird nur der Attributname angegeben:
 ```
-<a href="https://www.campus02.at" target="_blank">Link zum Campus 02, öffnet sich in einem neuen Tab</a><br>
-<script src="jquery.js" async></script> <!-- das Skript jquery.js soll asynchron (async) geladen werden -->
-<img src="https://www.campus02.at/wp-content/themes/campus02/assets/img/logo.png" width=214 height=70 alt='Logo des "Campus 02"'>
+<a href="https://www.campus02.at" target="_blank">
+Link zum Campus 02, öffnet sich in einem neuen Tab</a><br>
+
+<script src="jquery.js" async></script> 
+<!-- das Skript jquery.js soll asynchron (async) geladen werden -->
+
+<img 
+  src="https://www.campus02.at/wp-content/themes/campus02/assets/img/logo.png" 
+  width=214 
+  height=70 
+  alt='Logo des "Campus 02"'>
 ```
 Das letzte Beispiel bindet ein Bild ein. Es zeigt anhand der Attribute `height` und `width`, dass man die Anführungszeichen weglassen kann. Das
 Attribut `alt` zeigt, dass man auch einfache statt doppelter Anführungszeichen verwenden kann, wenn z.B. im Attributwert ein doppeltes Anführungszeichen vorkommt.
 
-In diesem Beispiel ist auch ein Kommentar zu sehen, Kommentare in HTML beginnen mit `<!--` und enden mit `-->`.
-
 <iframe width="100%" height="250" src="//jsfiddle.net/michivo/hn8y3f49/4/embedded/html,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
+### Kommentare
+
+Im Beispiel oben ist auch HTML-Kommentar zu sehen. Kommentare in HTML beginnen mit `<!--` und enden mit `-->`. Sie können auch über mehrere Zeilen gehen.
+
+### Sonderzeichen
+Einige Zeichen haben in HTML eine besondere Bedeutung, und zwar:
+- `<` und `>` für Tags,
+- `"` und `'` als Anführungszeichen um Attribute und
+- `&` als Escape-Zeichen für Sonderzeichen
+
+Um diese Zeichen darstellen zu können, müssen sie speziell codiert werden. In HTML gibt es mehrere Möglichkeiten, diese Zeichen zu codieren: Als
+HTML-Entität, als Unicode-Codepoint dezimal oder als Unicode-Codepoint hexadezimal. In jedem Fall beginnt ein codiertes Zeichen mit einem `&` und
+endet mit einem `;`, dazwischen der jeweilige Zeichencode. Die oben angeführten Zeichen können wie folgt codiert werden:
+
+| Zeichen | HTML-Entität | Unicode dezimal | Unicode hexadezimal |
+|:---:|:---:|:---:|:---:|
+|`<`|`&lt;`|`&#60;`|`&#x3c;`|
+|`>`|`&gt;`|`&#62;`|`&#x3e;`|
+|`"`|`&quot;`|`&#34;`|`&#x22;`|
+|`'`|`&apos;`|`&#39;`|`&#x27;`|
+|`&`|`amp`|`&#38;`|`&#x26;`|
+
+Nicht nur diese reservierten Zeichen, auch zahlreiche andere Zeichen können so codiert werden, z.B. wenn die entsprechenden Zeichen nicht auf der
+Tastatur einer\*s Entwickler\*in zu finden sind. Umlaute können z.B. als `&auml;` für ä, `&Auml;` für Ä, `&ouml;` für ö usw. codiert werden, können aber
+natürlich auch direkt eingegeben werden.
+
+<iframe width="100%" height="250" src="//jsfiddle.net/michivo/y6wboc3n/9/embedded/html,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+Eine umfassende Liste von Sonderzeichen und ihren jeweiligen Codes ist auf der [Entwicklerseite des W3C](https://dev.w3.org/html5/html-author/charref) zu finden.
+
 ## Quellen
-<a id="hypertext">[1]</a> https://www.w3.org/DesignIssues/Uses.html
+- <a id="hypertext">[1]</a> https://www.w3.org/DesignIssues/Uses.html
+- https://html.spec.whatwg.org/multipage/
+- https://developer.mozilla.org/en-US/docs/Web/HTML
+- https://en.wikipedia.org/wiki/Markup_language
