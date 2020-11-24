@@ -27,6 +27,9 @@ module.exports = {
     'Media Types': [
       'mime-intro',
       'mime-list'
+    ],
+    DOM: [
+      'dom-intro'
     ]
   },
 };
