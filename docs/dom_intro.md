@@ -23,5 +23,31 @@ All diese Manipulationen werden in der Regel mit JavaScript umgesetzt.
 Die folgende Abbildung (Quelle: https://commons.wikimedia.org/wiki/File:DOM-model.svg, Autor: Birger Eriksson) zeigt den DOM-Tree einer einfachen Webseite:
 ![Beispiel-DOM einer Webseite](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/580px-DOM-model.svg.png)
 
+Das in diesem DOM-Tree dargestellte HTML-Dokument sieht wie folgt aus:
+```
+<!doctype HTML>
+<html>
+  <head>
+    <title>My title</title>
+  </head>
+  <body>
+    <h1>A heading</h1>
+    <a href="https://www.campus02.at>Link text</a>
+  </body>
+</html>
+```
+
+## Geschichte
+
+Ähnlich wie einige andere Web-Standards entstand das DOM während der Browser Wars zwischen
+Netscape und Microsoft ("DOM 0"). Ziel der Enwicklung war es, interaktive und dynamische Seiten
+bauen und anzeigen zu können. Das W3C übernahm 1998 die Wieterentwicklung des DOM-Standards,
+der in den Folgejahren von allen gängigen Browsern umgesetzt wurde. 
+
+Der DOM-Standard wurde um Möglichkeiten erweitert, Style-Informationen abzurufen und zu ändern,
+auf Events zu reagieren und schneller und effizienter auf Elemente im DOM-Tree zugreifen zu können. 2004 löste sich 
+die W3C-Arbeitsgruppe, die für das DOM verantwortlich war, auf. Danach übernahm die WHATWG
+ähnlich wie bei HTML die Arbeit am DOM-Standard, auch beim DOM gibt es einen *Living Standard*,
+der sich laufend weiterentwickelt und von allen aktuellen Browsern weitgehend unterstützt wird.
 
 6e4mjpaq/14/
