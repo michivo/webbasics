@@ -19,5 +19,6 @@ Wie in der Abbildung zu sehen, gibt es unterschiedliche Knotentypen im DOM-Baum:
 - Für jedes Element gibt es einen zugehörigen **Elementknoten**. Ein Elementknoten kann, je nach Element, ein oder mehrere weitere Elementknoten, Attributknoten oder Textknoten als Kinder haben
 - Für jedes Attribut gibt es einen **Attributknoten**. Attributknoten können keine weiteren Kinder haben.
 - Textinhalte werden in **Textknoten** abgelegt. Auch Textknoten können keine weiteren Kinder haben.
+- Für Kommentare gibt es **Kommentarknoten**, die klarerweise auch keine Kinder haben
 
 Auf http://bioub.github.io/dom-visualizer/ gibt es ein Tool, das DOM-Bäume einfacher Webseiten übersichtlich darstellt. Aber Vorsicht: DOM-Bäume werden schnell sehr groß und komplex, eine Visualisierung dieser Art bietet sich wirklich nur bei sehr kleinen, einfachen Seiten an.
