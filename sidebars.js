@@ -29,7 +29,8 @@ module.exports = {
       'mime-list'
     ],
     DOM: [
-      'dom-intro'
+      'dom-intro',
+      'dom-tree'
     ]
   },
 };

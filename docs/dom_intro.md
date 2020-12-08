@@ -6,7 +6,7 @@ sidebar_label: DOM
 
 Das **Document Object Model** (DOM) ist Definition einer Programmierschnittstelle,
 die HTML-Dokumente (und auch XML-Dokumente) als Baumstruktur darstellt. Diese
-Baumstruktur (der *DOM-Tree*) enthält als Knoten die Elemente einer HTML-Seite,
+Baumstruktur (der *DOM-Baum*) enthält als Knoten die Elemente einer HTML-Seite,
 also z.B. Überschriften, Absätze, Links, etc. .
 
 Das DOM erlaubt es, diese Baumstruktur zu verändern, also z.B. Knoten zu löschen,
@@ -20,10 +20,10 @@ DOM Ihre Seite dynamisch verändert wird.
 
 All diese Manipulationen werden in der Regel mit JavaScript umgesetzt.
 
-Die folgende Abbildung (Quelle: https://commons.wikimedia.org/wiki/File:DOM-model.svg, Autor: Birger Eriksson) zeigt den DOM-Tree einer einfachen Webseite:
+Die folgende Abbildung (Quelle: https://commons.wikimedia.org/wiki/File:DOM-model.svg, Autor: Birger Eriksson) zeigt den DOM-Baum einer einfachen Webseite:
 ![Beispiel-DOM einer Webseite](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/580px-DOM-model.svg.png)
 
-Das in diesem DOM-Tree dargestellte HTML-Dokument sieht wie folgt aus:
+Das in diesem DOM-Baum dargestellte HTML-Dokument sieht wie folgt aus:
 ```
 <!doctype HTML>
 <html>
@@ -49,5 +49,7 @@ auf Events zu reagieren und schneller und effizienter auf Elemente im DOM-Tree z
 die W3C-Arbeitsgruppe, die für das DOM verantwortlich war, auf. Danach übernahm die WHATWG
 ähnlich wie bei HTML die Arbeit am DOM-Standard, auch beim DOM gibt es einen *Living Standard*,
 der sich laufend weiterentwickelt und von allen aktuellen Browsern weitgehend unterstützt wird.
+
+
 
 6e4mjpaq/14/
