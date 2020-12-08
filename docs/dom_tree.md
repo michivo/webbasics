@@ -15,7 +15,7 @@ zwei Kinder hat: Die Elementknoten für Body und Head.
 ## Knotentypen
 Wie in der Abbildung zu sehen, gibt es unterschiedliche Knotentypen im DOM-Baum:
 - Den **Dokumentknoten** als Wurzels des DOM-Baums
-- Den **Dokumenttypknoten**, der in der Abbildung oben nicht dargestellt wird (für <!DOCTYPE html>)
+- Den **Dokumenttypknoten**, der in der Abbildung oben nicht dargestellt wird (für die `DOCTYPE`-Angabe)
 - Für jedes Element gibt es einen zugehörigen **Elementknoten**. Ein Elementknoten kann, je nach Element, ein oder mehrere weitere Elementknoten, Attributknoten oder Textknoten als Kinder haben
 - Für jedes Attribut gibt es einen **Attributknoten**. Attributknoten können keine weiteren Kinder haben.
 - Textinhalte werden in **Textknoten** abgelegt. Auch Textknoten können keine weiteren Kinder haben.
