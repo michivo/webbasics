@@ -31,6 +31,9 @@ module.exports = {
     DOM: [
       'dom-intro',
       'dom-tree'
+    ],
+    CSS: [
+      'css-intro'
     ]
   },
 };
