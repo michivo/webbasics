@@ -33,7 +33,8 @@ module.exports = {
       'dom-tree'
     ],
     CSS: [
-      'css-intro'
+      'css-intro',
+      'css-box-model'
     ]
   },
 };
