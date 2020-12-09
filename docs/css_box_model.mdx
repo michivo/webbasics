@@ -4,4 +4,19 @@ title: Das CSS Box-Model
 sidebar_label: CSS Box-Model
 ---
 
-todo
+Wenn ein Browser ein HTML-Dokument rendert, muss er klarerweise wissen, *wie groß* jedes einzelne Element sein muss.
+Im Browser werden alle Elemente mit Hilfe des **Box Models** modelliert. Alle HTML-Elemente können sozusagen als
+"Boxen" betrachtet werden, die vom Browser gezeichnet werden. Jede dieser Boxen hat:
+- eine Höhe und Breite (`height` und `width`), die die Abmessungen des Inhalts beschreiben
+- den Innenabstand (`padding`) zwischen dem Inhalt und dem Rahmen
+- einem optionalen Rahmen (`border`), der die Box umgibt
+- einem Außenabstand (`margin`), der den Abstand außerhalb des Rahmens festlegt
+
+Für all diese Teile der Box gibt es entsprechende CSS-Eigenschaften. 
+![Box-Model](https://upload.wikimedia.org/wikipedia/commons/7/7a/Boxmodell-detail.png)
+
+Hier ist ein Beispiel, in dem Sie mit dem Box Model herumspielen können. Die `inner`-div hat
+einen roten Margin und ein grünes Padding, die Hintergrundfarbe des Inhalts ist magenta. Durch
+die blaue Hintergrundfarbe des `outer`-div wird auch der Margin des `inner`-divs klar erkennbar:
+
+<iframe width="100%" height="400" src="//jsfiddle.net/michivo/qb2rezkf/35/embedded/result,html,css/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
