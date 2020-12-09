@@ -13,6 +13,11 @@ Style Sheets ganz allgemein beinhalten Informationen darüber, wie Inhalte darge
 Darstellung kommen und es ein Regelwerk gibt, in welcher Reihenfolge diese Angaben ausgewertet werden,
 dazu aber später mehr.
 
+Was kann man nun mit CSS "stylen"?
+- Das Schriftbild: Welche Farbe, Schriftart, Schriftgröße, ... hat Text?
+- Rahmen, Hintergrundfarben, ... von Elementen
+- Die Positionierung von Elementen
+
 ## Geschichte
 
 Anfangs wurden Informationen zur Darstellung direkt in HTML angeführt. Das hat aber einige Nachteile: Es wird vor allem
@@ -24,4 +29,25 @@ HTML-Standards Bestrebungen, die Beschreibung des *Inhalts* von jener der *Darst
 vom W3C veröffentlicht. 
 
 CSS wird auch nach wie vor vom W3C gepflegt und erweitert. Ähnlich wie bei HTML hat sich eine Art Living Standard etabliert, die
-CSS-Spezifikation besteht mittlerweile aus vielen separaten Modulen, die unabhängig voneinander weiterentwickelt werden.
+CSS-Spezifikation besteht mittlerweile aus vielen separaten Modulen, die unabhängig voneinander weiterentwickelt werden. Der letzte
+offizielle Standard war CSS3, CSS4 wurde nie offiziell verabschiedet.
+
+## Funktionsweise
+
+Mit CSS werden Styling-Regeln definiert, die dann vom Browser angewandt werden. Der Browser liest ein HTML-Dokument ein, erzeugt
+daraus ein Document Objet Model. Der Browser lädt anschließend weitere Ressourcen, die für die Darstellung des HTML-Dokuments
+benötigt werden, so unter anderem Stylesheets. Die Stylesheets werden vom Browser eingelesen und verarbeitet und verknüpft 
+anschließend die Style-Informationen aus den Stylesheets mit dem DOM. Erst dann wird die Seite im Browser dargestellt.
+![Ablaufdiagramm der Verarbeitung von HTML und CSS](https://media.prod.mdn.mozit.cloud/attachments/2015/10/14/11781/ab96f980498d7c46fe26f6df06b9acfc/rendering.svg).
+
+## Beispiel
+Hier sind drei Beispiele. Beachten Sie, dass das HTML-Dokument stets dasselbe ist. Das erste Beispiel enthält keine
+Style-Informationen, das zweite und das dritte schon:
+
+<iframe width="100%" height="400" src="//jsfiddle.net/michivo/9u5vo2nj/1/embedded/html,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+Hier die Variante mit CSS:
+<iframe width="100%" height="400" src="//jsfiddle.net/michivo/3sdbzhk9/31/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+... und hier die zweite CSS-Variante:
+<iframe width="100%" height="400" src="//jsfiddle.net/michivo/ow0h1ubq/36/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
