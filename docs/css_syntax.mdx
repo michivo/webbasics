@@ -46,6 +46,10 @@ Dieser Block definiert, dass alle `p`-Elemente, deren `class`-Attribut den Wert 
 serifenlosen Schrift) und einem 1 Pixel breiten Rahmen dargestellt werden sollen. Dieselben Regeln gelten für alle `div`-Elemente, 
 deren `class`-Attribut den Wert `statement` haben.
 
+### Selektoren
+
+TODO
+
 ## At-Regeln
 
 Zusätzlich zu den CSS-Regelsätzen gibt es noch At-Regeln, die wichtigsten sind:
@@ -100,7 +104,7 @@ Eine umfassende Beschreibung der supports-Queries gibt es bei [Mozilla](https://
 Es gibt drei unterschiedliche Möglichkeiten, CSS-Regeln zu definieren:
 - Externe CSS-Regeln werden in einer separaten CSS-Datei definiert. Diese Dateien werden im Header mit dem `link`-Element eingebunden
 - Interne CSS-Regeln werden direkt im HTML-Head mit dem `style`-Tag angegeben
-- Inline-CSS-Regeln, die bei beliebigen HTML-Elementen im Body im `style`-Attribut angegeben werden
+- Inline-CSS-Regeln, die bei beliebigen HTML-Elementen im Body im `style`-Attribut angegeben werden. Inline-CSS-Regeln enthalten Deklarationsblöcke ohne die geschwungenen Klammern
 
 ```html
 <!DOCTYPE html>
@@ -121,4 +125,38 @@ Es gibt drei unterschiedliche Möglichkeiten, CSS-Regeln zu definieren:
         <p style="font-style: italic;">Das ist inline-CSS!</p>
     </body>
 </html>
+```
+
+## Prävalenz von CSS-Regeln
+Wie gerade beschrieben gibt es mehrere Möglichkeiten, CSS-Regeln zu definieren. Welche CSS-Regeln haben aber nun Vorrang? Angenommen, Sie haben folgende HTML-Datei:
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css"> <!-- externes CSS enthält Regel h1 { color: red; } -->
+        <style>
+            h1 {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="color: green;">Hallo Welt</h1>
+    </body>
+</html>
+
+Welche Farbe hat dann die Überschrift "Hallo Welt"? In diesem Fall hat die Inline-Regel Vorrang, die Überschrift wird also grün sein.
+Ohne die Inline-Regel wäre die Überschrift blau, denn die später im Header definierte Regel hat Vorrang gegenüber davor definierter Regeln.
+Die Vorrangregeln für CSS-Regeln sind also: 
+1. Inline-Regeln
+2. Im Header definierte Regeln, wobei später im Header angeführte Regeln Vorrang gegenüber früher angeführten Regeln haben und spezifische Regeln Vorrang haben gegenüber allgemeinen Regeln.
+3. Browser-Standard-Werte
+
+Zum Aushebeln dieses Regelwerks gibt es die Möglichkeit, CSS-Regeln mit `!important` zu markieren. Solche Regeln haben immer Vorrang. `!important` sollte aber
+sehr sparsam eingesetzt werden, spezifischere Regeln und eine nachvollziehbare Reihenfolge der Styles sind stets zu bevorzugen:
+
+```css
+div.warning {
+  background-color: red !important;
+}
 ```
