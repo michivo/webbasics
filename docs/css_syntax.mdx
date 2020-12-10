@@ -130,6 +130,7 @@ Es gibt drei unterschiedliche Möglichkeiten, CSS-Regeln zu definieren:
 ## Prävalenz von CSS-Regeln
 Wie gerade beschrieben gibt es mehrere Möglichkeiten, CSS-Regeln zu definieren. Welche CSS-Regeln haben aber nun Vorrang? Angenommen, Sie haben folgende HTML-Datei:
 
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -144,6 +145,7 @@ Wie gerade beschrieben gibt es mehrere Möglichkeiten, CSS-Regeln zu definieren.
         <h1 style="color: green;">Hallo Welt</h1>
     </body>
 </html>
+```
 
 Welche Farbe hat dann die Überschrift "Hallo Welt"? In diesem Fall hat die Inline-Regel Vorrang, die Überschrift wird also grün sein.
 Ohne die Inline-Regel wäre die Überschrift blau, denn die später im Header definierte Regel hat Vorrang gegenüber davor definierter Regeln.
