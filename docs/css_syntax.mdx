@@ -4,4 +4,121 @@ title: Die Syntax von CSS
 sidebar_label: CSS Syntax
 ---
 
-todo
+## Deklarationen
+CSS-Deklarationen bestehen stets aus einer Eigenschaft (wie zum Beispiel `background-color` für die Hintergrundfarbe,
+`font-family` für die Schriftart oder `border-width` für die Rahmenbreite) und einem Wert (z.B. `red`, `Arial` oder `1px`).
+
+Eine CSS-Deklaration besteht aus der Eigenschaft, gefolgt von einem Doppelpunkt und dem Wert:
+
+```css
+background-color: red
+```
+
+Es gibt über 100 CSS-Eigenschaften.
+
+## Deklarationsblöcke
+
+Deklarationen werden in Blöcken zusammengefasst. Ein Block wird von geschwungenen Klammern umgeben, besteht dann aus einer oder mehreren
+Deklarationen, jeweils gefolgt von einem Strichpunkt:
+
+```css
+{
+    background-color: red;
+    font-family: Helvetica, Arial, Sans-Serif;
+    border-width: 1px;
+}
+```
+
+## CSS-Regelsätze
+
+Ein CSS-Regelsatz definiert nun, auf welche Elemente ein Deklarationsblock angewendet werden soll. Ein Regelsatz besteht daher aus einem Selektor,
+der festlegt, worauf sich der Regelsatz bezieht, und einem Deklarationsblock, der definiert, welche Regeln angewendet werden sollen.
+
+```css
+p.important, div.statement {
+    background-color: red;
+    font-family: Helvetica, Arial, Sans-Serif;
+    border-width: 1px;
+}
+```
+
+Dieser Block definiert, dass alle `p`-Elemente, deren `class`-Attribut den Wert `important` hat rot, mit Schriftart Helvetica (alternativ mit Arial bzw. einer generischen
+serifenlosen Schrift) und einem 1 Pixel breiten Rahmen dargestellt werden sollen. Dieselben Regeln gelten für alle `div`-Elemente, 
+deren `class`-Attribut den Wert `statement` haben.
+
+## At-Regeln
+
+Zusätzlich zu den CSS-Regelsätzen gibt es noch At-Regeln, die wichtigsten sind:
+- `@charset` definiert den verwendeten Zeichensatz, z.B. `@charset "utf-8;"`
+- `@import` zum Importieren externer Stylesheets, z.B. `@import "custom.css";` oder `import url('landscape.css') screen and (orientation:landscape);`
+- `@font-face` zum Importieren von Schriftarten, z.B. `@font-face { font-family: MyHelvetica; src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"), url(MgOpenModernaBold.ttf); font-weight: bold; }`
+- `@keyframes` für Animationen, die separat behandelt werden
+- `@page` um spezielle Regeln für Ausdrucke zu definieren, z.B. `@page :first { margin: 2cm; }`
+
+Weiters gibt es die etwas komplexeren Regeln `@media` und `@supports`:
+### @media
+Mit der `@media`-Regel können ausgabemedienabhängige Bedingungen definiert werden. Nur, wenn diese Bedingungen erfüllt werden, werden auch die zugehörigen Regelsätze angewendet.
+Soll z.B. die Zeilenhöhe größer gewählt werden, wenn ein Benutzer eine Seite auf einem Bildschirm mit über 1200px Breite ansieht, kann das so definiert werden:
+
+```css
+@media (width >= 1200px) {
+    body { line-height: 1.4; }
+}
+
+@media (800px <= width < 1200px) {
+    body { line-height: 1.2; }
+}
+```
+
+Eine umfassende Beschreibung der media-Queries gibt es bei [Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/@media).
+
+### @supports
+Mit der `@supports`-Regel können Regelsätze abhängig von vom Browser unterstützten Features angewendet werden. Möchte man zum Beispiel
+in Browsern, die das unterstützen, ein Grid-Layout verwenden, in allen anderen ein Flex-Layout (auf diese Art von Layouts werden wir
+noch eingehen), kann das so formuliert werden:
+
+```css
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@supports (display: grid) {
+  .layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-gap: 2rem;
+  }
+}
+```
+
+Nachdem alle modernen Browser ein weitgehend gleiches Set von Features unterstützen, hat die @supports-Regel eine untergeordnete 
+Bedeutung.
+Eine umfassende Beschreibung der supports-Queries gibt es bei [Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/@supports).
+
+## Externes, internes und inline CSS
+Es gibt drei unterschiedliche Möglichkeiten, CSS-Regeln zu definieren:
+- Externe CSS-Regeln werden in einer separaten CSS-Datei definiert. Diese Dateien werden im Header mit dem `link`-Element eingebunden
+- Interne CSS-Regeln werden direkt im HTML-Head mit dem `style`-Tag angegeben
+- Inline-CSS-Regeln, die bei beliebigen HTML-Elementen im Body im `style`-Attribut angegeben werden
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css"> <!-- externes Stylesheet styles.css -->
+         
+        <!-- hier kommt internes CSS -->
+        <style>
+            p {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Hallo Welt</h1>
+        <p>Ein Absatz ohne gesonderte Stilinformationen.</p>
+        <p style="font-style: italic;">Das ist inline-CSS!</p>
+    </body>
+</html>
+```

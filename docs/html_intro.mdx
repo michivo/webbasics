@@ -56,7 +56,7 @@ HTML-Dokumente müssen laut Standard immer UTF8-kodiert sein (siehe https://de.w
 
 Mit der Doctype-Deklaration wird dem Browser (oder einem anderen Programm, mit dem ein HTML-Dokument geöffnet wird) mitgeteilt, um welche Art von 
 Dokument es sich handelt. Im Falle von HTML-Dokumenten sieht die Doctype-Deklaration wie folgt aus:
-```
+```html
 <!DOCTYPE html>
 ```
 Wobei weder `DOCTYPE` noch `html` case-sensitiv sind, `<!doctype HTML>`) ist also ebenso gültig. Die Doctype-Deklaration sollte ganz am Beginn eines
@@ -68,7 +68,7 @@ Elemente bestehen aus einem einzelnen (Start-)Tag oder einem Tag-Paar, bestehend
 darauf folgt der Elementname (z.B. `img` für ein Bild, `h1` für eine Überschrift erster Ordnung oder `p` für einen Absatz). Danach folgen
 optionale Attribute, mit dem Zeichen `>` wird der Tag wieder geschlossen. Dann folgt der **Inhalt**, gefolgt vom Endtag. Der Endtag beginnt mit `</`, 
 gefolgt vom Elementnamen und dem abschließenden `>`. Hier sind ein paar Beispiele von Elementen ohne Attribute:
-```
+```html
 <h1>Das ist eine Überschrift</h1>
 <p>Das ist ein Absatz. Mit dem br-Element <br> macht man einen 
 Zeilenumbruch. br hat keinen Endtag, ein Zeilenumbruch 
@@ -87,7 +87,7 @@ Zeilenumbrüche immer explizit mit `<br>` angeben!
 Attribute enthalten Informationen zu einem Element. In der Regel beginnen sie mit dem Attributnamen, gefolgt von einem `=` und dem Attributwert. Der Attributwert
 ist meistens in Anführungszeichen gehalten, dabei werden doppelte Anführungszeichen bevorzugt. Es gibt auch Attribute, die keinen Wert haben, in solchen Fällen
 wird nur der Attributname angegeben:
-```
+```html
 <a href="https://www.campus02.at" target="_blank">
 Link zum Campus 02, öffnet sich in einem neuen Tab</a><br>
 

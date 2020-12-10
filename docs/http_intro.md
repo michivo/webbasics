@@ -59,7 +59,7 @@ Content-Type: text/html
 <summary>Klicken Sie hier, um den gesamten Antwort-Body zu sehen (zur besseren Lesbarkeit formatiert).</summary>
 
 
-```
+```html
 <HEADER>
   <TITLE>The World Wide Web project<TITLE> 
   <NEXTID N="55"> 
