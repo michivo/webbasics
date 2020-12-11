@@ -3,3 +3,58 @@ id: css-units
 title: CSS - Einheiten und Werte
 sidebar_label: Einheiten
 ---
+
+Ein wesentlicher Bestandteil von CSS ist ja, wie Größen, Abstände oder die Dicke von Linien angegeben werden. Diese Werte müssen
+in entsprechenden Einheiten angegeben werden. Während das auf den ersten Blick trivial erscheinen mag, ist es doch oft eine 
+Herausforderung. So ist es ja wichtig, dass eine Seite auf Bildschirmen unterschiedlicher Auflösung in diversen Zoomeinstellungen
+immer gut aussieht und das Layout nicht zusammenbricht. Alle Längenangaben (außer 0) müssen in CSS immer aus Zahlenwert und Einheit
+(ohne Leerzeichen dazwischen) bestehen, also z.B. `16px`, `25mm`, `3.5Q` oder `2.50rem`.
+
+Es gibt absolute Längeneinheiten (wie cm, mm, Pixel, ...) und relative Einheiten:
+
+## Absolute Längeneinheiten
+
+Absolute Längeneinheiten beziehen sich nicht auf irgendein Element (wie z.B. die Fensterbreite), sondern sind, wie der Name schon sagt,
+absolut. Diese "Absolutheit" hat aber nur insofern Gültigkeit, als dabei natürlich auch von einer gewissen Bildschirmauflösung und
+einem gewissen Zoomlevel ausgegangen wird. 1px (=1 Pixel) ist also nicht immer einen physikalischen Pixel breit, sondern sollte
+auf jedem Bildschirm bei einer Zoomeinstellung von 100% tatsächlich 0.264583mm groß sein. Abhängig vom Zoom-Level wird sich diese Größe
+auch ändern.
+
+Die absoluten Längeneinheiten in CSS sind:
+- `cm` (Zentimeter)
+- `mm` (Millimeter)
+- `Q` (Viertelmillimeter)
+- `in` (Zoll/Inches, 1in=2.54cm)
+- `pc` (Picas, 1pc=1/6 Zoll)
+- `pt` (Points, 1pt=1/72 Zoll)
+- `px` (Pixel, 1px=1/96 Zoll)
+
+Absolute Längenangaben werden hauptsächlich für Ausdrucke verwendet, einzig `px` und (für Schriftart) `pt` werden auch für die
+Bildschirmausgabe verwendet. 
+
+## Relative Längenangaben
+
+Relative Einheiten beziehen sich immer auf "irgendetwas anderes". Dieses "andere" kann eine typographische Größe oder eine 
+Größe des Anzeigefensters sein. Die relativen Einheiten sind:
+- `em` - Die Schriftgröße des Elternelements, wenn es sich um typographische Angaben (wie font-size) handelt, sonst die Schriftgröße des Elements selbst
+- `ex` - Die Höhe des Buchstaben **x** in der Schriftart des Elements
+- `ch` - Die Breite des Zeichens **0** in der Schriftart des Elements
+- `rem` - Die Schriftgröße des Wurzelelements (also des `html`-Elements)
+- `lh` - Die Zeilenhöhe des Elements
+- `vw` - 1% der Breite des Anzeigefensters
+- `vh` - 1% der Höhe des Anzeigefensters
+- `vmin` - 1% der kleineren Dimension des Anzeigefensters
+- `vmax` - 1% der größeren Dimension des Anzeigefensters
+- `%` - Relative Angabe in Relation zu etwas anderem (bei Höhen und Breiten die Höhe bzw. Breite des Elternelements, bei Schriftarten die Schriftgröße des Elternelements)
+
+Am gängigsten sind hier die Angaben `rem`, `%` und `em`. Insbesondere `rem` wird bei vielen modernen Webseiten für (fast) alle Längenangaben verwendet.
+
+## Farben
+
+Neben Größenangaben sind auch Farben ein wichtiger Faktor beim Layout und Design von Webseiten. Farben können wie auch Längen auf unterschiedliche Arten angegeben werden:
+- als Hexadezimalwerte mit oder ohne Alpha-Channel für Transparenz. Die ersten zwei Stellen geben dabei den Rotwert, die nächsten zwei Stellen den Grünwert, die folgenden Stellen den Blauwert und (falls vorhanden) die abschließenden zwei Stellen den Alpha-/Transparenzwert als Hexadezimalzahlen im Bereich von 0-255 bzw. 00-FF an. `#FF0000` ist also rot, `#00FF00` grün, `#FF00FF80` ein halbtransparentes lila, ...
+- RGB und RGBA-Werte mit der Funktion `rgb()` bzw. `rgba()`. Diesen Funktionen werden jeweils die Rot-, Blau- und Grünwerte (0-255), sowie bei `rgba()` auch der Alpha-Wert (0.0-1.0) übergeben. `rgb(255, 255, 0)` wäre also rot, `rgb(0, 255, 0)` grün und `rgba(255, 0, 255, 0.5)` ein halbtransparentes lila.
+- HSL und HSLA-Werte mit der Funktion `hsl()` bzw. `hsla()`. Diesen Funktionen werden die Werte für Hue (0-360), Saturation (0%-100%) und Lightness (0%-100%), sowie bei `hsla()` auch der Alpha-Wert (0.0-1.0) übergeben. `hsl(0, 100%, 50%)` wäre also rot, `hsl(120, 100%, 50%)` grün und `hsla(300, 100%, 50%, 0.5)` ein halbtransparentes lila.
+- Schlüsselwörter wie `black`, `red`, `green`, `slategray`, `blanchedalmond`, etc. - eine vollstände Liste von Farben finden Sie u.a. bei [Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
+
+Es gibt freilich noch zahlreiche weitere Wertangaben, so zum Beispiel für Winkel, Zeiten oder URLs, Farben und Längen sind aber für den Rahmen dieses Skriptums ausreichend.

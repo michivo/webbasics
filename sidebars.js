@@ -35,7 +35,8 @@ module.exports = {
     CSS: [
       'css-intro',
       'css-syntax',
-      'css-box-model'
+      'css-box-model',
+      'css-units'
     ]
   },
 };
