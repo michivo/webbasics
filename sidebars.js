@@ -37,6 +37,10 @@ module.exports = {
       'css-syntax',
       'css-box-model',
       'css-units'
+    ],
+    'Datenspeicherung': [
+      'storage-intro',
+      'storage-cookies'
     ]
   },
 };
