@@ -6,4 +6,55 @@ sidebar_label: Cookies
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+Den meisten Nutzer*innen sind Cookies vor allem deswegen ein Begriff, weil man bei den meisten Seiten dem Einsatz eben dieser Cookies zustimmen muss.
+Was aber sind *Cookies* genau?
+
 <img alt="Delicious Cookie" src={useBaseUrl('img/cookie.svg')} height='300'/>
+
+Cookies sind Daten, die vom Client (also dem Browser) beim Besuch einer Webseite gespeichert werden. HTTP an sich ist ja ein *zustandsloses* Protokoll,
+auf HTTP-Ebene ist somit jede Anfrage unabhängig von jenen davor und danach zu betrachten. Um trotzdem Webanwendungen mit Zustandsinformationen umsetzen 
+zu können, braucht es eine Lösung, wie dieser Zustand abgebildet werden. Dieser Zustand kann z.B. aus dem Einkaufswagen eines Online-Shops, Login-Daten,
+Trackingdaten, Einstellungen oder anderen Daten bestehen. Die Lösung dafür sind *Cookies*. Ein Cookie besteht aus
+- einem Namen
+- einem Wert (Länge: Maximal 4kB)
+- Attributen, wie z.B. dem Ablaufdatum, der Domäne, sowie Flags (`HttpOnly` für Cookies, auf die mit JavaScript nicht zugegriffen werden kann, `Secure` für Cookies, die nur über HTTPS übertragen werden, ...)
+
+
+## Implementierung
+
+Cookies werden, wie bereits bei den Kapiteln zu HTTP beschrieben, in HTTP-Headern übertragen. Der Server weist mit dem `Set-Cookie`-Header den Client an, ein oder mehrere Cookies zu speichern. Hier ist der Anfang einer Beispielantwort eines Servers, mit der zwei Cookies gesetzt werden:
+
+```
+HTTP/1.0 200 OK
+Content-type: text/html
+Set-Cookie: theme=midnight
+Set-Cookie: sessionToken=4079935355c44e3ea04eccfb924fd6ab; Expires=Wed, 01 Feb 2021 12:34:56 GMT; Secure; HttpOnly
+```
+
+Der Server setzt hier ein Cookie mit dem Namen `theme` und dem Wert `midnight`, sowie ein weiteres Cookie mit dem Namen `sessionCookie` und dem Wert `4079935355c44e3ea04eccfb924fd6ab` sowie den Attributen `Expires` (Ablaufdatum), `Secure` und `HttpOnly`. Der Browser/Client speichert diese Cookies und
+überträgt sie bei nachfolgenden Anfragen an den Server wieder im HTTP-Header `Cookie`. Um ein Cookie wieder zu löschen, wird in der Regel vom Server ein `Set-Cookie`-Header mit leerem Wert (optional) und standardgemäß einem Ablaufdatum in der Vergangenheit geschickt, also z.B.: 
+
+```
+HTTP/1.0 200 OK
+Content-type: text/html
+Set-Cookie: sessionToken=; Expires=Wed, 01 Feb 2020 12:34:56 GMT
+```
+
+## Attribute
+
+Wie im obigen Beispiel gesehen, kann ein Cookie mehrere Attribute haben. Die wichtigsten sind:
+- `Expires`: Der Wert dieses Attributs gibt an, bis zu welchem Zeitpunkt ein Cookie vom Client verwendet werden soll. Alternativ kann auch das Attribut `max-age` verwendet werden, das das maximale Alter in Sekunden enthält. Ist keines der Attribute vorhanden, wird das Cookie vom Browser nicht persistiert, es wird also mit dem Ende der aktuellen Browser-Session gelöscht.
+- `HTTPOnly`: Wenn dieses Attribut (das keinen Wert hat) vorhanden ist, bedeutet das, dass Skripte im Client nicht berechtigt sind, auf das jeweilige Cookie zuzugreifen. Das wird vor allem aus Sicherheitsgründen bei Cookies gemacht, die z.B. Zugriff auf sensible Daten erlauben würden. Angriffe, bei denen externer JavaScript-Code auf solche Cookies zuzugreifen versucht, werden als XSS (Cross Site Scripting bezeichnet) und durch Verwendung dieses Attributs deutlich erschwert.
+- `Secure`: Cookies, die dieses Attribut haben, dürfen vom Client nur über verschlüsselte Verbindungen (also über HTTPS) übertragen werden, wenn sie auch vom Server über eine solche Verbindung gesetzt wurden. Damit wird es deutlich erschwert, solche Cookies zu *sniffen*, also ihren Inhalt durch die Analyse nicht-verschlüsselter Datenkanäle abzugreifen.
+- Die Attribute `Domain` und `Path` geben an, für welche Domain bzw. welchen Pfad ein Cookie gültig sind. Sie sind vor allem dann wichtig, wo mehrere Anwendungen unter einer Domain erreichbar sind. Hat bei einem Cookie das `Domain`-Attribut den Wert `github.io`, dann würde der Browser dieses Cookie sowohl an `michivo.github.io` übertragen als auch an z.B. `attacker.github.io`. Wird kein Wert für `Domain` bzw. `Path` angegeben, verwendet sie der Browser nur bei der Domain bzw. dem Pfad des Requests, in dessen Antwort die Cookies gesetzt wurden. `Domain` kann freilich nur Werte beinhalten, die die gleiche Top-Level-Domain haben wie die Webseite, zu der ein Cookie gehört. Die Webseite `campus02.at` kann also keine Cookies für die Domain `fh-joanneum.at` setzen.
+
+## First-Party vs Third-Party-Cookies
+
+**First-Party-Cookies** sind jene Cookies, die von der Webseite gesetzt sind, die ein Benutzer tatsächlich besucht. Hierbei handelt es sich einerseits um Cookies, die technisch notwendig sind (z.B. Session-ID nach dem Login, Inhalt des Einkaufswagens, Einstellungen, ...), oft aber auch um Daten, die von den Webseitenbetreiber\*innen für statistische Auswertungen verwendet werden. **Third-Party-Cookies** sind jedoch Cookies, die von anderen Webseiten (z.B. Facebook, Google, Twitter, ... beim Besuch eines Blogs) gesetzt werden. Third-Party-Cookies erlauben es den Unternehmen hinter diesen anderen Webseiten, genauere Benutzer\*innenprofile zu erstellen, da sie ein Webseitenübergreifendes Tracking erlauben. 
+
+Nun wurde oben erwähnt, dass Cookies nur für Domains gesetzt werden können, die die gleiche Top-Level-Domain wie die besuchte Webseite haben. Die Seite `www.campus02.at` kann also selbst keine Google-, Facebook- oder Twitter-Cookies setzen. Findet sich aber auf der Seite `www.campus02.at` z.B. ein Facebook-Like-Button, eine Werbeeinschaltung von Google oder ein Share-Link für Twitter, so werden für diese Elemente in der Regel Inhalte von den jeweiligen Seiten geladen - somit ist es diesen Seiten auch möglich, Cookies zu setzen und das Surfverhalten zu analysieren. 
+
+Third-Party-Cookies werden aus datenschutzrechtlicher Sicht als bedenklich eingestuft und sind u.a. Thema bei der DSGVO/GDPR. Seit einigen Jahren ist es daher erforderlich, dass Benutzer*innen aktiv der Verwendung von Cookies, die nicht technisch notwendig sind, ausdrücklich zuzustimmen. Eine tiefergehende Auseinandersetzung mit diesem sicherlich spannenden Thema würde den Rahmen dieses Skriptums aber leider sprengen.
+
+## Links
+- [Cookie-Spezifikation in RFC-6265](https://tools.ietf.org/html/rfc6265)

@@ -4,7 +4,8 @@ title: Clientseitig Daten speichern
 sidebar_label: Einführung
 ---
 
-In vielen Webanwendungen ist es erwünscht oder gar notwendig, clientseitig Daten zu speichern. Der Browser soll also lokal Daten speichern, das kann u.a. für folgende Zwecke sinnvoll sein:
+In vielen Webanwendungen ist es erwünscht oder gar notwendig, clientseitig Daten zu speichern. 
+Der Browser soll also lokal Daten speichern, das kann u.a. für folgende Zwecke sinnvoll sein:
 - **Anmeldedaten** werden im Browser gespeichert und dem Server bei jeder Anfrage mitgeschickt, dort auf ihre Gültigkeit überprüft
 - **Trackingdaten** werden dazu eingesetzt, damit das Nutzer\*innenverhalten nachverfolgt und analysiert werden kann. Das ist nicht unbedingt im Interesse der Benutzer\*innen, sehr wohl aber im Interesse von Internetunternehmen wie Google, Facebook usw., die damit Benutzer\*innenprofile erstellen können und Werbung besser platzieren können
 - **Benutzer*innendefinierte Einstellungen**, so z.B. das jeweils bevorzugte Farbschema
