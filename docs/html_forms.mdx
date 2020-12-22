@@ -1,0 +1,24 @@
+---
+id: html-forms
+title: HTML - Forms
+sidebar_label: Forms
+---
+
+**Forms** bzw. **Formulare** sind ein wichtiges Element, um Benutzer\*innen die Interaktion mit Ihrer Seite zu ermöglichen, so z.B. bei
+- Suchmasken, in denen Suchbegriffe eingegeben werden
+- Anmeldeformularen, bei denen Benutzername und Passwort angegeben wird
+- Kontakformularen
+- ...
+
+All diesen Formularen ist gemein, dass Benutzer\*innen Daten eingeben, welche dann an einen Server geschickt werden. Der Client erwartet sich eine Antwort und zeigt diese der\*m Benutzer\*in an.
+
+Ein Formular wird immer von einem `form`-Tag umschlossen, das in der Regel folgende Attribute hat:
+- `action` um anzugeben, an welche URL die Formularinhalte geschickt werden sollen
+- `method` um die HTTP-Methode festzulegen, mit der der Request an die im `action`-Attribut angegebene URL geschickt werden soll (also `post` oder `get`)
+- `target` um anzugeben, in welchem Kontext die Antwort des Servers angezeigt werden soll (`_self`, `_blank`, `_parent`, `_top` oder der jeweilige Framename)
+
+Ein Beispiel für ein einfaches Formular sehen Sie hier:
+
+<iframe width="100%" height="400" src="//jsfiddle.net/michivo/q5okh73u/20//embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+Eine vollständige Referenz der Elemente für HTML-Formulare finden Sie wie immer bei [Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Forms). Neben den im Beispiel angeführten Texteingabefelder gibt es noch zahlreiche weitere dort dokumentierte Elemente für die Dateneingabe (Datumseingabe, Checkboxen, Passworteingabe, ...).

@@ -22,7 +22,8 @@ module.exports = {
     ],
     HTML: [
       'html-intro',
-      'html-elements'
+      'html-elements',
+      'html-forms'
     ],
     'Media Types': [
       'mime-intro',

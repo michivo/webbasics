@@ -17,7 +17,7 @@ zu können, braucht es eine Lösung, wie dieser Zustand abgebildet werden. Diese
 Trackingdaten, Einstellungen oder anderen Daten bestehen. Die Lösung dafür sind *Cookies*. Ein Cookie besteht aus
 - einem Namen
 - einem Wert (Länge: Maximal 4kB)
-- Attributen, wie z.B. dem Ablaufdatum, der Domäne, sowie Flags (`HttpOnly` für Cookies, auf die mit JavaScript nicht zugegriffen werden kann, `Secure` für Cookies, die nur über HTTPS übertragen werden, ...)
+- Attributen, wie z.B. dem Ablaufdatum, der Domäne, sowie Flags (`HttpOnly`, `Secure`, ...)
 
 
 ## Implementierung
@@ -47,6 +47,7 @@ Wie im obigen Beispiel gesehen, kann ein Cookie mehrere Attribute haben. Die wic
 - `HTTPOnly`: Wenn dieses Attribut (das keinen Wert hat) vorhanden ist, bedeutet das, dass Skripte im Client nicht berechtigt sind, auf das jeweilige Cookie zuzugreifen. Das wird vor allem aus Sicherheitsgründen bei Cookies gemacht, die z.B. Zugriff auf sensible Daten erlauben würden. Angriffe, bei denen externer JavaScript-Code auf solche Cookies zuzugreifen versucht, werden als XSS (Cross Site Scripting bezeichnet) und durch Verwendung dieses Attributs deutlich erschwert.
 - `Secure`: Cookies, die dieses Attribut haben, dürfen vom Client nur über verschlüsselte Verbindungen (also über HTTPS) übertragen werden, wenn sie auch vom Server über eine solche Verbindung gesetzt wurden. Damit wird es deutlich erschwert, solche Cookies zu *sniffen*, also ihren Inhalt durch die Analyse nicht-verschlüsselter Datenkanäle abzugreifen.
 - Die Attribute `Domain` und `Path` geben an, für welche Domain bzw. welchen Pfad ein Cookie gültig sind. Sie sind vor allem dann wichtig, wo mehrere Anwendungen unter einer Domain erreichbar sind. Hat bei einem Cookie das `Domain`-Attribut den Wert `github.io`, dann würde der Browser dieses Cookie sowohl an `michivo.github.io` übertragen als auch an z.B. `attacker.github.io`. Wird kein Wert für `Domain` bzw. `Path` angegeben, verwendet sie der Browser nur bei der Domain bzw. dem Pfad des Requests, in dessen Antwort die Cookies gesetzt wurden. `Domain` kann freilich nur Werte beinhalten, die die gleiche Top-Level-Domain haben wie die Webseite, zu der ein Cookie gehört. Die Webseite `campus02.at` kann also keine Cookies für die Domain `fh-joanneum.at` setzen.
+- Mit dem `SameSite`-Attribut kann angegeben werden, ob ein Cookie nur als First-Party-Cookie oder auch als Third-Party-Cookie genutzt werden darf. Dieses Attribut kann drei Werte haben: `SameSite=None` erlaubt die Verwendung als Third-Party-Cookie, `SameSite=Lax` verbietet die Verwendung als Third-Party-Cookies beim Laden von Ressourcen (z.B. Bildern, IFrames), erlaubt diese aber beim Klicken auf einen Link, `SameSite=Strict` verbietet die Verwendung als Third-Party-Cookie gänzlich. Cookies mit `SameSite=None` müssen das `Secure`-Attribut gesetzt haben, sonst wird das Cookie vom Browser blockiert.
 
 ## First-Party vs Third-Party-Cookies
 
