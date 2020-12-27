@@ -1,0 +1,24 @@
+---
+id: css-layout
+title: CSS Layouting
+sidebar_label: Layouts
+---
+
+In diesem Abschnitt geht des darum, darzustellen, wie Elemente auf einer Webseite positioniert werden können. Wenn dem Browser über CSS nicht irgendwie mitgeteilt wird, wie Elemente zu positionieren sind, werden die Elemente anhand diverser Standardregeln positioniert. Das ist der **normale Fluss** oder **Normal flow**. Im Beispiel von der Startseite ist schön zu sehen, wie dieser normale Fluss aussieht:
+
+<iframe width="100%" height="400" src="//jsfiddle.net/michivo/9u5vo2nj/1/embedded/result,html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+Die Elemente scheinen in der gerenderten Seite in der selben Reihenfolge auf wie im Code. Teils sind sie nebeneinander angeordnet (wie die Links im `nav`-Bereich), teils untereinander (wie die Listenelemente `li` in der `ul`-Liste). Elemente, die nebeneinander aufscheinen, werden als *inline*-Elemente bezeichnet, solche die untereinander dargestellt werden, als *block*-Elemente. Die wichtigsten CSS-Eigenschaften, mit denen die Positionierung gesteuert werden kann, sind:
+- `display` mit den möglichen Werten `inline` (keine Zeilenumbrüche, Darstellung nebeneinander wenn möglich), `block` (Zeilenumbrüche vor und nach dem Element, Darstellung untereinander), `table` für eine tabellarische Darstellung der Inhalte, `flex` für eine Anordnung der Inhalte gemäß dem Flexbox-Modell (dazu später mehr), `grid` für eine Anordnung gemäß dem Grid-Modell (dazu später mehr), `list-item` für die Darstellung von Listenelementen etc.
+- `float` um den Textfluss um Elemente zu bestimmen (`left`, `right`, `inline-start`, `inline-end` und `none`)
+- `position` um den Bezugsrahmen für die Positionierung festzulegen: `static` für den normalen Fluss, `relative` für eine Verschiebung der Position relativ zur eigentlichen Position, `absolute` für eine absolute Positionierung innerhalb des nächsten übergeordneten Elements mit relativer oder absoluter Position und `fixed` für eine absolute Positionierung innerhalb des Browserfensters. Für `relative`, `fixed` und `absolute` wird die Position mithilfe der Eigenschaften `top`, `left`, `right` und `bottom` definiert.
+
+Moderne Webseiten verwenden üblicherweise das Flexbox-Modell und/oder das Grid-Modell. Ältere Versionen des Internet Explorer unterstützen diese beiden Modelle nur teilweise bzw. gar nicht, moderne Browser jedoch vollständig. Diese beiden Modelle erlauben eine flexible Positionierung, insbesondere auch für responsive Seiten.
+
+## Flexbox-Modell
+
+TODO
+
+## Grid-Modell
+
+TODO

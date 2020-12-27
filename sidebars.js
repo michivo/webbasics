@@ -37,7 +37,8 @@ module.exports = {
       'css-intro',
       'css-syntax',
       'css-box-model',
-      'css-units'
+      'css-units',
+      'css-layout'
     ],
     'Datenspeicherung': [
       'storage-intro',
