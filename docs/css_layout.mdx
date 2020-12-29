@@ -36,9 +36,15 @@ Wenn man das Fenster verkleinert, ändert sich auch das Layout: Die Artikel werd
 - `align-items` definiert, wie die Items im Container quer zur `flex-direction` positioniert werden soll: `flex-start`, `flex-end`, `center`, `stretch` und `baseline` sind die möglichen Werte
 - `align-content` definiert, wie die Item-Zeilen bzw. -Spalten im Container positioniert werden sollen: `flex-start`, `flex-end`, `center`, `stretch`, `space-between` und `space-around` sind die möglichen Werte.
 
-TODO flex-items..
+Die CSS-Eigenschaften für Flex-Items sind:
+- `order` um die Reihenfolge innerhalb eines Containers festzulegen
+- `flex-basis` gibt an, wie viel Platz ein Item benötigt
+- `flex-grow` legt fest, wie viel Platz ein Item für sich beansprucht, wenn *mehr* Platz zur Verfügung steht als benötigt wird
+- `flex-shrink` legt fest, wie viel Platz ein Item für sich beansprucht, wenn *weniger* Platz zur Verfügung steht als benötigt wird
+- `flex` ist eine CSS-Eigenschaft, mit der die vorherigen drei Eigenschaften in Kurzform angegeben werden können
+- `align-self` überschreibt die `align-items`-Eigenschaft des Containers für ein Item
 
-Eine schöne Übersicht über die Flexbox-spezifischen CSS-Eigenschaften findet man [hier](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
+Eine schöne Übersicht und umfassendere Beschreibung der Flexbox-spezifischen CSS-Eigenschaften findet man [bei CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) oder bei [Mozilla](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox).
 
 ## Grid-Modell
 
