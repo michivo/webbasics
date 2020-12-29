@@ -17,8 +17,29 @@ Moderne Webseiten verwenden üblicherweise das Flexbox-Modell und/oder das Grid-
 
 ## Flexbox-Modell
 
-TODO
+Das Flexbox-Modell wird von älteren Versionen des Internet Explorer nicht unterstützt, vereinzelt gibt es noch User, die diese Browser verwenden (1-2%). Für sie wird eine Seite mit Flexbox-Layout nicht korrekt dargestellt.
+
+Das Flexbox-Modell entstand aus dem Bedürfnis, CSS-Layouts verwenden zu können, die auf unterschiedlichen Ausgabegeräten, Bildschirmgrößen und Auflösungen gleichermaßen gut funktionieren. Das Layout sollte sich also an den Bildschirm anpassen. Mit den in CSS2 verfügbaren Optionen (wie `float` und `position`), Elemente zu positionieren, war das oft nur schwer oder gar nicht möglich, man brauchte ein flexibleres Modell: Das **CSS Flexible Box Layout** oder kurz **Flexbox**.
+
+Das grundlegende Konzept hinter dem Flexbox-Modell ist es, Elemente innerhalb einer Box nebeneinander oder untereinander anzuordnen. Wie viele Elemente das sind und wie viel Platz ihnen eingeräumt wird, hängt vom verfügbaren Platz ab. Möchte man beispielsweise drei Artikel nebeneinander darstellen, sodass jedes Element gleich viel Platz bekommt und gleich hoch ist, kann das mit Flexbox wie folgt umgesetzt werden:
+
+<iframe width="100%" height="400" src="//jsfiddle.net/michivo/o0vn7cmh/8/embedded/result,html,css/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+Das `section`-Element ist in diesem Fall der sogenannte **Flex-Container** (definiert durch die CSS-Eigenschaft `display: flex`). Darin befinden sich die `article`-Elemente als sogenannte **Flex-Items**.
+
+Wenn man das Fenster verkleinert, ändert sich auch das Layout: Die Artikel werden untereinander statt nebeneinander dargestellt, das geschieht über eine sogenannte *Media Query* (dazu später mehr). Die relevanten CSS-Eigenschaften für den Flex-Container sind:
+- `display: flex` bzw. `display: inline flex` - so wird ein Flex-Container definiert
+- `flex-direction` gibt die Richtung an, in der die Items im Container angeordnet werden: `row`, `row-reverse`, `column` und `column-reverse` sind hier die möglichen Werte
+- `flex-wrap` definiert, ob alle Elemente in einer Zeile bzw. Spalte angeordnet werden sollen (`nowrap`), oder ob sie auf mehrere Zeilen bzw. Spalten aufgeteilt werden sollen (`wrap` bzw. `wrap-reverse`)
+- `flex-flow` ist eine CSS-Eigenschaft, mit der man `flex-direction` und `flex-wrap` in einem angeben kann, also z.B. `flex-flow: row wrap;`
+- `justify-content` definiert, wie die Items im Container in Bezug auf die `flex-direction` positioniert werden sollen: `flex-start`, `flex-end`, `center`, `space-between`, `space-around` und `space-evenly` sind die möglichen Werte
+- `align-items` definiert, wie die Items im Container quer zur `flex-direction` positioniert werden soll: `flex-start`, `flex-end`, `center`, `stretch` und `baseline` sind die möglichen Werte
+- `align-content` definiert, wie die Item-Zeilen bzw. -Spalten im Container positioniert werden sollen: `flex-start`, `flex-end`, `center`, `stretch`, `space-between` und `space-around` sind die möglichen Werte.
+
+TODO flex-items..
+
+Eine schöne Übersicht über die Flexbox-spezifischen CSS-Eigenschaften findet man [hier](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 
 ## Grid-Modell
 
-TODO
+Das Grid-Layout wird von älteren Versionen des Internet Explorer und Edge nicht unterstützt, nach wie vor verwenden noch einige wenige Benutzer diese Browser (3-5%), für sie wird eine Seite mit Grid-Layout also nicht korrekt dargestellt.
