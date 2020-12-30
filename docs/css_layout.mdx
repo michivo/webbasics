@@ -56,4 +56,21 @@ Hier ist dasselbe Beispiel wie oben, nur dieses Mal mit einem Grid-Layout statt 
 
 <iframe width="100%" height="400" src="//jsfiddle.net/michivo/g5nqb1ys/7/embedded/result,html,css/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-TODO: more grid
+Analog zur Flexbox gibt es auch beim Grid den Container und Items, die jeweils über diverse CSS-Eigenschaften konfiguriert werden können.
+Die CSS-Eigenschaften für den Grid-Container sind:
+- `display: grid`, um einen Grid-Container als solchen zu definieren
+- `grid-template-columns` und `grid-template-columns` um die Spalten bzw. Zeilen eines Grids zu definieren
+- `grid-template-areas`, um den Zellen innerhalb eines Grids Namen zu geben
+- `grid-template` als Kurzform, um die rows, columns und areas über eine CSS-Eigenschaft zu definieren
+- `row-gap` bzw. `col-gap` für Zeilen- bzw. Spaltenabstände sowie `gap` als Kurzform für beide Eigenschaften
+- `justify-items` bzw. `align-items`, um Zelleninhalte in Zeilen- bzw. Spaltenrichtung auszurichten, jeweils mit den möglichen Werten `start`, `end` und `center`, sowie `place-items` als Kurzform für beide Eigenschaften
+- `justify-content` bzw. `align-content`, um das gesamte Grid in Zeilen- bzw. Spaltenrichtung auszurichten, jeweils mit den möglichen Werten `start`, `end`, `center`, `space around`, `space-evenly` und `space-between`, sowie `place-content` als Kurzform für beide Eigenschaften
+- `grid-auto-columns` und `grid-auto-rows` um die Spaltenbreiten bzw. Zeilenhöhen für automatisch generierte Zeilen bzw. Spalten zu definieren
+- `grid-auto-flow`, um zu definieren, in welcher Richtung ein Grid befüllt werden soll (zeilenweise oder spaltenweise) mit den möglichen Werten `row`, `column`, `row dense` und `column dense`
+
+Bei Grid-Items muss freilich definiert werden, wo sie sich im Grid befinden (wenn man sich nicht auf das Auto-Placement verlassen möchte). Dafür gibt es zwei unterschiedliche Ansätze: Eine Möglichkeit ist es, Startzeile bzw. -spalte und Endzeile bzw. -spalte zu definieren (genauer gesagt gibt man dabei die Rasterlinien an), alternativ dazu kann man auch eine am Grid-Container definierten `grid-template-areas` angeben, in der sich ein Grid-Item befinden soll. Hier die CSS-Eigenschaften für Grid-Items:
+- `grid-row-start` und `grid-row-end` bzw. `grid-column-start` und `grid-column-end`, um die jeweiligen Start- und Endlinien im Grid anzugeben bzw. `grid-column` und `grid-row` für die Angabe beider Werte in Kurzform
+- `grid-area` also Kurzform für die Angabe von `grid-row` und `grid-column` oder, um eine der am Grid-Container definierten `grid-template-areas` anzugeben
+- `justify-self` bzw. `align-self` um die Ausrichtung des Inhalts in Zeilen- bzw. Spaltenrichtung anzugeben, jeweils mit den möglichen Werten `start`, `end` und `center`, sowie `place-self` als Kurzform für beide Eigenschaften
+
+Eine schöne Übersicht und umfassendere Beschreibung der Grid-spezifischen CSS-Eigenschaften findet man [bei CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/) oder bei [Mozilla](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids).
