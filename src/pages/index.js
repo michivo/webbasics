@@ -8,7 +8,7 @@ import styles from './styles.module.css';
 
 const features = [
   {
-    title: <>Grundlagen des Web</>,
+    title: <h2>Grundlagen des Web</h2>,
     imageUrl: 'img/registration-web.svg',
     description: (
       <>
@@ -18,7 +18,7 @@ const features = [
     ),
   },
   {
-    title: <>Erstellen von Webseiten</>,
+    title: <h2>Erstellen von Webseiten</h2>,
     imageUrl: 'img/internet-web-browser.svg',
     description: (
       <>
@@ -29,7 +29,7 @@ const features = [
     ),
   },
   {
-    title: <>Interaktive Codebeispiele</>,
+    title: <h2>Interaktive Codebeispiele</h2>,
     imageUrl: 'img/brackets-coding.svg',
     description: (
       <>
