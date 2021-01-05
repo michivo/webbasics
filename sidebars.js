@@ -40,9 +40,12 @@ module.exports = {
       'css-units',
       'css-layout'
     ],
-    'Datenspeicherung': [
+    Datenspeicherung: [
       'storage-intro',
       'storage-cookies'
+    ], 
+    Barrierefreiheit: [
+      'a11y-intro'
     ]
   },
 };
