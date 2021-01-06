@@ -45,7 +45,8 @@ module.exports = {
       'storage-cookies'
     ], 
     Barrierefreiheit: [
-      'a11y-intro'
+      'a11y-intro',
+      'a11y-aria'
     ]
   },
 };
