@@ -1,0 +1,52 @@
+---
+id: a11y-aria
+title: Accessible Rich Internet Applications - ARIA
+sidebar_label: ARIA
+---
+
+**WAI-ARIA** steht für Web Accessibility Initiative – Accessible Rich Internet Applications, den W3C-Standard für barrierefreie Webseiten. ARIA ist somit eine technische Spezifikation, sie bezieht sich darauf, wie (dynamische) Webseiten so gebaut werden können, dass sie u.a. auch mit Screenreadern oder alternativen Eingabe- und Ausgabegeräten zuverlässig und gut bedienbar sind. Der [WAI-ARIA-Standard](https://www.w3.org/TR/wai-aria/) umfasst deutlich über 200 Seiten, sprengt also den Rahmen dieses Skriptums. Die wichtigsten Begriffe und Prinzipien werden aber hier erklärt.
+
+## ARIA-Begriffe
+
+HTML-Elemente haben **Rollen**, die Hilfsmitteln wie Screenreadern mitteilen, wie gewisse Elemente zu behandeln sind. Durch die Rollen von Elementen können Benutzer*innen mit Screenreadern bzw. solche ohne Maus, nur mit Keyboard effizienter durch eine Seite navigieren. Diese Rollen sind z.B. `button`, `checkbox`, `link` und `main`. Während zahlreiche Elemente vordefinierte Rollen haben, die nicht extra angegeben werden müssen, so hat jeder `button` automatisch die Rolle `button`, jedes `a`-Element mit einem `href`-Attribut die Rolle `link` oder (wenn innerhalb eines `menu`-Elements) die Rolle `menuitem`, der `header` die Rolle `banner`, jedes `input`-Element mit Attribut `type=checkbox` die Rolle `checkbox` und so weiter. Es gibt aber auch zahlreiche Elemente (`div` und `span` zum Beispiel), die offensichtlich keine implizite Rolle haben, ihnen kann mithilfe des HTML-Attributs `role` explizit eine Rolle zugewiesen werden, also z.B.:
+
+```
+<div role="math">2*3=4</div> Widdewiddewitt und drei macht neune
+```
+
+Die wichtigsten Rollen zur Navigation auf einer Seite sind die **Landmark-Roles**:
+- `banner` für die allgemeine Informationen wie Firmennamen, Logo, Suchfeld etc. die meist am Beginn einer Seite sind (das Element `header` hat implizit diese Rolle)
+- `main` für den Hauptteil der Seite (das Element `main` hat implizit diese Rolle)
+- `contentinfo` für Informationen wie Copyright-Statement, Datenschutzinformationen, Impressum etc., die meist am Ende einer Seite zu finden sind (das Element `footer` hat implizit diese Rolle)
+- `navigation` für Gruppen von Links, die zur Navigation auf einer Seite dienen (das Element `nav` hat implizit diese Rolle)
+- `search` für ein Suchfeld, diese Rolle muss explizit vergeben werden (meist in der Form `<form role="search"><!-- Suchfeld --></form>)
+- `form` für Formulare (hier sollte bevorzugt das Element `form` ohne Rollenangabe verwendet werden)
+- `complementary` für ergänzende Informationen (das `aside`-Element hat implizit diese Rolle)
+- `region`, um Bereiche innerhalb einer Seite zu identifizieren, um die Navigation dorthin zu erleichtern
+
+Zusätzlich zu den Rollen gibt es auch **Eigenschaften** und **Zustandsinformationen** die über **ARIA-Attribute** ausgedrückt werden. Diese Attribute sind HTML-Attribute, die Informationen zu den Eigenschaften und über den Zustand eines Elements mit einer bestimmten Rolle beinhalten. `aria-label` beinhaltet zum Beispiel einen Namen für ein Element, das sonst keinen sichtbaren Namen hat (z.B. `<button aria-label="Close">X</button>`), `aria-labelledby` um z.B. bei einem Input-Feld anzugeben, in welchem Element sich der Name des Input-Elements befindet:
+
+```
+    <div id="mailLabelId">E-Mail</div>
+    <input type="text" aria-labelledby="mailLabelId"/>
+```
+
+Weiters gibt es Attribute, die den veränderlichen Zustand eines Elements beinhalten, z.B. `aria-checked` bei Checkboxen, `aria-valuenow` für den aktuellen Wert eines Fortschrittsbalkens etc.
+
+Eine umfassende Beschreibung aller Rollen, Zustände und Eigenschaften findet man einerseits im [ARIA-Standard](https://www.w3.org/TR/wai-aria/), eine etwas kompaktere Auflistung der wichtigsten Zustände und Eigenschaften gibt es auch bei [selfhtml](https://wiki.selfhtml.org/wiki/WAI-ARIA/Zust%C3%A4nde_und_Eigenschaften).
+
+## Richtlinien für die Erstellung barrierefreier Webseiten
+
+Angesichts der zahlreichen Rollen, Eigenschaften und Zustände sowie deren Beziehungen untereinander mag man als Webentwickler verzweifelt fragen: Brauche ich das wirklich alles? Nicht wirklich, denn meist reicht es, sich an einige wichtige Grundregeln zu halten:
+1. Verwenden Sie semantisch passende Elemente (wie oben gesehen haben viele Elemente schon die richtigen ARIA-Rollen). Nur wenn Sie generische Elemente wie `span` oder `div` verwenden, sollten Sie auch entsprechende Rollen angeben, wo nötig.
+2. Verwenden Sie die oben angeführten Landmark-Roles als Orientierungspunkte. Wenn Sie sich an Regel 1 halten, werden die Landmark-Roles großteils ohnehin schon richtig vergeben.
+3. Strukturieren Sie Ihre Seite richtig: Verwenden Sie richtige Header-Hierarchien (h1, h2, h3, h4, ...)
+4. Verwenden Sie Schriftarten, Schriftgrößen und Farben, die die Lesbarkeit Ihrer Seite erhöhen. Links sollten als solche erkennbar sein, ihr Zustand ebenso.
+5. Setzen Sie bei interaktiven Elementen (Eingabefeldern, ...) die relevanten ARIA-Attribute, um auch Benutzer*innen mit Einschränkungen die Verwendung Ihrer Seite zu ermöglichen
+6. Achten Sie bei Multimediainhalten wie Bildern darauf, dass stets ein Alternativtext angegeben ist. Sollen Bilder keinen Inhalt transportieren, geben Sie einen leeren Alternativtext an, lassen ihn aber nicht weg.
+7. Verwenden Sie JavaScript nicht mehr als nötig. Zu viele dynamische Inhalte erschweren oft die Verwendung Ihrer Seite für Benutzer*innen mit Einschränkungen.
+
+Hier sehen Sie ein paar Beispiele, wie man es **nicht** machen soll:
+<iframe width="100%" height="400" src="//jsfiddle.net/michivo/u64rq5nb/18/embedded/result,html,css,js/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+Meist ist es so, dass es kaum Zusatzaufwand bedeutet, Seiten barrierefrei zu gestalten, es ist aber oft viel Arbeit, Seiten im Nachhinein barrierefrei zu machen. Daher: Machen Sie Ihre Seiten von vornherein barrierefrei!
