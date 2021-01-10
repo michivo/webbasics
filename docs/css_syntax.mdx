@@ -113,16 +113,32 @@ a::after {
     content: '>';
 }
 
-p::first/line {
+p::first-line {
     padding-left: 2rem;
 }
 ```
 
 Eine ausführliche Dokumentation der Pseudoelemente finden Sie bei [Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements).
 
+#### Attribut-Selektoren
+Mit Attribut-Selektoren können Elemente abhängig von gewissen Attributwerten selektiert werden, so z.B.:
+```css
+/* selektiert alle a-Elemente mit einem title-Attribut */
+a[title] {
+    background-color: gray;
+}
+
+/* selektiert alle a-Elemente, die auf www.campus02.at verlinken */ 
+a[title="https://www.campus02.at"] {
+    font-size: 2rem;
+}
+```
+
+Eine ausführliche Dokumentation der Attribut-Selektoren finden Sie bei [Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors).
+
 #### Selektoren kombinieren
 Mehrere Selektoren können auch kombiniert werden:
-- Selektoren können gruppiert werden, indem sie durch Beistriche getrennt werden, z.B.: `div span.warning p { ... }`
+- Selektoren können gruppiert werden, indem sie durch Beistriche getrennt werden, z.B.: `div, span.warning, p { ... }`
 - Kind-Kombinationen können verwendet werden, wenn Regeln auf direkte Kinder anderer Elemente angewendet werden sollen. Sollen z.B. alle `li`-Elemente in `ul`-Elementen selektiert werden, dann erfolgt dies mithilfe eines `>`: `ul > li`
 - Nachkommen-Kombinationen können verwendet werden, wenn Regeln auf alle *Nachkommen* (also Kinder, deren Kinder & Kindeskinder, ...) angewendet werden sollen. Dazu gibt man einfach ein Leerzeichen zwischen den Selektoren an: `nav a` selektiert alle `a`-Elemente, die sich irgendwo in einem `nav`-Element befinden
 - Geschwister-Kombinationen können verwendet werden, wenn Regeln auf *nachfolgende Geschwister* angewendet werden sollen (also Elemente, die dieselben Eltern im DOM-Baum haben). Der Operator für diese Kombinationen ist die `~`: `p ~ span` selektiert alle span-Elemente, die auf ein p-Element folgen und die gleichen Eltern haben.
