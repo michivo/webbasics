@@ -1,0 +1,38 @@
+---
+id: storage-threats
+title: Gefahren von Cookies
+sidebar_label: Gefahren
+---
+
+Wie im vorangegangenen Abschnitt beschrieben, sind Cookies ein essenzielles Element vieler Webanwendungen, wenn es darum geht,
+dass sich ein\*e Benutzer\*in bei einer Seite authentifiziert. Das führt freilich dazu, dass es für böswillige Hacker\*innen interessant ist,
+Schwächen bei diversen Cookie-Mechanismen auszunutzen, um mittels Identitätsdiebstahl Schaden anzurichten.
+
+Sehen wir uns einige dieser möglichen Schwachstellen an.
+
+## Cross-Site-Scripting (XSS)
+
+Beim XSS wird versucht, schadhaften JavaScript-Code in eine Seite zu injizieren. Die konkreten Mechanismen, wie das passiert, sind nicht Thema dieser Vorlesung, die Auswirkungen jedoch schon: Können Angreifer schadhaften Code im Browser eines Benutzers ausführen, können Sie damit auch auf die im Browser gespeicherten Cookies zugreifen, sie abgreifen und die somit erhaltenen Daten für ihre Zwecke missbrauchen.
+
+Die Verwendung des `HttpOnly`-Attributs schafft hier Abhilfe gegen eine Vielzahl von XSS-Attacken, weil auf Cookies mit diesem Attribut nicht per JavaScript zugegriffen werden kann. Dieses Attribut sollte somit immer dann verwendet werden, wenn eine Anwendung nicht selbst direkt auf das jeweilige Cookie zugreifen muss.
+
+## Cookie Sniffing
+
+Baut man eine unverschlüsselte Verbindung zu einem Webserver auf, werden sämtliche Daten (also auch Cookies) unverschlüsselt übertragen. Angreifer können, wenn sie Zugriff auf die zwischen Client und Server ausgetauschten Daten haben, die Cookies auslesen und für ihre Zwecke nutzen.
+
+Die effizienteste Methode gegen Cookie-Sniffing ist es, nur sichere Verbindungen zwischen Client und Server zuzulassen, also auf HTTPS statt HTTP zu setzen. Bei Cookies sollte dann das `Secure`-Attribut gesetzt werden
+
+## Cross Site Request Forgery (CSRF)
+
+Bei CSRF versuchen Angreifer über Schadcode in Webseiten, gefälschte Anfragen an vertrauenswürdige Seiten mit den Authetifikationsdaten einer\*s Benutzer\*in abzusetzen. Das erreicht man, indem z.B. ein Werbebanner folgenden HTML-Code enthält:
+
+```
+   <img src="https://www.deinebank.at/transferMoney?recipient=EvilMichael;amount=10000">
+```
+
+Der Browser setzt, wenn er diese Zeile verarbeitet, einen HTTP-Aufruf an die angegebene URL ab und inkludiert bei diesem Aufruf freilich alle Cookies für `https://www.deinebank.at`. Ist die\*er Benutzer\*in Kundin\*e dieser Bank, und hätte die Bank keinen Sicherheitsmechanismus wie 2-Faktor-Authentifizierung oder ein TAN-Verfahren, könnte so Geld von einem Konto abgezogen werden.
+
+Mit dem `SameSite`-Cookie-Attribut wird sichergestellt, dass Cookies nur dann bei Aufrufen mitgegeben werden, wenn man sich als Benutzer\*in auch wirklich auf der Seite befindet, die das Cookie gesetzt hat. Browserhersteller sind in den letzten Monaten dazu übergegangen, auch Cookies, die das `SameSite`-Attribut nicht gesetzt haben, so zu behandeln, als wäre `SameSite=Lax` gesetzt.
+
+## Links
+- [OWASP](https://owasp.org/) - das Open Web Application Security Project, eine führende Organisation im Bereich der Web-Sicherheit

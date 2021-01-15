@@ -42,7 +42,8 @@ module.exports = {
     ],
     Datenspeicherung: [
       'storage-intro',
-      'storage-cookies'
+      'storage-cookies',
+      'storage-threats'
     ], 
     Barrierefreiheit: [
       'a11y-intro',
