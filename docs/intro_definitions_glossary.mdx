@@ -9,30 +9,42 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 In diesem Skriptum werden Begriffe wie *Client*, *Server* oder *Browser* immer wieder vorkommen. Um sicherzustellen,
 dass es zu keinen Missverständnissen bei diesen Begriffen kommt, hier ein kurzer Überblick:
 
-### Client
+## Client
 Ein Programm, das Dienste von einem Server abruft. Meist laufen Client und Server auf unterschiedlichen Rechnern,
 kommunizieren also meist über ein Netzwerk (wie das Internet) miteinander.
 
-### Browser
+## Browser
 Ein Programm auf einem Rechner (PC, Tablet, Smartphone, ...) das in der Lage ist, Webseiten darzustellen. Der Browser
 ist ein *Client*-Programm. Beispiele für Browser sind Chrome, Firefox, Edge, Chromium, Internet Explorer, Safari und
 Opera.
 
-### Server
+## Server
 Ein Programm, das anderen Programmen (den Clients) Dienste anbietet. In diesem Skriptum wird der Begriff
 **Server** nur für *Software*, nicht für *Hardware* verwendet.
 
-### HTTP-Server oder Webserver
+## HTTP-Server oder Webserver
 Ein Programm auf einem Rechner, das Dokumente, Dateien und weitere Daten meist über das Internet an Clients wie z.B. 
 Browser überträgt. Es hat sich eingebürgert, auch die Rechner, auf denen solche Programme laufen, als Server zu
 bezeichnet, in diesem Skriptum ist mit HTTP-Server oder Webserver jedoch immer das Programm (die Software) und nicht
 der Rechner (die Hardware) gemeint. Die gängigsten HTTP-Server sind [Apache](https://httpd.apache.org/), 
 [nginx](https://nginx.org/en/), Microsoft Internet Information Services und [Node.js](https://nodejs.org/en/)
 
-### Proxy-Server
+## Proxy-Server
 Ein Programm, das Anfragen von einem Client entgegennimmt und an einen Server weiterleitet. Ein Client (wie z.B. ein
 Browser) stellt also keine direkte Verbindung zu einem Webserver her, sondern öffnet eine Verbindung zum Proxy-Server.
 Möchte der Client eine Webseite öffnen, schickt er also eine Anfrage an den Proxy-Server. Hat der Proxy-Server z.B.
 die angefragte Seite im Cache, kann er die Anfrage beantworten, ohne den Zielserver zu kontaktieren.
 <img alt="Kommunikation via Proxy" src={useBaseUrl('img/proxy.png')} />
-Proxies werden oft aus Sicherheitszwecken, zur Performanceoptimierung oder aus Datenschutzgründen eingesetzt. 
+Es gibt unterschiedliche Arten von Proxies. Proxies, über die sämtiche Datenströme zwischen einem Client und dem Internet
+laufen, nennt man oft auch **Forward Proxies**. Proxies, die zwischen dem Server und dem Internet agieren, nennt man 
+**Reverse Proxies**. Mit der Bezeichnung *Proxy* (ohne *Forward* oder *Reverse*) wird ein Forward Proxy bezeichnet. Forward
+Proxies findet man oft in größeren Firmennetzwerken, oft werden sie auch von Internet Service Providern (ISPs) betrieben.
+
+Proxies werden zu unterschiedlichen Zwecken eingesetzt:
+- Performance: Sogenannte **Caching Proxies** werden eingesetzt, um die benötigte Bandbreite zu reduzieren und Anfragen schneller beantworten zu können. Sie *merken* sich die Antwort auf Anfragen von Clients und geben diese Antwort bei gleichartigen Anfragen wieder zurück, ohne den Server erneut zu kontaktieren. Das Caching-Verhalten (welche Antworten sich der Proxy merken soll und welche nicht) kann über diverse HTTP-Header beeinflusst werden. Caching Proxies werden sowohl bei Forward als auch Reverse Proxies eingesetzt: Bei Forward Proxies, um den ausgehenden Datenverkehr zu reduzieren, bei Reverse Proxies um die Last auf die Webserver zu reduzieren. Reverse Proxies übernehmen oft auch die Aufgabe der Ver- und Entschlüsselung der Datenströme zum Client (*SSL-Termination*), sowie das Komprimieren und Dekomprimieren der mit dem Client ausgetauschten Daten.
+- Sicherheitszwecke: Forward Proxies haben oft die Aufgabe, den Datenverkehr zwischen Client und Server zu überwachen. Somit kann verhindert werden, dass z.B. Clients in Firmen unerwünschten Seiten aufrufen oder dass schädliche Inhalte geladen werden. Bei Reverse Proxies können einerseits natürlich ebenfalls böswillige Zugriffe verhindert werden, außerdem dienen Reverse Proxies oft dazu, Details über die dahinterliegende Infrastruktur vor der Außenwelt zu verbergen, was Angriffe auf diese erschwert.
+- Anonymisierung: Baut ein Client eine Verbindung über einen Forward Proxy zu einem Server auf, ist es für den Server schwer bis gar nicht möglich, festzustellen, von welchem Rechner die Anfrage kommt - er sieht nur eine Anfrage des Proxies. Somit sind Anfragen über einen Proxy bis zu einem gewissen Grad anonym. Proxies kommen oft auch zum Einsatz, um Geoblocking zu umgehen, weil Server annehmen müssen, dass eine Anfrage über einen Proxy aus der Region gestellt wird, in der der Proxy steht - der Standort des Clients ist für den Server nicht eruierbar, wobei man sich hier in einem rechtlichen Graubereich bewegt.
+
+## Content Delivery/Distribution Networks (CDNs)
+
+TODO

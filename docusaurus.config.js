@@ -20,7 +20,7 @@ module.exports = {
           label: 'Skriptum',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        // {to: 'blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/michivo/webbasics',
           label: 'GitHub',
