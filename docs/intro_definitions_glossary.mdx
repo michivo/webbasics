@@ -47,4 +47,6 @@ Proxies werden zu unterschiedlichen Zwecken eingesetzt:
 
 ## Content Delivery/Distribution Networks (CDNs)
 
-TODO
+Ein Content Delivery Network (CDN) ist ein global verteiltes Netzwerk von Servern, die Inhalte ausliefern. Bei diesen Inhalten handelt es sich meist um Dateien, die sich selten ändern, aber oft abgefragt werden. Das können folglich große Mediendateien von Streaming-Diensten, genauso wie kleine, häufig genutzte JavaScript-Bibliotheken wie jQuery oder CSS-Frameworks wie Bootstrap. Das Ziel von CDNs ist es, Clients weltweit schnell die gewünschten Inhalte zu liefern, Latenzen also gering zu halten und den globalen Netzwerk-Traffic zu reduzieren. Mit CDNs lassen sich also oft Kostenersparnisse bei gleichzeitigem Performancegewinn realisieren.
+
+Bei CDNs werden Inhalte auf einem *Ursprungsserver* (Origin) zur Verfügung gestellt und über ein *Distributionssystem* auf eine große Zahl von *Replica-Servern* repliziert. Anfragen von Clients werden über ein *Request-Routing-System* an einen geeigneten Replica-Server weitergeleitet und von diesem beantwortet. Bekannte Anbieter von CDNs sind Google, Cloudflare, Amazon und Microsoft mit Azure.
