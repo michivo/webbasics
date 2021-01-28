@@ -1,5 +1,5 @@
 ---
-id: uri-learnings
+id: uris-learnings
 title: Lernziele
 sidebar_label: Lernziele
 ---
