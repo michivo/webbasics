@@ -14,40 +14,49 @@ module.exports = {
       'http-whatfor',
       'http-methods',
       'http-responses',
-      'http-headers-overview'
+      'http-headers-overview',
+      'http-learnings'
     ],
     URIs: [
       'uris-intro',
-      'uris-urls'
+      'uris-urls',
+      'uris-learnings'
     ],
     HTML: [
       'html-intro',
       'html-elements',
-      'html-forms'
+      'html-forms',
+      'html-learnings'
     ],
     'Media Types': [
       'mime-intro',
-      'mime-list'
+      'mime-list',
+      'mime-learnings'
     ],
     DOM: [
       'dom-intro',
-      'dom-tree'
+      'dom-tree',
+      'dom-learnings'
     ],
     CSS: [
       'css-intro',
       'css-syntax',
       'css-box-model',
       'css-units',
-      'css-layout'
+      'css-layout',
+      'css-learnings'
     ],
     Datenspeicherung: [
       'storage-intro',
       'storage-cookies',
-      'storage-threats'
+      'storage-threats',
+      'storage-learnings'
     ], 
     Barrierefreiheit: [
       'a11y-intro',
-      'a11y-aria'
+      'a11y-aria',
+      'a11y-learnings',
+      'a11y-learnings'
     ]
   },
 };

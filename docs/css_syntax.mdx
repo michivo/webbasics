@@ -200,6 +200,13 @@ Es gibt drei unterschiedliche Möglichkeiten, CSS-Regeln zu definieren:
 - Interne CSS-Regeln werden direkt im HTML-Head mit dem `style`-Tag angegeben
 - Inline-CSS-Regeln, die bei beliebigen HTML-Elementen im Body im `style`-Attribut angegeben werden. Inline-CSS-Regeln enthalten Deklarationsblöcke ohne die geschwungenen Klammern
 
+Ist für ein Element *keine* CSS-Regel definiert, verwendet der Browser Default-Werte, daher sind z.B. Überschriften groß und Links blau,
+auch wenn man das nirgends definiert hat. Diese Default-Werte unterscheiden sich teilweise je nach Browser, daher ist es nicht unüblich,
+einen **CSS-Reset** oder eine **Normalisierung** durchzuführen. Dabei werden zahlreiche CSS-Regeln auf einen browserunabhängigen, moderner anmutenden
+Standardwert gesetzt. Das geschieht, indem man z.B. ein [reset.css von Eric Meyer](https://meyerweb.com/eric/tools/css/reset/) oder 
+[Normalize.css](https://necolas.github.io/normalize.css/) als erstes Stylesheet einbindet.
+
+
 ```html
 <!DOCTYPE html>
 <html>
