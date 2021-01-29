@@ -4,4 +4,6 @@ title: Lernziele
 sidebar_label: Lernziele
 ---
 
-TODO
+Nach diesem Abschnitt sollten Sie folgende Fragen beantworten können:
+- Was ist das DOM? Was ist der DOM-Tree?
+- Welche Bedeutung hat das DOM, insbesondere bei dynamischen Webseiten?
