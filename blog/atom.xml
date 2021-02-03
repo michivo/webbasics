@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://michivo.github.io/webbasics/blog</id>
+    <title>Web Basics Blog</title>
+    <updated>2019-05-29T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://michivo.github.io/webbasics/blog"/>
+    <subtitle>Web Basics Blog</subtitle>
+    <icon>https://michivo.github.io/webbasics/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Hello]]></title>
+        <id>Hello</id>
+        <link href="https://michivo.github.io/webbasics/webbasics/blog/2019/05/29/hello-world"/>
+        <updated>2019-05-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Willkommen zu diesem Blog, hier finden Sie Informationen über das Skriptum, z.B. wenn es erweitert wird oder Inhalte sich ändern.]]></summary>
+    </entry>
+</feed>
