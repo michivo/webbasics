@@ -194,6 +194,31 @@ Nachdem alle modernen Browser ein weitgehend gleiches Set von Features unterstü
 Bedeutung.
 Eine umfassende Beschreibung der supports-Queries gibt es bei [Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/@supports).
 
+### @layer
+Anfang 2022 wurde CSS um Layers erweitert, die eine flexiblere Definition von CSS-Regeln und deren Prävalenz erlauben. Mit dem Statement
+```css
+@layer base, specific;
+```
+
+kann definiert werden, dass es zwei Layer namens *base* bzw. *specific* gibt, wobei Regeln in einem später genannten Layer immer Vorrang gegenüber Regeln in den Layern davor haben. So hätte z.B. bei folgenden CSS-Regeln
+```css
+@layer base, specific;
+
+@layer base {
+  ul > li {
+    font-weight: 900;
+  }
+}
+
+@layer specific {
+  li {
+    font-weight: 100;
+  }
+}
+```
+
+jedes `<li>`-Element nur ein `font-weight` von 100, weil die Regel aus dem Layer *specific* jene aus dem Layer `base` überschreibt.
+
 ## Externes, internes und inline CSS
 Es gibt drei unterschiedliche Möglichkeiten, CSS-Regeln zu definieren:
 - Externe CSS-Regeln werden in einer separaten CSS-Datei definiert. Diese Dateien werden im Header mit dem `link`-Element eingebunden
@@ -252,8 +277,16 @@ Welche Farbe hat dann die Überschrift "Hallo Welt"? In diesem Fall hat die Inli
 Ohne die Inline-Regel wäre die Überschrift blau, denn die später im Header definierte Regel hat Vorrang gegenüber davor definierter Regeln.
 Die Vorrangregeln für CSS-Regeln sind also: 
 1. Inline-Regeln
-2. Im Header definierte Regeln, wobei später im Header angeführte Regeln Vorrang gegenüber früher angeführten Regeln haben und spezifische Regeln Vorrang haben gegenüber allgemeinen Regeln.
+2. Im Header definierte Regeln, wobei später im Header angeführte Regeln Vorrang gegenüber früher angeführten Regeln haben und *spezifische* Regeln Vorrang haben gegenüber allgemeinen Regeln.
 3. Browser-Standard-Werte
+
+### Spezifität/Specificity
+Wenn es widersprüchliche CSS-Regeln gibt (z.B.: `li { font-weight: 900 }` und `ul li { font-weight: 100 }`), so gibt es in CSS die sogenannte Spezifität von Regeln, die bestimmt, welche Regeln vorrangig behandelt werden:
+- der *-Selektor (der universelle Selektor) hat die geringste Spezifität
+- Elementselektoren, wie z.B. `div` oder `li > ul` haben die nächshöhere Spezifität
+- (Pseudo)Klassen- und Attributselektoren (`li.someClass`, `input[type="text"]`, ...) haben die nächsthöhere Spezifität
+- ID-Selektoren (`#title`) haben die nächsthöhere Spezifität
+- Inline-Styles (`<a style="..."`) haben die höchste Priorität, können jedoch mit
 
 Zum Aushebeln dieses Regelwerks gibt es die Möglichkeit, CSS-Regeln mit `!important` zu markieren. Solche Regeln haben immer Vorrang. `!important` sollte aber
 sehr sparsam eingesetzt werden, spezifischere Regeln und eine nachvollziehbare Reihenfolge der Styles sind stets zu bevorzugen:
