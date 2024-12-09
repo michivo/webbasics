@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Web Basics',
   tagline: 'Unterrichtsmaterial für die Lehrveranstaltung',
-  url: 'https://michivo.github.io/webbasics',
+  url: 'https://michivo.github.io/',
   baseUrl: '/webbasics/',
   favicon: 'img/favicon.ico',
   organizationName: 'michivo', // Usually your GitHub org/user name.
