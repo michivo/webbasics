@@ -9,9 +9,16 @@
     <icon>https://michivo.github.io/webbasics/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Hello]]></title>
-        <id>Hello</id>
-        <link href="https://michivo.github.io/webbasics/webbasics/blog/2019/05/29/hello-world"/>
+        <id>https://michivo.github.io/webbasics/blog/2019/05/29/hello-world</id>
+        <link href="https://michivo.github.io/webbasics/blog/2019/05/29/hello-world"/>
         <updated>2019-05-29T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Willkommen zu diesem Blog, hier finden Sie Informationen über das Skriptum, z.B. wenn es erweitert wird oder Inhalte sich ändern.]]></summary>
+        <content type="html"><![CDATA[<p>Willkommen zu diesem Blog, hier finden Sie Informationen über das Skriptum, z.B. wenn es erweitert wird oder Inhalte sich ändern.</p><p>Nix More, das war's schon!</p>]]></content>
+        <author>
+            <name>Michael Faschinger</name>
+            <uri>https://github.com/michivo</uri>
+        </author>
+        <category label="hello" term="hello"/>
+        <category label="webbasics" term="webbasics"/>
     </entry>
 </feed>
