@@ -1,5 +1,5 @@
 ---
-id: hello-world
+slug: hello-world
 title: Hello
 author: Michael Faschinger
 author_title: Der Vortragende
