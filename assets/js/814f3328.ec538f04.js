@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkweb_basics=self.webpackChunkweb_basics||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Hello","permalink":"/webbasics/blog/2019/05/29/hello-world"}]}')}}]);
