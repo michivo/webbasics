@@ -1,0 +1,32 @@
+/* Example font imports - replace with your actual font files */
+@font-face {
+    font-family: 'CustomFont-Regular';
+    src: url('../static/fonts/CustomFont-Regular.woff2') format('woff2'),
+         url('../static/fonts/CustomFont-Regular.woff') format('woff'),
+         url('../static/fonts/CustomFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CustomFont-Bold';
+    src: url('../static/fonts/CustomFont-Bold.woff2') format('woff2'),
+         url('../static/fonts/CustomFont-Bold.woff') format('woff'),
+         url('../static/fonts/CustomFont-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CustomFont-Italic';
+    src: url('../static/fonts/CustomFont-Italic.woff2') format('woff2'),
+         url('../static/fonts/CustomFont-Italic.woff') format('woff'),
+         url('../static/fonts/CustomFont-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Add more @font-face declarations for each font file in your static/fonts folder */

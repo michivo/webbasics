@@ -43,7 +43,7 @@ einem Header.
 
 ```
 HTTP/1.1 200 OK 
-Date: Tue, 30 Jun 2020 09:24:25 GMT  
+Date: Tue, 31 Aug 2025 09:24:25 GMT  
 Server: Apache  
 Last-Modified: Thu, 03 Dec 1992 08:37:20 GMT  
 ETag: "40521e06-8a9-291e721905000"   

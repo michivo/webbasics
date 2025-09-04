@@ -23,4 +23,4 @@ Später kamen weitere Standards dazu:
 im Browser u.a. auf Webseiten zugreifen können
 - HyperText Transfer Protocol Secure (HTTPS), mit dem der gesamte Datenverkehr verschlüsselt werden kann
 
-Diese Standards werden großteils vom [World Wide Web Consortium](https://www.w3.org) verwaltet.
+Diese Standards werden großteils vom [World Wide Web Consortium](https://www.w3.org) und der [Web Hypertext Application Technology Working Group Community](https://whatwg.org/) verwaltet.

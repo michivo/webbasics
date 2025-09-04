@@ -47,7 +47,7 @@ Werbeplattform entdeckt. Microsoft entwickelt die erste Version des Internet Exp
 Das W3C entwickelt HTML kontinuierlich weiter (HTML 2 im Jahr 1995, HTML 3 und 4 im Jahr 1997), 1996 wird
 die erste Version der CSS-Spezifikation veröffentlicht. Trotz der Versuche, HTML und CSS zu standardisieren,
 kommt es zum Browserkrieg zwischen Netscape und Microsoft: Jedes der beiden Unternehmen versucht, die
-Standards eigens zu interpretieren und zu erweitern, um dem jeweiligen Konkurrenten das Leben schwer zu machen.
+Standards eigens zu interpretieren und zu erweitern, um dem jeweiligen Konkurrenten Marktanteile zu entziehen.
 
 1996 wird JavaScript 1.0.0 von Netscape veröffentlicht, womit eine dynamische Manipulation von Seiten
 ermöglicht wurde.
@@ -66,4 +66,4 @@ einigen Querelen um die Weiterentwicklung des HTML-Standards ist seit Mai 2019 o
 die Pflege und Weiterentwicklung des **HTML Living Standard** (früher HTML 5) verantwortlich.
 
 ## Quellen
-<a id="hypertext">[1]</a> https://www.w3.org/WhatIs.html
+<a id="hypertext">[1]</a><a class="external-link" href="https://www.w3.org/WhatIs.html"> What is HyperText?</a>

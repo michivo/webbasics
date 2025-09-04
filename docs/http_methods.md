@@ -50,4 +50,4 @@ Der Server antwortet mit einer Liste der von ihm unterstützten Methoden und Mer
 Wird in der Kommunikation über HTTP-Proxies benötigt, um gesicherte Verbindungen durch ein oder 
 mehrere Proxies zu tunneln.
 
-Im weiteren Verlauf der Vorlesung haben wir ausschließlich mit GET, POST, PUT und DELETE zu tun.
+Im weiteren Verlauf der Vorlesung haben wir ausschließlich mit GET, HEAD, POST, PUT und DELETE zu tun.

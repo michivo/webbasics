@@ -11,8 +11,8 @@ Wir als Benutzer arbeiten aber nur in seltenen Fällen direkt mit IP-Adressen, i
 wir nur Domain-Namen wie z.B. campus02.at . Die Umwandlung eines Domain-Namens in eine IP-Adresse
 geschieht über das **Domain Name Service (DNS)**.
 
-Der Domäne campus02.at ist zum Beispiel die IPv4-Adresse 149.154.100.47 zugeordnet (Stand 26.6.2020),
-der Domäne de.wikipedia.org die IPv4-Adresse 91.198.174.192 und die IPv6-Adresse 2620:0:862:ed1a::1.
+Der Domäne campus02.at ist zum Beispiel die IPv4-Adresse 136.243.48.190 zugeordnet (Stand 4.9.2025),
+der Domäne de.wikipedia.org die IPv4-Adresse 185.15.59.224 und die IPv6-Adresse 2a02:ec80:300:ed1a::1.
 
 Das DNS funktioniert also ähnlich einem Telefonbuch: Im Telefonbuch werden Unternehmen oder Personen
 Telefonnummern zugeordnet, im DNS werden Domain-Namen IP-Adressen zugeordnet. Im Falle des DNS werden
@@ -23,10 +23,10 @@ die Domains in einem global verteilten System gespeichert, das den Namensraum de
 Angenommen, Sie wollen von Ihrem Rechner eine Verbindung zu `www.campus02.at` aufbauen. Dazu brauchen
 Sie, wie bereits erwähnt, die *IP-Adresse*, die der Domain `www.campus02.at` zugeordnet ist. 
 Wie wird nun so ein DNS-Request aufgelöst?
-1. Ihr Rechner sucht in der Hosts-Datei bzw. in einem lokalen Cache, ob die IP-Adresse für `www.campus02.at` hinterlegt ist. Wenn nicht, ...
+1. Ihr Rechner sucht in der Hosts-Datei bzw. in einem lokalen Cache, ob die IP-Adresse für `www.campus02.at` hinterlegt ist. Wenn ja, gibt es ein Ergebnis. Sonst geht es weiter bei Schritt 2.
 2. Ihr Rechner kontaktiert den DNS-Server, der in der Regel über DHCP automatisch zugewiesen wurde.
 Der DNS-Server wird in der Regel von Ihrem Internet Service Provider (ISP) betrieben. Der DNS-Server überprüft,
-ob er die IP-Adresse für www.campus02.at kennt. Wenn nicht, ...
+ob er die IP-Adresse für www.campus02.at kennt. Wenn ja, gibt es ein Ergebnis. Sonst geht es weiter bei Schritt 3.
 3. Der DNS-Server fragt bei einem der weltweit 13 Root-Nameserver nach www.campus02.at. Der Root-Nameserver
 weiß, in welcher DNS-Zone `at.` verwaltet wird und sendet Namen und IP-Adressen der `.at`-Nameserver an
 den DNS-Server Ihres ISPs.
@@ -35,4 +35,4 @@ den DNS-Server Ihres ISPs.
 6. Der Nameserver antwortet dem DNS-Server mit der IP-Adresse. Der DNS-Server antwortet Ihrem Rechner ebenso
 mit dieser IP-Adresse. 
 7. Ihr Rechner kennt die IP-Adresse von `www.campus02.at`, 
-Sie können eine Verbindung zu diesem Rechner aufbauen. <img alt="Happy dancing banana" src={useBaseUrl('img/banana.gif')} height='30'/>
+Sie können eine Verbindung zu diesem Rechner aufbauen. <img alt="" src={useBaseUrl('img/banana.gif')} height='30'/>

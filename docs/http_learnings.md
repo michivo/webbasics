@@ -9,4 +9,4 @@ Nach diesem Abschnitt sollten Sie folgende Fragen beantworten können:
 - Welche HTTP-Methoden gibt es und wofür werden sie verwendet?
 - Was sind die grundlegenden Eigenschaften des HTTP-Protokolls?
 - Was sind die wichtigsten HTTP-Header?
-- Wie sind HTTP Response Codes organisiert, welche Response Codes gibt es?
+- Wie sind HTTP Response Codes organisiert, welche Response Codes gibt es (2-3 pro Gruppe von Codes)?
